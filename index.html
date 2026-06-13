@@ -3,157 +3,440 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Alessandro Idà | Portfolio Professionale</title>
-    <meta name="description" content="Portfolio di Alessandro Idà: Sales Manager, Key Account e Project Developer.">
+    <title>Alessandro Idà | Sales Manager & Project Developer</title>
+    <meta name="description" content="Il backstage della mia crescita. Portfolio di Alessandro Idà: Sales Manager, Key Account, Project Developer.">
+    <meta name="robots" content="index, follow">
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#0f4c81">
+    
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <style>
         :root {
-            --primary-bg: #f8faff;
-            --card-bg: #ffffff;
-            --text-main: #12253c;
-            --text-muted: #52606f;
-            --accent-color: #0b7ff0;
-            --accent-soft: #eaf4ff;
-            --border-color: #e4edf5;
+            /* Palette Colori Corporate (Navy Blue) */
+            --profession-bg: #f4f7fa;
+            --profession-card: #ffffff;
+            --profession-text: #1a2634;
+            --profession-muted: #53647a;
+            --profession-border: #dbe4ee;
+            --profession-accent: #0f4c81; /* Corporate Blue */
+            --profession-badge-bg: #e6eef5;
+            --profession-accent-soft: #eef3f8;
+            --profession-green: #21865c;
+            --background-ai-color: #0f4c81;
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            color: var(--text-main);
-            background-color: var(--primary-bg);
-            line-height: 1.6;
+            background: var(--profession-bg);
+            color: var(--profession-text);
+            overflow-x: hidden;
         }
 
+        a { text-decoration: none; color: var(--profession-accent); }
+        
         /* Navbar */
-        .navbar {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-        }
-        .navbar-brand {
-            font-weight: 800;
-            color: var(--text-main);
-            letter-spacing: -0.5px;
-        }
-        .nav-link {
-            font-weight: 600;
-            color: var(--text-muted);
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-        .nav-link:hover, .nav-link.active {
-            color: var(--accent-color);
+        .header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--profession-border); padding: 15px 0; z-index: 999; }
+        .navmenu ul { list-style: none; padding: 0; margin: 0; display: flex; align-items: center; gap: 20px; }
+        .navmenu a { color: var(--profession-text); font-weight: 700; font-size: 0.9rem; transition: color 0.3s; }
+        .navmenu a:hover { color: var(--profession-accent); }
+        .logo-text { font-size: 1.5rem; font-weight: 900; color: var(--profession-accent); letter-spacing: -1px; }
+
+        /* Button */
+        .btn-primary { background-color: var(--profession-accent); border: none; border-radius: 999px; padding: 12px 24px; font-weight: 800; }
+        .btn-primary:hover { background-color: #0c3e6a; }
+
+        /* Hero */
+        .profession-hero { padding: 150px 0 60px; background: linear-gradient(164deg, color-mix(in srgb, var(--profession-accent), transparent 93%) 50%, transparent 50%); }
+        .profession-badge { display: inline-flex; align-items: center; gap: 8px; border-radius: 50px; padding: 8px 18px; margin-bottom: 18px; font-size: .88rem; font-weight: 700; color: #fff; background: var(--profession-accent); }
+        .profession-hero h1 { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 900; line-height: 1.1; letter-spacing: -1px; margin-bottom: 20px; }
+        .profession-lead { font-size: 1.1rem; color: var(--profession-muted); line-height: 1.6; margin-bottom: 30px; }
+        
+        /* Floating Cards Hero (Effetto WOW) */
+        .profession-hero-media { position: relative; isolation: isolate; }
+        .profession-hero-image { border-radius: 24px; overflow: hidden; border: 1px solid var(--profession-border); box-shadow: 0 18px 48px rgba(15, 76, 129, 0.15); }
+        .profession-hero-image img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+        .profession-hero-overlay { position: absolute; inset: 0; pointer-events: none; }
+        .profession-hero-float { position: absolute; border: 1px solid var(--profession-border); border-radius: 16px; background: rgba(255, 255, 255, .94); box-shadow: 0 14px 32px rgba(0,0,0,0.08); padding: 12px 16px; color: var(--profession-text); backdrop-filter: blur(5px); }
+        .float-1 { top: 10%; left: -10%; width: 240px; animation: floatAnim 4s ease-in-out infinite; }
+        .float-2 { bottom: 20%; right: -5%; width: 220px; animation: floatAnim 5s ease-in-out infinite reverse; }
+        .float-3 { top: 45%; right: 10%; background: var(--profession-accent); color: white; border:none; animation: floatAnim 3.5s ease-in-out infinite; }
+        
+        @keyframes floatAnim {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
-        /* Bottoni */
-        .btn-primary {
-            background-color: var(--accent-color);
-            border: none;
-            border-radius: 999px;
-            padding: 12px 28px;
-            font-weight: 700;
-            box-shadow: 0 8px 24px rgba(11, 127, 240, 0.2);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(11, 127, 240, 0.3);
-            background-color: #0966c2;
-        }
+        /* Sezioni Standard */
+        .profession-section { padding: 80px 0; }
+        .white { background: #fff; }
+        .profession-section-title h2 { font-weight: 900; font-size: 2.2rem; margin-bottom: 15px; }
+        .profession-section-title p { color: var(--profession-muted); font-size: 1.1rem; }
+        .everoo-request-kicker { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px; background: var(--profession-accent-soft); color: var(--profession-accent); font-weight: 800; font-size: 0.85rem; margin-bottom: 15px; }
 
-        /* Hero Section */
-        .hero-section {
-            padding: 160px 0 100px;
-            background: linear-gradient(135deg, #ffffff 0%, var(--primary-bg) 100%);
-        }
-        .hero-title {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -1px;
-            margin-bottom: 20px;
-        }
-        .hero-subtitle {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            margin-bottom: 30px;
-            font-weight: 400;
-        }
-        .badge-role {
-            background-color: var(--accent-soft);
-            color: var(--accent-color);
-            padding: 8px 16px;
-            border-radius: 999px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
+        /* Metodo TASK (Ripreso da flow) */
+        .task-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px; }
+        .task-card { background: var(--profession-accent-soft); border-radius: 20px; padding: 30px; transition: transform 0.3s; }
+        .task-card:hover { transform: translateY(-5px); }
+        .task-icon { width: 50px; height: 50px; background: #fff; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--profession-accent); margin-bottom: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .task-card h3 { font-weight: 800; font-size: 1.3rem; margin-bottom: 10px; }
+        .task-card ul { padding-left: 20px; color: var(--profession-muted); font-size: 0.95rem; }
 
-        /* Sezioni e Card */
-        .section-title {
-            font-weight: 800;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        .info-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 40px;
-            height: 100%;
-            box-shadow: 0 10px 30px rgba(18, 37, 60, 0.03);
-            transition: transform 0.3s, border-color 0.3s;
-        }
-        .info-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-color);
-        }
-        .card-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--accent-soft);
-            color: var(--accent-color);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-        .info-card h3 {
-            font-weight: 700;
-            font-size: 1.25rem;
-            margin-bottom: 15px;
-        }
-        .info-card p {
-            color: var(--text-muted);
-            margin: 0;
-            font-size: 0.95rem;
+        /* Progetti (Piattaforma Tabs) */
+        .ev-platform-shell { display: grid; grid-template-columns: 280px 1fr; gap: 20px; background: #fff; border: 1px solid var(--profession-border); border-radius: 24px; padding: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); }
+        .ev-menu { display: flex; flex-direction: column; gap: 8px; }
+        .ev-menu-btn { background: transparent; border: none; text-align: left; padding: 12px 16px; border-radius: 12px; font-weight: 700; color: var(--profession-muted); transition: all 0.2s; display: flex; align-items: center; gap: 10px; cursor: pointer; }
+        .ev-menu-btn.active, .ev-menu-btn:hover { background: var(--profession-accent-soft); color: var(--profession-accent); }
+        .ev-panel { display: none; background: var(--profession-bg); border-radius: 16px; padding: 30px; height: 100%; border: 1px solid var(--profession-border); }
+        .ev-panel.active { display: block; animation: fadeIn 0.3s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Risultati (Metriche) */
+        .metric-card { background: #fff; border: 1px solid var(--profession-border); border-radius: 16px; padding: 30px; text-align: center; height: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+        .metric-value { font-size: 3rem; font-weight: 900; color: var(--profession-accent); line-height: 1; margin-bottom: 10px; }
+        .metric-title { font-weight: 800; font-size: 1.1rem; margin-bottom: 10px; }
+
+        /* Carousel 6 Reasons */
+        .reasons-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 20px; scrollbar-width: none; }
+        .reason-card { flex: 0 0 300px; scroll-snap-align: start; background: #fff; border: 1px solid var(--profession-border); border-radius: 20px; padding: 30px; transition: transform 0.3s; }
+        .reason-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.06); border-color: var(--profession-accent); }
+        .reason-card h3 { font-weight: 900; font-size: 1.2rem; margin-bottom: 15px; }
+
+        /* Contact Form Formattazione "WOW" */
+        .lead-box { background: var(--profession-accent-soft); border-radius: 24px; padding: 50px; }
+        .form-control { border-radius: 12px; padding: 12px 15px; border: 1px solid var(--profession-border); }
+        .form-control:focus { border-color: var(--profession-accent); box-shadow: 0 0 0 3px rgba(15, 76, 129, 0.1); }
+
+        @media (max-width: 991px) {
+            .ev-platform-shell { grid-template-columns: 1fr; }
+            .ev-menu { flex-direction: row; overflow-x: auto; padding-bottom: 10px; }
+            .ev-menu-btn { white-space: nowrap; }
+            .task-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Alessandro Idà.</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Chi Sono</a></li>
-                    <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
-                    <li class="nav-item"><a class="nav-link" href="risultati.html">Risultati & Approccio</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary btn-sm px-4" href="#contatti">Scarica CV</a>
-                    </li>
+    <header class="header fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="#" class="logo-text">Alessandro Idà.</a>
+            <nav class="navmenu d-none d-lg-block">
+                <ul>
+                    <li><a href="#chi-sono">Chi Sono</a></li>
+                    <li><a href="#task">Metodo TASK</a></li>
+                    <li><a href="#progetti">Progetti</a></li>
+                    <li><a href="#risultati">Risultati</a></li>
+                    <li><a href="#reasons">Perché Io</a></li>
                 </ul>
-            </div>
+            </nav>
+            <a href="#contatti" class="btn btn-primary d-none d-md-block">Contattami</a>
         </div>
+    </header>
+
+    <main>
+        <section id="chi-sono" class="profession-hero">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-7">
+                        <span class="profession-badge"><i class="bi bi-briefcase-fill"></i> Sales Manager | Key Account | Project Developer</span>
+                        <h1>Dietro le quinte della mia crescita.</h1>
+                        <p class="profession-lead">
+                            Sono un giovane e intraprendente professionista, pronto a condividere il lato autentico della mia carriera. La mia missione è <strong>tradurre la complessità in soluzioni efficaci</strong> attraverso analisi, creatività e impegno costante.
+                        </p>
+                        <div class="d-flex gap-3 mt-4">
+                            <a href="#progetti" class="btn btn-primary">Guarda i Progetti</a>
+                            <a href="#risultati" class="btn" style="border: 2px solid var(--profession-border); border-radius: 999px; padding: 10px 24px; font-weight: 700; color: var(--profession-text);">I miei Risultati</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="profession-hero-media">
+                            <div class="profession-hero-image">
+                                <img src="https://via.placeholder.com/600x800/0f4c81/ffffff?text=Foto+Alessandro" alt="Alessandro Idà">
+                            </div>
+                            <div class="profession-hero-overlay">
+                                <article class="profession-hero-float float-1">
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <i class="bi bi-check-circle-fill text-success fs-4"></i>
+                                        <div>
+                                            <strong>La mia Vision</strong>
+                                            <small>Fare la differenza, ogni giorno.</small>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="profession-hero-float float-2">
+                                    <strong>+20% Fatturato Generato</strong>
+                                    <small>Incidenza media sul totale aziendale.</small>
+                                </article>
+                                <article class="profession-hero-float float-3">
+                                    <strong><i class="bi bi-star-fill text-warning"></i> 6 Reasons Why</strong>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="task" class="profession-section white">
+            <div class="container">
+                <div class="profession-section-title text-center">
+                    <span class="everoo-request-kicker"><i class="bi bi-diagram-3"></i> Il mio approccio</span>
+                    <h2>Il metodo T.A.S.K.</h2>
+                    <p>Le attività che svolgo quotidianamente si sintetizzano in quattro aree operative chiave, che mi permettono di adattarmi facilmente alle esigenze aziendali.</p>
+                </div>
+
+                <div class="task-grid">
+                    <article class="task-card">
+                        <div class="task-icon"><i class="bi bi-book"></i></div>
+                        <h3>Training (Formazione)</h3>
+                        <ul>
+                            <li>Crescita personale e Imprenditoria</li>
+                            <li>Tecniche di vendita e Marketing</li>
+                            <li>Tecnologia, informatica e Project Management</li>
+                        </ul>
+                    </article>
+                    <article class="task-card">
+                        <div class="task-icon"><i class="bi bi-person-lines-fill"></i></div>
+                        <h3>Account Manager</h3>
+                        <ul>
+                            <li>Risoluzione problemi e analisi esigenze</li>
+                            <li>Gestione insoluti e fidelizzazione clienti</li>
+                            <li>Presidio a 360° del portafoglio</li>
+                        </ul>
+                    </article>
+                    <article class="task-card">
+                        <div class="task-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h3>Sales (Vendite)</h3>
+                        <ul>
+                            <li>Trattative inbound e Negoziazioni</li>
+                            <li>Up/Cross selling e preparazione offerte</li>
+                            <li>Video dimostrazioni e analisi business</li>
+                        </ul>
+                    </article>
+                    <article class="task-card">
+                        <div class="task-icon"><i class="bi bi-people-fill"></i></div>
+                        <h3>Key Leader</h3>
+                        <ul>
+                            <li>Coordinamento team e presidio riunioni</li>
+                            <li>Analisi dati e redazione report</li>
+                            <li>Ideazione e proposizione di soluzioni</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="progetti" class="profession-section">
+            <div class="container">
+                <div class="profession-section-title">
+                    <span class="everoo-request-kicker"><i class="bi bi-window-sidebar"></i> Execution</span>
+                    <h2>Dall'idea al risultato: I Miei Progetti</h2>
+                    <p>Ho messo in campo la mia creatività ideando, progettando e realizzando in modo proattivo e autonomo.</p>
+                </div>
+
+                <div class="ev-platform-shell">
+                    <div class="ev-menu">
+                        <button class="ev-menu-btn active" onclick="openTab('proj1')"><i class="bi bi-code-slash"></i> Algoritmo Strategico</button>
+                        <button class="ev-menu-btn" onclick="openTab('proj2')"><i class="bi bi-crosshair"></i> Smart Tracking</button>
+                        <button class="ev-menu-btn" onclick="openTab('proj3')"><i class="bi bi-database"></i> CRM Custom</button>
+                        <button class="ev-menu-btn" onclick="openTab('proj4')"><i class="bi bi-bar-chart"></i> Piani di Crescita</button>
+                        <button class="ev-menu-btn" onclick="openTab('proj5')"><i class="bi bi-rocket"></i> Lanci di Successo</button>
+                        <button class="ev-menu-btn" onclick="openTab('proj6')"><i class="bi bi-building"></i> Startup Da Zero</button>
+                    </div>
+
+                    <div class="ev-content">
+                        <div id="proj1" class="ev-panel active">
+                            <span class="badge bg-primary mb-3">Analisi Dati</span>
+                            <h3>Algoritmo Strategico</h3>
+                            <p class="fs-5 text-muted">Sviluppato un algoritmo con oltre 8 macro, in grado di gestire 10.000+ combinazioni per calcolare il rendimento degli e-commerce.</p>
+                            <div class="mt-4 p-4 bg-white rounded-3 border">
+                                <strong>Impatto:</strong> Traduzione immediata della complessità numerica in decisioni strategiche azionabili per i clienti.
+                            </div>
+                        </div>
+                        <div id="proj2" class="ev-panel">
+                            <span class="badge bg-primary mb-3">Monitoraggio</span>
+                            <h3>Smart Tracking</h3>
+                            <p class="fs-5 text-muted">Sviluppato su Google Sheet uno strumento con 12 macro per il monitoraggio in tempo reale degli obiettivi, con video tutorial dedicato.</p>
+                        </div>
+                        <div id="proj3" class="ev-panel">
+                            <span class="badge bg-primary mb-3">Sviluppo Strumenti</span>
+                            <h3>Sviluppo CRM</h3>
+                            <p class="fs-5 text-muted">Creato un CRM su Google Sheet con 80+ fogli e tabelle pivot, per una visione completa delle performance dei clienti.</p>
+                        </div>
+                        <div id="proj4" class="ev-panel">
+                            <span class="badge bg-primary mb-3">Strategia</span>
+                            <h3>Piani di Crescita</h3>
+                            <p class="fs-5 text-muted">Ideati piani di crescita e strategie; realizzati script di vendita, piani operativi e materiali formativi per la formazione del team.</p>
+                        </div>
+                        <div id="proj5" class="ev-panel">
+                            <span class="badge bg-primary mb-3">Marketing</span>
+                            <h3>Lanci di Successo</h3>
+                            <p class="fs-5 text-muted">Lanciati diversi progetti aziendali, tra cui campagne Google Ads, integrazioni e convenzioni con corrieri.</p>
+                        </div>
+                        <div id="proj6" class="ev-panel">
+                            <span class="badge bg-success mb-3">Progetto a 360°</span>
+                            <h3>Startup Da Zero</h3>
+                            <p class="fs-5 text-muted">Gestito da zero un progetto freelance. Ecco gli step chiave:</p>
+                            <ul class="list-group list-group-flush mt-3">
+                                <li class="list-group-item bg-transparent border-0"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Ideazione:</strong> Concept, naming, brand identity.</li>
+                                <li class="list-group-item bg-transparent border-0"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Sviluppo Web:</strong> Sito custom HTML/CSS/JS (no template).</li>
+                                <li class="list-group-item bg-transparent border-0"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Contenuti & Email:</strong> Copywriting, Privacy, Brevo automations.</li>
+                                <li class="list-group-item bg-transparent border-0"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Advertising & Track:</strong> Google Ads, Search Console, Analytics.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="risultati" class="profession-section white">
+            <div class="container">
+                <div class="profession-section-title">
+                    <span class="everoo-request-kicker"><i class="bi bi-calculator"></i> I Numeri</span>
+                    <h2>Impatto Concreto: I Risultati</h2>
+                    <p>Le stime dei risultati diretti ottenuti nella chiusura contratti e sviluppo clienti.</p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="metric-card">
+                            <div class="metric-title text-muted">Performance 2022</div>
+                            <div class="metric-value">215k €</div>
+                            <div class="fw-bold mt-2">21% del totale aziendale</div>
+                            <p class="small text-muted mt-2">Ticket medio: 5.1k €<br>Clienti gestiti: 77</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="metric-card" style="border-color: var(--profession-accent); box-shadow: 0 15px 35px rgba(15,76,129,0.1);">
+                            <div class="metric-title text-muted">Performance 2023</div>
+                            <div class="metric-value">351k €</div>
+                            <div class="fw-bold mt-2">27% del totale aziendale</div>
+                            <p class="small text-muted mt-2">Ticket medio: 4.7k €<br>Clienti gestiti: 73</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="metric-card">
+                            <div class="metric-title text-muted">Performance 2024</div>
+                            <div class="metric-value">259k €</div>
+                            <div class="fw-bold mt-2">23% del totale aziendale</div>
+                            <p class="small text-muted mt-2">Ticket medio: 3.8k €<br>Clienti gestiti: 67</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reasons" class="profession-section">
+            <div class="container">
+                <div class="profession-section-title">
+                    <span class="everoo-request-kicker"><i class="bi bi-patch-check"></i> Valore Aggiunto</span>
+                    <h2>6 Reasons Why</h2>
+                    <p>Sono fiducioso di poter apportare un valore significativo. Ecco perché dovreste scegliermi.</p>
+                </div>
+
+                <div class="reasons-track">
+                    <article class="reason-card">
+                        <div class="task-icon"><i class="bi bi-heart-fill"></i></div>
+                        <h3>01. Passione Professionale</h3>
+                        <p>La passione mi spinge a dare sempre il massimo: raggiungo risultati concreti sentendomi coinvolto dal lavoro.</p>
+                    </article>
+                    <article class="reason-card">
+                        <div class="task-icon"><i class="bi bi-chat-quote-fill"></i></div>
+                        <h3>02. Dialogo Strategico</h3>
+                        <p>Ottime capacità comunicative per trasmettere idee in modo chiaro, facilitando la collaborazione.</p>
+                    </article>
+                    <article class="reason-card">
+                        <div class="task-icon"><i class="bi bi-shield-lock-fill"></i></div>
+                        <h3>03. Resilienza Attiva</h3>
+                        <p>Determinato e resiliente: mantengo impegno e motivazione nelle difficoltà, superando i miei limiti.</p>
+                    </article>
+                    <article class="reason-card">
+                        <div class="task-icon"><i class="bi bi-people-fill"></i></div>
+                        <h3>04. Team Player</h3>
+                        <p>Supporto il lavoro di squadra guidando il team verso gli obiettivi comuni, con positività.</p>
+                    </article>
+                    <article class="reason-card">
+                        <div class="task-icon"><i class="bi bi-lightbulb-fill"></i></div>
+                        <h3>05. Visione Innovativa</h3>
+                        <p>Creo soluzioni fuori dagli schemi, esprimendo idee originali e anticipando le tendenze.</p>
+                    </article>
+                    <article class="reason-card">
+                        <div class="task-icon"><i class="bi bi-fire"></i></div>
+                        <h3>06. Dedizione Costante</h3>
+                        <p>Metto il massimo impegno in ogni progetto con l'obiettivo di superare le aspettative.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contatti" class="profession-section white">
+            <div class="container">
+                <div class="lead-box">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-lg-5">
+                            <h2 class="fw-bold" style="font-size: 2.5rem; color: var(--profession-accent);">Fissiamo un colloquio?</h2>
+                            <p class="fs-5 text-muted mt-3 mb-4">Sono pronto a condividere il lato autentico della mia carriera professionale e a valutare nuove sfide.</p>
+                            
+                            <div class="d-flex flex-column gap-3">
+                                <a href="mailto:ida.alessandro@outlook.it" class="btn btn-outline-primary text-start fw-bold p-3" style="border-radius: 12px; background: #fff;"><i class="bi bi-envelope-fill me-2"></i> ida.alessandro@outlook.it</a>
+                                <a href="tel:+393342689942" class="btn btn-outline-primary text-start fw-bold p-3" style="border-radius: 12px; background: #fff;"><i class="bi bi-telephone-fill me-2"></i> +39 334-268-9942</a>
+                                <a href="#" class="btn btn-outline-primary text-start fw-bold p-3" style="border-radius: 12px; background: #fff;"><i class="bi bi-linkedin me-2"></i> Profilo LinkedIn</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="bg-white p-4 p-md-5 rounded-4 border">
+                                <h3 class="mb-4 fw-bold">Invia un messaggio rapido</h3>
+                                <form action="mailto:ida.alessandro@outlook.it" method="POST" enctype="text/plain">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Nome o Azienda" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="email" class="form-control" placeholder="La tua Email" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <textarea class="form-control" rows="4" placeholder="Messaggio"></textarea>
+                                        </div>
+                                        <div class="col-12 mt-4">
+                                            <button type="submit" class="btn btn-primary w-100 py-3 fs-5">Invia Messaggio</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-top py-4 text-center">
+        <div class="container">
+            <p class="mb-0 text-muted fw-bold">© 2026 Alessandro Idà. Tutti i diritti riservati. | Realizzato per GitHub Pages</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Funzione per la gestione delle Tabs "Progetti" (Simile alla piattaforma Everoo)
+        function openTab(tabId) {
+            // Nascondi tutti i pannelli
+            document.querySelectorAll('.ev-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            // Rimuovi lo stato attivo dai bottoni
+            document.querySelectorAll('.ev-menu-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Attiva il pannello e il bottone cliccato
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
