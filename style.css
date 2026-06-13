@@ -1,10 +1,228 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 100px;
-    background: #f5f5f5;
+/* ==========================================================================
+   CSS Globale - Alessandro Idà Portfolio
+   ========================================================================== */
+
+:root {
+    /* Mappatura Colori Brandizzati */
+    --profession-accent: #ea580c;       /* Arancione principale per CTA e risalto */
+    --profession-accent-hover: #c2410c; /* Arancione scuro per hover */
+    --profession-accent-soft: #fff7ed;  /* Sfondo arancione leggerissimo */
+    --profession-text: #0f172a;         /* Blu Navy scuro / Ottanio per i testi */
+    --profession-muted: #475569;        /* Grigio per testi secondari */
+    --profession-bg: #f8fafc;           /* Grigio chiarissimo di sfondo */
+    --profession-border: #e2e8f0;       /* Colore bordi */
 }
 
-h1 {
-    color: #2d7ff9;
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--profession-text);
+    background-color: var(--profession-bg);
+    overflow-x: hidden;
+    padding-top: 80px; /* Compensa la navbar fixed */
+}
+
+/* Utilities del testo */
+.fw-black { font-weight: 900; }
+.text-navy { color: var(--profession-text) !important; }
+.text-primary-custom { color: var(--profession-accent) !important; }
+
+/* ==========================================================================
+   Componenti Base (Bottoni, Badge)
+   ========================================================================== */
+
+.btn-primary {
+    background-color: var(--profession-accent);
+    border-color: var(--profession-accent);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--profession-accent-hover);
+    border-color: var(--profession-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(234, 88, 12, 0.2);
+}
+
+.custom-outline-btn {
+    border-color: var(--profession-accent);
+    color: var(--profession-accent);
+    transition: all 0.3s ease;
+}
+
+.custom-outline-btn:hover {
+    background-color: var(--profession-accent);
+    color: white;
+}
+
+.profession-badge {
+    display: inline-flex;
+    align-items: center;
+    background: var(--profession-accent);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.badge-kicker {
+    display: inline-block;
+    background: var(--profession-accent-soft);
+    color: var(--profession-accent);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(234, 88, 12, 0.2);
+}
+
+/* ==========================================================================
+   Header & Navbar
+   ========================================================================== */
+.header {
+    height: 80px;
+    transition: all 0.3s ease;
+}
+
+.navmenu .active-link {
+    color: var(--profession-accent) !important;
+}
+
+.navmenu a:hover {
+    color: var(--profession-accent) !important;
+    transition: color 0.3s ease;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.profession-hero {
+    padding: 60px 0 80px;
+    background: linear-gradient(164deg, rgba(234, 88, 12, 0.05) 50%, rgba(234, 88, 12, 0.02) 25%, transparent 50%);
+}
+
+.profession-lead {
+    font-size: 1.15rem;
+    color: var(--profession-muted);
+    line-height: 1.7;
+}
+
+/* Pills "Capabilities" T.A.S.K */
+.profession-hero-capabilities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.profession-hero-capability {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 40px;
+    border: 1px solid var(--profession-border);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 9px 16px;
+    color: var(--profession-text);
+    font-size: 0.9rem;
+    font-weight: 800;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.profession-hero-capability i {
+    color: var(--profession-accent);
+    font-size: 1.1rem;
+}
+
+/* Sezione Media (Immagine e Cards Fluttuanti) */
+.profession-hero-media {
+    position: relative;
+    z-index: 1;
+}
+
+.profession-hero-image img {
+    border-radius: 24px;
+    box-shadow: 0 25px 50px rgba(15, 23, 42, 0.1);
+    border: 1px solid var(--profession-border);
+}
+
+.profession-hero-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.profession-hero-float {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid var(--profession-border);
+    border-radius: 16px;
+    padding: 12px 16px;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+    backdrop-filter: blur(5px);
+    z-index: 2;
+    animation: floatAnim 6s ease-in-out infinite;
+}
+
+.profession-hero-float:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.profession-hero-float:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.profession-hero-float strong {
+    color: var(--profession-text);
+    font-size: 0.9rem;
+    font-weight: 800;
+    display: block;
+}
+
+.profession-hero-float small {
+    color: var(--profession-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+@keyframes floatAnim {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ==========================================================================
+   Sezioni Generiche
+   ========================================================================== */
+.profession-section {
+    padding: 90px 0;
+    background: var(--profession-accent-soft);
+}
+
+.profession-section.white {
+    background: #ffffff;
+}
+
+/* Adattamenti Mobile */
+@media (max-width: 991px) {
+    .profession-hero-float {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin-top: 15px;
+        width: 100%;
+        animation: none;
+    }
+    
+    .profession-hero-overlay {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 }
