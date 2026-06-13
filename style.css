@@ -1,306 +1,575 @@
-/* ==========================================================================
-   CSS Globale - Alessandro Idà Portfolio
-   ========================================================================== */
+/* =========================
+   RESET
+========================= */
 
-:root {
-    /* Color Palette Ufficiale */
-    --main-blue: #003f5b;       /* Blu scuro (titoli, testi primari, navbar) */
-    --cyan-blue: #1895b2;       /* Azzurro (icone, hover, accenti leggeri) */
-    --cta-orange: #f9744a;      /* Arancione (solo CTA, highlight, dettagli critici) */
-    
-    /* Sfondi e scale grigi */
-    --soft-cyan: #f2f9fb;       /* Sfondo leggerissimo basato sull'azzurro */
-    --soft-orange: #fff5f2;     /* Sfondo leggerissimo basato sull'arancione */
-    --bg-white: #ffffff;
-    --text-muted: #5e7182;
-    --border-color: #e5edf5;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* ==========================================================================
-   Impostazioni Generali
-   ========================================================================== */
-body {
-    font-family: 'Inter', sans-serif;
-    color: var(--main-blue);
-    background-color: var(--bg-white);
-    overflow-x: hidden;
-    padding-top: 70px;
+html{
+    scroll-behavior:smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', sans-serif;
+body{
+    font-family:'Inter',sans-serif;
+    background:#060816;
+    color:#fff;
+    overflow-x:hidden;
+    line-height:1.7;
 }
 
-.fw-black { font-weight: 900; }
-.text-main-blue { color: var(--main-blue) !important; }
-.text-cyan { color: var(--cyan-blue) !important; }
-.text-cta { color: var(--cta-orange) !important; }
-.text-muted { color: var(--text-muted) !important; }
+/* =========================
+   VARIABLES
+========================= */
 
-.bg-soft-cyan { background-color: var(--soft-cyan) !important; }
-.bg-soft-orange { background-color: var(--soft-orange) !important; }
-.bg-cta { background-color: var(--cta-orange) !important; color: white;}
-.border-cyan { border-color: rgba(24, 149, 178, 0.3) !important; }
+:root{
 
-/* ==========================================================================
-   Componenti (Bottoni, Tag, Badge)
-   ========================================================================== */
-.btn-cta {
-    background-color: var(--cta-orange);
-    border-color: var(--cta-orange);
-    color: #fff;
-    transition: all 0.3s ease;
-}
+    --bg:#060816;
+    --card:#0d1326;
+    --card-light:#121a31;
 
-.btn-cta:hover, .btn-cta:focus {
-    background-color: #e36138;
-    border-color: #e36138;
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 15px rgba(249, 116, 74, 0.25);
-}
+    --border:rgba(255,255,255,.08);
 
-.btn-outline-main {
-    border: 2px solid var(--main-blue);
-    color: var(--main-blue);
-    background: transparent;
-    transition: all 0.3s ease;
+    --primary:#6d5dfe;
+    --secondary:#00d4ff;
+    --accent:#8b5cf6;
+
+    --text:#ffffff;
+    --muted:#9ba3c7;
+
+    --gradient:
+    linear-gradient(
+        135deg,
+        #6d5dfe,
+        #00d4ff
+    );
+
 }
 
-.btn-outline-main:hover {
-    background-color: var(--main-blue);
-    color: white;
-    transform: translateY(-2px);
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
 }
 
-.profession-badge {
-    display: inline-flex;
-    align-items: center;
-    background: var(--soft-cyan);
-    color: var(--main-blue);
-    padding: 8px 18px;
-    border-radius: 50px;
-    font-weight: 800;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
-    border: 1px solid rgba(24, 149, 178, 0.2);
+/* =========================
+   BACKGROUND BLOBS
+========================= */
+
+.gradient-blob{
+    position:fixed;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.15;
+    z-index:-1;
 }
 
-.badge-kicker {
-    display: inline-block;
-    background: var(--soft-orange);
-    color: var(--cta-orange);
-    padding: 6px 14px;
-    border-radius: 50px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.75rem;
+.blob-1{
+    width:500px;
+    height:500px;
+    background:#6d5dfe;
+    top:-200px;
+    left:-150px;
 }
 
-.tag-pill {
-    background-color: var(--soft-cyan);
-    color: var(--main-blue);
-    border: 1px solid rgba(24, 149, 178, 0.2);
-    padding: 6px 14px;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 700;
+.blob-2{
+    width:500px;
+    height:500px;
+    background:#00d4ff;
+    top:200px;
+    right:-200px;
 }
 
-/* ==========================================================================
-   Header & Navbar
-   ========================================================================== */
-.header {
-    height: 75px;
-    transition: all 0.3s ease;
+.blob-3{
+    width:500px;
+    height:500px;
+    background:#8b5cf6;
+    bottom:-250px;
+    left:35%;
 }
 
-.navmenu a {
-    color: var(--text-muted);
-    transition: color 0.3s ease;
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:999;
+
+    backdrop-filter:blur(20px);
+
+    background:
+    rgba(6,8,22,.65);
+
+    border-bottom:
+    1px solid rgba(255,255,255,.05);
 }
 
-.navmenu .active-link {
-    color: var(--main-blue) !important;
+.navbar .container{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    height:85px;
 }
 
-.navmenu a:hover {
-    color: var(--cyan-blue) !important;
+.logo{
+
+    text-decoration:none;
+    color:white;
+
+    font-size:1.2rem;
+    font-weight:800;
 }
 
-/* ==========================================================================
-   Hero Section & Floating Cards
-   ========================================================================== */
-.profession-hero {
-    padding: 60px 0 80px;
+nav{
+    display:flex;
+    gap:35px;
 }
 
-.profession-hero::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: radial-gradient(circle at right, var(--soft-cyan) 0%, transparent 60%);
-    z-index: -1;
+nav a{
+
+    color:#d7dcf2;
+    text-decoration:none;
+    font-weight:500;
+
+    transition:.3s;
 }
 
-.profession-lead {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    line-height: 1.6;
+nav a:hover{
+    color:white;
 }
 
-.profession-hero-media {
-    position: relative;
-    z-index: 1;
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-primary{
+
+    background:var(--gradient);
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:16px 30px;
+
+    border-radius:14px;
+
+    font-weight:700;
+
+    transition:.4s;
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    box-shadow:
+    0 10px 40px rgba(109,93,254,.35);
 }
 
-.profession-hero-image img {
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 63, 91, 0.08);
+.btn-primary:hover{
+
+    transform:
+    translateY(-5px);
+
+    box-shadow:
+    0 20px 50px rgba(109,93,254,.5);
 }
 
-.profession-hero-overlay {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
+.btn-secondary{
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:16px 30px;
+
+    border-radius:14px;
+
+    transition:.3s;
 }
 
-.profession-hero-float {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid var(--border-color);
-    border-radius: 14px;
-    padding: 10px 18px;
-    box-shadow: 0 12px 24px rgba(0, 63, 91, 0.06);
-    backdrop-filter: blur(5px);
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    animation: floatAnim 5s ease-in-out infinite;
+.btn-secondary:hover{
+
+    background:
+    rgba(255,255,255,.05);
 }
 
-.profession-hero-float:nth-child(2) {
-    animation-delay: 2s;
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
 }
 
-.profession-hero-float strong {
-    color: var(--main-blue);
-    font-size: 0.9rem;
-    font-weight: 800;
-    display: block;
-    line-height: 1.2;
+.hero .container{
+
+    max-width:1000px;
 }
 
-.profession-hero-float small {
-    color: var(--text-muted);
-    font-size: 0.75rem;
-    font-weight: 600;
+.hero-badge{
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    border-radius:999px;
+
+    background:
+    rgba(255,255,255,.05);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    color:#9ba3c7;
+
+    font-size:.85rem;
+
+    margin-bottom:30px;
 }
 
-@keyframes floatAnim {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+.hero h1{
+
+    font-size:6rem;
+
+    line-height:1.05;
+
+    font-weight:900;
+
+    letter-spacing:-4px;
+
+    margin-bottom:30px;
 }
 
-/* ==========================================================================
-   Layout Sezioni e Cards (Chi Sono, Task, Progetti)
-   ========================================================================== */
-.profession-section {
-    padding: 90px 0;
+.hero h1 span{
+
+    display:block;
+
+    background:var(--gradient);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
-.profession-card {
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.hero-description{
+
+    font-size:1.25rem;
+
+    max-width:800px;
+
+    margin:auto;
+
+    color:var(--muted);
+
+    margin-bottom:45px;
 }
 
-.profession-card:hover {
-    box-shadow: 0 12px 24px rgba(0, 63, 91, 0.05);
+.hero-buttons{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+
+    margin-bottom:70px;
 }
 
-.icon-box {
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    font-size: 1.3rem;
+/* =========================
+   HERO STATS
+========================= */
+
+.hero-stats{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:25px;
 }
 
-/* TASK Cards */
-.task-card {
-    background: var(--bg-white);
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    height: 100%;
-    transition: all 0.3s ease;
-}
-.task-card:hover {
-    border-color: rgba(24, 149, 178, 0.4);
-    box-shadow: 0 10px 25px rgba(24, 149, 178, 0.08);
-    transform: translateY(-5px);
-}
-.task-letter {
-    font-size: 3.5rem;
-    font-weight: 900;
-    line-height: 1;
-    opacity: 0.8;
+.stat-card{
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:
+    1px solid rgba(255,255,255,.07);
+
+    backdrop-filter:
+    blur(20px);
+
+    padding:30px;
+
+    border-radius:22px;
+
+    transition:.4s;
 }
 
-/* Progetti Cards */
-.project-card {
-    display: block;
-    background: var(--bg-white);
-    border: 1px solid var(--border-color);
-    border-radius: 18px;
-    padding: 24px;
-    height: 100%;
-    transition: all 0.3s ease;
+.stat-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    border-color:
+    rgba(109,93,254,.4);
 }
 
-.project-card:hover {
-    border-color: var(--cyan-blue);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 63, 91, 0.06);
+.stat-card h3{
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+
+    color:#fff;
 }
 
-.project-icon {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 14px;
-    font-size: 1.5rem;
+.stat-card p{
+
+    color:var(--muted);
 }
 
-/* Risultati Row */
-.result-row {
-    transition: transform 0.3s ease;
-}
-.result-row:hover {
-    transform: translateX(10px);
+/* =========================
+   SECTIONS
+========================= */
+
+.section{
+    padding:140px 0;
 }
 
-/* ==========================================================================
-   Media Queries (Responsive)
-   ========================================================================== */
-@media (max-width: 991px) {
-    .profession-hero-float {
-        position: relative;
-        top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
-        margin-top: 15px; width: 100%;
-        animation: none;
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:80px;
+}
+
+.section-title span{
+
+    color:#00d4ff;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:.8rem;
+}
+
+.section-title h2{
+
+    font-size:3rem;
+
+    margin-top:15px;
+
+    margin-bottom:20px;
+}
+
+.section-title p{
+
+    color:var(--muted);
+
+    max-width:800px;
+
+    margin:auto;
+}
+
+.dark-section{
+
+    background:
+    rgba(255,255,255,.015);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.glass-card,
+.skill-card,
+.task-card,
+.project-card{
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:
+    1px solid rgba(255,255,255,.07);
+
+    backdrop-filter:
+    blur(20px);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    transition:.4s;
+}
+
+.glass-card:hover,
+.skill-card:hover,
+.task-card:hover,
+.project-card:hover{
+
+    transform:
+    translateY(-12px);
+
+    border-color:
+    rgba(109,93,254,.35);
+
+    box-shadow:
+    0 25px 60px rgba(109,93,254,.12);
+}
+
+.glass-card i,
+.skill-card i{
+
+    font-size:2rem;
+
+    color:#00d4ff;
+
+    margin-bottom:20px;
+}
+
+.glass-card h3,
+.skill-card h3,
+.task-card h3,
+.project-card h3{
+
+    margin-bottom:15px;
+}
+
+/* =========================
+   GRIDS
+========================= */
+
+.grid-3{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:30px;
+}
+
+.skills-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:30px;
+}
+
+.task-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:25px;
+}
+
+.projects-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:30px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+    .hero h1{
+        font-size:4.5rem;
     }
-    .profession-hero-overlay {
-        position: relative;
-        display: flex; flex-direction: column; gap: 10px; margin-top: 20px;
+
+    .task-grid{
+        grid-template-columns:
+        repeat(2,1fr);
     }
-    .profession-section {
-        padding: 60px 0;
+
+}
+
+@media(max-width:900px){
+
+    nav{
+        display:none;
     }
+
+    .hero h1{
+        font-size:3.5rem;
+    }
+
+    .hero-stats{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .grid-3,
+    .skills-grid,
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero{
+        padding-top:120px;
+    }
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+    }
+
+    .hero-stats{
+
+        grid-template-columns:1fr;
+    }
+
+    .task-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .section{
+
+        padding:90px 0;
+    }
+
 }
