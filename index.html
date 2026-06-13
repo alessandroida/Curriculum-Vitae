@@ -4,297 +4,103 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Alessandro Idà | Sales Manager & Project Developer</title>
-    <meta name="description" content="Dietro le quinte della mia crescita. Il portfolio di Alessandro Idà.">
-    <meta name="robots" content="index, follow">
+    <meta name="description" content="Portfolio di Alessandro Idà: Sales Manager, Key Account e Project Developer. Scopri i miei progetti, le mie skill e il mio approccio operativo.">
     
-    <meta name="theme-color" content="#0f4c81">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Inter:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
     
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Librerie CSS (Bootstrap, Bootstrap Icons, AOS per animazioni) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <style>
-        /* === VARIABILI DI TEMA (Corporate Navy) === */
-        :root {
-            --cv-bg: #f8faff;
-            --cv-card: #ffffff;
-            --cv-text: #12253c;
-            --cv-muted: #52606f;
-            --cv-border: #d9e6f5;
-            --cv-accent: #0f4c81;
-            --cv-accent-soft: #eaf2fa;
-            --cv-accent-hover: #0c3e6a;
-            --cv-highlight: #eaf4ff;
-            --cv-blue-bright: #0b7ff0;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--cv-bg);
-            color: var(--cv-text);
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        a { text-decoration: none; transition: all 0.3s ease; }
-
-        /* === NAVBAR (Stile Blur Moderno) === */
-        .header {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--cv-border);
-            padding: 16px 0;
-            transition: all 0.3s ease;
-        }
-        .logo-text {
-            font-size: 1.4rem;
-            font-weight: 900;
-            color: var(--cv-text);
-            letter-spacing: -0.5px;
-        }
-        .logo-text span { color: var(--cv-blue-bright); }
-        .navmenu ul { list-style: none; padding: 0; margin: 0; display: flex; align-items: center; gap: 24px; }
-        .navmenu a { color: var(--cv-muted); font-weight: 600; font-size: 0.95rem; }
-        .navmenu a:hover, .navmenu a.active { color: var(--cv-accent); font-weight: 700; }
-
-        /* === BOTTONI WOW === */
-        .btn-cv-primary {
-            background: var(--cv-accent);
-            color: #fff;
-            border: none;
-            border-radius: 999px;
-            padding: 12px 28px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            box-shadow: 0 10px 24px rgba(15, 76, 129, 0.2);
-            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-        }
-        .btn-cv-primary:hover {
-            background: var(--cv-accent-hover);
-            color: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 14px 32px rgba(15, 76, 129, 0.3);
-        }
-        .btn-cv-outline {
-            background: transparent;
-            color: var(--cv-accent);
-            border: 2px solid var(--cv-border);
-            border-radius: 999px;
-            padding: 10px 26px;
-            font-weight: 700;
-            transition: all 0.2s;
-        }
-        .btn-cv-outline:hover {
-            border-color: var(--cv-accent);
-            background: var(--cv-accent-soft);
-            color: var(--cv-accent);
-        }
-
-        /* === HERO SECTION (Floating Elements) === */
-        .hero-section {
-            padding: 160px 0 60px;
-            background: radial-gradient(circle at top left, #ffffff 0%, var(--cv-bg) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .cv-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 16px;
-            background: var(--cv-highlight);
-            color: var(--cv-blue-bright);
-            border-radius: 999px;
-            font-weight: 800;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 24px;
-        }
-        .hero-title {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 900;
-            line-height: 1.1;
-            letter-spacing: -1.5px;
-            margin-bottom: 24px;
-            color: var(--cv-text);
-        }
-        .hero-lead {
-            font-size: 1.15rem;
-            color: var(--cv-muted);
-            margin-bottom: 32px;
-            max-width: 600px;
-        }
-
-        /* Hero Image & Floating Cards */
-        .hero-media-wrapper { position: relative; width: 100%; max-width: 500px; margin: 0 auto; z-index: 1;}
-        .hero-main-img {
-            width: 100%;
-            aspect-ratio: 4/5;
-            object-fit: cover;
-            border-radius: 28px;
-            border: 1px solid var(--cv-border);
-            box-shadow: 0 24px 64px rgba(15, 76, 129, 0.12);
-        }
-        .float-card {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--cv-border);
-            border-radius: 18px;
-            padding: 16px 20px;
-            box-shadow: 0 16px 40px rgba(0,0,0,0.08);
-            z-index: 2;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            animation: float 5s ease-in-out infinite;
-        }
-        .float-1 { top: 10%; left: -15%; animation-delay: 0s; }
-        .float-2 { bottom: 15%; right: -10%; animation-delay: -2s; flex-direction: row-reverse; text-align: right;}
-        
-        .float-card .icon-box {
-            width: 40px; height: 40px; border-radius: 12px;
-            background: var(--cv-highlight); color: var(--cv-blue-bright);
-            display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
-        }
-        .float-card strong { display: block; font-size: 0.9rem; line-height: 1.2; color: var(--cv-text); }
-        .float-card small { color: var(--cv-muted); font-size: 0.75rem; font-weight: 600;}
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-12px); }
-        }
-
-        /* === SEZIONI WOW === */
-        .section-padding { padding: 100px 0; }
-        .bg-white-section { background: var(--cv-card); border-top: 1px solid var(--cv-border); border-bottom: 1px solid var(--cv-border); }
-        
-        .section-header { margin-bottom: 50px; }
-        .section-header h2 { font-size: clamp(2rem, 3vw, 2.5rem); font-weight: 900; letter-spacing: -0.5px; }
-        .section-header p { color: var(--cv-muted); font-size: 1.1rem; max-width: 700px; }
-
-        /* Card Mission/Vision */
-        .identity-card {
-            background: var(--cv-card);
-            border: 1px solid var(--cv-border);
-            border-radius: 24px;
-            padding: 32px;
-            height: 100%;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .identity-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--cv-blue-bright);
-            box-shadow: 0 20px 40px rgba(11, 127, 240, 0.08);
-        }
-        .identity-icon {
-            width: 54px; height: 54px; border-radius: 16px;
-            background: var(--cv-accent-soft); color: var(--cv-accent);
-            display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
-            margin-bottom: 24px;
-        }
-        .identity-card h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 12px; }
-        .identity-card p { color: var(--cv-muted); font-size: 0.95rem; margin: 0; }
-
-        /* Skills Chips */
-        .skills-container { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-        .skill-chip {
-            display: inline-flex; align-items: center; gap: 8px;
-            background: var(--cv-card); border: 1px solid var(--cv-border);
-            padding: 10px 18px; border-radius: 999px;
-            font-weight: 700; font-size: 0.9rem; color: var(--cv-text);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-            transition: all 0.2s;
-        }
-        .skill-chip i { color: var(--cv-blue-bright); font-size: 1.1rem; }
-        .skill-chip:hover { border-color: var(--cv-blue-bright); transform: translateY(-2px); }
-
-        /* Teaser Progetti (Layout Asimmetrico) */
-        .project-teaser {
-            background: var(--cv-accent-soft);
-            border-radius: 28px;
-            padding: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 30px;
-            border: 1px solid var(--cv-border);
-        }
-        .project-teaser-content h3 { font-weight: 900; font-size: 1.8rem; }
-        .project-teaser-content p { color: var(--cv-muted); font-size: 1rem; max-width: 500px; margin: 0;}
-        .project-stats { display: flex; gap: 20px; }
-        .stat-item { background: #fff; padding: 16px 24px; border-radius: 16px; border: 1px solid var(--cv-border); text-align: center; }
-        .stat-item strong { display: block; font-size: 1.8rem; font-weight: 900; color: var(--cv-accent); line-height: 1; }
-        .stat-item span { font-size: 0.8rem; color: var(--cv-muted); font-weight: 700; text-transform: uppercase; }
-
-        /* Footer */
-        .cv-footer { background: var(--cv-card); padding: 40px 0; border-top: 1px solid var(--cv-border); text-align: center; }
-
-        @media (max-width: 991px) {
-            .float-1, .float-2 { display: none; /* Nascondi card fluttuanti su mobile per pulizia */ }
-            .hero-section { padding-top: 120px; text-align: center; }
-            .hero-lead { margin: 0 auto 32px; }
-            .project-teaser { flex-direction: column; text-align: center; }
-            .project-teaser-content p { margin: 0 auto; }
-            .project-stats { width: 100%; justify-content: center; }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- CSS Custom -->
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
-<body>
 
-    <header class="header fixed-top">
-        <div class="container d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo-text">Alessandro<span>Idà.</span></a>
-            
-            <nav class="navmenu d-none d-lg-block">
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="progetti.html">Progetti</a></li>
-                    <li><a href="risultati.html">Risultati & Approccio</a></li>
+<body class="index-page profession-page">
+
+    <!-- HEADER & NAVBAR -->
+    <header id="header" class="header d-flex align-items-center fixed-top bg-white shadow-sm">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo text-decoration-none">
+                <span class="fw-bolder" style="font-size: 1.5rem; color: var(--profession-text);">Alessandro Idà</span>
+            </a>
+
+            <nav id="navmenu" class="navmenu d-none d-xl-flex">
+                <ul class="d-flex list-unstyled m-0 gap-4 align-items-center fw-semibold">
+                    <li><a href="index.html" class="text-decoration-none active-link">Home</a></li>
+                    <li><a href="chi-sono.html" class="text-decoration-none text-dark">Chi Sono & Skills</a></li>
+                    <li><a href="progetti.html" class="text-decoration-none text-dark">Progetti</a></li>
+                    <li><a href="risultati.html" class="text-decoration-none text-dark">Risultati</a></li>
+                    <li><a href="contatti.html" class="text-decoration-none text-dark">Contatti</a></li>
                 </ul>
             </nav>
 
-            <a href="#contatti" class="btn-cv-primary d-none d-md-block">Contattami</a>
+            <a class="btn btn-primary btn-getstarted rounded-pill fw-bold px-4 py-2 d-none d-md-block" target="_blank" href="Dietro_le_quinte_Il_backstage_della_mia_crescita.pdf">
+                Scarica Pitch
+            </a>
+            
+            <!-- Menu Hamburger Mobile -->
+            <i class="bi bi-list d-xl-none fs-1"></i>
         </div>
     </header>
 
-    <main>
-        <section class="hero-section">
+    <main class="main">
+        <!-- HERO SECTION -->
+        <section class="profession-hero">
             <div class="container">
                 <div class="row g-5 align-items-center">
-                    <div class="col-lg-6">
-                        <span class="cv-badge"><i class="bi bi-person-workspace"></i> Sales Manager | Key Account | Project Developer [cite: 5]</span>
-                        <h1 class="hero-title">Dietro le quinte della mia crescita.</h1>
-                        <p class="hero-lead">
-                            Sono un giovane e intraprendente professionista, pronto a condividere il lato autentico della mia carriera[cite: 12]. Traduco la complessità in soluzioni efficaci[cite: 17].
+                    <!-- Colonna Testo -->
+                    <div class="col-lg-7" data-aos="fade-right">
+                        <span class="profession-badge">
+                            <i class="bi bi-person-workspace me-2"></i> Sales Manager | Key Account | Project Developer
+                        </span>
+                        
+                        <h1 class="display-4 fw-black mt-3 mb-4 text-navy">
+                            Tradurre la complessità in soluzioni efficaci.
+                        </h1>
+                        
+                        <p class="profession-lead">
+                            Sono un professionista intraprendente, pronto a condividere il lato autentico della mia carriera. Dietro ogni risultato c'è analisi, creatività e un impegno costante. Benvenuti dietro le quinte del mio percorso.
                         </p>
-                        <div class="d-flex flex-wrap gap-3">
-                            <a href="progetti.html" class="btn-cv-primary">Esplora i miei progetti <i class="bi bi-arrow-right ms-2"></i></a>
-                            <a href="risultati.html" class="btn-cv-outline">Vedi i risultati</a>
+                        
+                        <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+                            <a href="progetti.html" class="btn btn-primary rounded-pill fw-bold px-4 py-3">Scopri i miei progetti <i class="bi bi-arrow-right ms-2"></i></a>
+                            <a href="contatti.html" class="btn btn-outline-dark rounded-pill fw-bold px-4 py-3">Contattami</a>
+                        </div>
+                        
+                        <!-- Competenze Core -->
+                        <div class="profession-hero-capabilities mt-5">
+                            <span class="profession-hero-capability"><i class="bi bi-book"></i> Training</span>
+                            <span class="profession-hero-capability"><i class="bi bi-person-lines-fill"></i> Account Manager</span>
+                            <span class="profession-hero-capability"><i class="bi bi-graph-up-arrow"></i> Sales</span>
+                            <span class="profession-hero-capability"><i class="bi bi-star-fill"></i> Key Leader</span>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="hero-media-wrapper">
-                            <img src="https://via.placeholder.com/500x600/0f4c81/ffffff?text=La+Tua+Foto+Professionale" alt="Alessandro Idà" class="hero-main-img">
+                    
+                    <!-- Colonna Immagine & Floating Cards -->
+                    <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
+                        <div class="profession-hero-media">
+                            <div class="profession-hero-image">
+                                <!-- Inserisci qui il link alla tua foto professionale del CV -->
+                                <img src="https://via.placeholder.com/600x750/12253c/ffffff?text=Foto+Alessandro" alt="Alessandro Idà" class="img-fluid">
+                            </div>
                             
                             <div class="profession-hero-overlay">
-                                <article class="float-card float-1">
-                                    <div class="icon-box"><i class="bi bi-bar-chart-line-fill"></i></div>
-                                    <div>
-                                        <strong>+215k € Fatturato</strong>
-                                        <small>Risultato diretto (2022)</small>
-                                    </div>
+                                <article class="profession-hero-float" style="top: 10%; left: -10%;">
+                                    <strong>Algoritmo Strategico</strong>
+                                    <small>Gestite 10.000+ combinazioni</small>
                                 </article>
-                                <article class="float-card float-2">
-                                    <div class="icon-box"><i class="bi bi-lightbulb-fill"></i></div>
-                                    <div>
-                                        <strong>Startup da zero</strong>
-                                        <small>Dall'idea all'impresa</small>
-                                    </div>
+                                
+                                <article class="profession-hero-float" style="top: 45%; right: -5%;">
+                                    <strong>CRM Custom</strong>
+                                    <small>Oltre 80 fogli connessi</small>
+                                </article>
+                                
+                                <article class="profession-hero-float" style="bottom: 10%; left: 5%;">
+                                    <strong>Gestione Clienti</strong>
+                                    <small>Portafoglio di 70+ clienti attivi</small>
                                 </article>
                             </div>
                         </div>
@@ -303,103 +109,77 @@
             </div>
         </section>
 
-        <section class="section-padding bg-white-section">
-            <div class="container">
-                <div class="section-header text-center mx-auto">
-                    <span class="cv-badge"><i class="bi bi-fingerprint"></i> La mia identità</span>
-                    <h2>Cosa mi guida ogni giorno</h2>
-                    <p class="mx-auto">Non mi limito a eseguire task. Ogni progetto è un'opportunità per creare valore e lasciare un'impronta positiva[cite: 20].</p>
-                </div>
-
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="identity-card">
-                            <div class="identity-icon"><i class="bi bi-bullseye"></i></div>
-                            <h3>La Mission</h3>
-                            <p>Tradurre la complessità in soluzioni efficaci. La mia missione è creare un impatto reale attraverso l'analisi, la creatività e l'impegno costante[cite: 17].</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="identity-card">
-                            <div class="identity-icon"><i class="bi bi-eye-fill"></i></div>
-                            <h3>La Vision</h3>
-                            <p>Essere riconosciuto come un professionista capace di fare la differenza[cite: 19]. Voglio fornire un contributo incisivo al team e apportare valore aggiunto[cite: 248].</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="identity-card">
-                            <div class="identity-icon"><i class="bi bi-building-check"></i></div>
-                            <h3>Contesto Ideale</h3>
-                            <p>Cerco realtà dove trovino spazio marketing, vendita, tecnologia o progetti ambiziosi, in un contesto stimolante e orientato alla crescita[cite: 22].</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-padding">
-            <div class="container">
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-5">
-                        <span class="cv-badge"><i class="bi bi-tools"></i> Hard & Soft Skills</span>
-                        <h2>L'unione fa la forza</h2>
-                        <p class="hero-lead mb-0">
-                            Unisco competenze tecniche e soft skills per affrontare sfide complesse, collaborare in team e contribuire concretamente alla crescita aziendale[cite: 25].
+        <!-- INTRO "CHI SONO" SECTION -->
+        <section class="profession-section text-center">
+            <div class="container" data-aos="fade-up">
+                <span class="badge-kicker mb-3">Dietro le quinte</span>
+                <h2 class="fw-black text-navy mb-4 display-6">Chi sono e come lavoro</h2>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <p class="fs-5 text-muted mb-5" style="line-height: 1.8;">
+                            Cerco realtà stimolanti dove trovino spazio marketing, vendita e tecnologia. Unisco una solida attitudine commerciale a competenze tecniche trasversali, che mi permettono di gestire con successo ecosistemi digitali e protocolli avanzati di trasferimento dati. E nel tempo libero? Mi trovi su un campo da tennis ad allenarmi per la prossima partita, oppure a pianificare in modo strategico e minuzioso la logistica del mio prossimo viaggio: la resilienza, l'organizzazione e la voglia di mettermi in gioco sono parte del mio DNA.
                         </p>
-                        <div class="mt-4">
-                            <a href="risultati.html#task" class="btn-cv-outline">Scopri il Metodo T.A.S.K.</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="skills-container">
-                            <span class="skill-chip"><i class="bi bi-lightning-charge-fill"></i> Agilità mentale [cite: 28]</span>
-                            <span class="skill-chip"><i class="bi bi-chat-quote-fill"></i> Apertura al feedback [cite: 29]</span>
-                            <span class="skill-chip"><i class="bi bi-diagram-3-fill"></i> Pensiero critico [cite: 30]</span>
-                            <span class="skill-chip"><i class="bi bi-currency-euro"></i> Attitudine commerciale [cite: 34]</span>
-                            <span class="skill-chip"><i class="bi bi-people-fill"></i> Leadership coinvolgente [cite: 37]</span>
-                            <span class="skill-chip"><i class="bi bi-briefcase-fill"></i> Portafoglio clienti [cite: 39]</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-padding bg-white-section">
-            <div class="container">
-                <div class="project-teaser">
-                    <div class="project-teaser-content">
-                        <span class="cv-badge"><i class="bi bi-rocket-takeoff-fill"></i> Ideare. Sviluppare. Realizzare.</span>
-                        <h3>Dall'idea al risultato [cite: 169]</h3>
-                        <p class="mt-2 mb-4">Ho avuto molte opportunità di dare spazio alle mie idee, dando vita a progetti ambiziosi e innovativi gestiti dall'ideazione alla realizzazione[cite: 173].</p>
-                        <a href="progetti.html" class="btn-cv-primary">Sfoglia il mio Portfolio <i class="bi bi-arrow-right ms-2"></i></a>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat-item">
-                            <strong>6+</strong>
-                            <span>Progetti Chiave</span>
-                        </div>
-                        <div class="stat-item">
-                            <strong>1</strong>
-                            <span>Startup da zero [cite: 106]</span>
-                        </div>
+                        
+                        <a href="chi-sono.html" class="btn btn-outline-primary rounded-pill fw-bold px-4 py-2 custom-outline-btn">
+                            Scopri il mio approccio T.A.S.K.
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="cv-footer" id="contatti">
+    <!-- FOOTER GLOBALE -->
+    <footer id="footer" class="footer py-5 border-top">
         <div class="container">
-            <h3 class="fw-bold mb-4" style="color: var(--cv-accent);">Creiamo valore insieme?</h3>
-            <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
-                <a href="mailto:ida.alessandro@outlook.it" class="btn-cv-outline"><i class="bi bi-envelope-fill me-2"></i>ida.alessandro@outlook.it [cite: 311]</a>
-                <a href="tel:+393342689942" class="btn-cv-outline"><i class="bi bi-telephone-fill me-2"></i>+39 334-268-9942 [cite: 310]</a>
-                <a href="#" class="btn-cv-outline"><i class="bi bi-linkedin me-2"></i>LinkedIn [cite: 312]</a>
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <a href="index.html" class="logo text-decoration-none mb-3 d-block">
+                        <span class="fw-bolder fs-4 text-navy">Alessandro Idà</span>
+                    </a>
+                    <p class="text-muted">Sales Manager, Key Account e Project Developer. Tradurre la complessità in soluzioni efficaci è la mia missione.</p>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold text-navy mb-3">Navigazione</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="chi-sono.html" class="text-decoration-none text-muted">Chi Siamo & Skills</a></li>
+                        <li><a href="progetti.html" class="text-decoration-none text-muted">I miei Progetti</a></li>
+                        <li><a href="risultati.html" class="text-decoration-none text-muted">Risultati</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold text-navy mb-3">Contatti</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2 text-muted">
+                        <li><i class="bi bi-geo-alt-fill me-2 text-primary-custom"></i> Lombardia, Italia</li>
+                        <li><i class="bi bi-telephone-fill me-2 text-primary-custom"></i> +39 334-268-9942</li>
+                        <li><i class="bi bi-envelope-fill me-2 text-primary-custom"></i> ida.alessandro@outlook.it</li>
+                    </ul>
+                    <div class="social-links d-flex gap-3 mt-3">
+                        <a href="#" class="btn btn-light rounded-circle"><i class="bi bi-linkedin text-navy"></i></a>
+                        <a href="#" class="btn btn-light rounded-circle"><i class="bi bi-whatsapp text-navy"></i></a>
+                    </div>
+                </div>
             </div>
-            <p class="text-muted small mb-0">© 2026 Alessandro Idà. Tutti i diritti riservati.</p>
+            
+            <div class="text-center mt-5 pt-4 border-top text-muted small">
+                <p>&copy; 2026 Alessandro Idà. Tutti i diritti riservati.</p>
+            </div>
         </div>
     </footer>
 
+    <!-- Script Librerie -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inizializzazione Animazioni
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50
+        });
+    </script>
 </body>
 </html>
