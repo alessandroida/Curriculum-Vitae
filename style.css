@@ -3,16 +3,19 @@
    ========================================================================== */
 
 :root {
-    /* Mappatura Colori Brandizzati */
+    /* Colori Brandizzati (Arancione, Blu scuro, Ottanio) */
     --profession-accent: #ea580c;       /* Arancione principale per CTA e risalto */
     --profession-accent-hover: #c2410c; /* Arancione scuro per hover */
-    --profession-accent-soft: #fff7ed;  /* Sfondo arancione leggerissimo */
-    --profession-text: #0f172a;         /* Blu Navy scuro / Ottanio per i testi */
-    --profession-muted: #475569;        /* Grigio per testi secondari */
-    --profession-bg: #f8fafc;           /* Grigio chiarissimo di sfondo */
+    --profession-accent-soft: #fff7ed;  /* Sfondo arancione leggerissimo (soft) */
+    --profession-text: #0f172a;         /* Blu Navy scuro / Ottanio per i testi primari */
+    --profession-muted: #475569;        /* Grigio scuro per testi secondari */
+    --profession-bg: #f8fafc;           /* Grigio chiarissimo di sfondo globale */
     --profession-border: #e2e8f0;       /* Colore bordi */
 }
 
+/* ==========================================================================
+   Impostazioni Generali
+   ========================================================================== */
 body {
     font-family: 'Inter', sans-serif;
     color: var(--profession-text);
@@ -21,15 +24,20 @@ body {
     padding-top: 80px; /* Compensa la navbar fixed */
 }
 
-/* Utilities del testo */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Utilities personalizzate */
 .fw-black { font-weight: 900; }
 .text-navy { color: var(--profession-text) !important; }
 .text-primary-custom { color: var(--profession-accent) !important; }
+.bg-primary-soft { background-color: var(--profession-accent-soft) !important; }
+.bg-primary-custom { background-color: var(--profession-accent) !important; color: #fff;}
 
 /* ==========================================================================
-   Componenti Base (Bottoni, Badge)
+   Componenti (Bottoni, Badge, Card)
    ========================================================================== */
-
 .btn-primary {
     background-color: var(--profession-accent);
     border-color: var(--profession-accent);
@@ -44,15 +52,16 @@ body {
     box-shadow: 0 10px 20px rgba(234, 88, 12, 0.2);
 }
 
-.custom-outline-btn {
-    border-color: var(--profession-accent);
-    color: var(--profession-accent);
+.btn-outline-dark {
+    border-color: var(--profession-text);
+    color: var(--profession-text);
     transition: all 0.3s ease;
 }
 
-.custom-outline-btn:hover {
-    background-color: var(--profession-accent);
-    color: white;
+.btn-outline-dark:hover {
+    background-color: var(--profession-text);
+    color: #fff;
+    transform: translateY(-2px);
 }
 
 .profession-badge {
@@ -80,6 +89,22 @@ body {
     border: 1px solid rgba(234, 88, 12, 0.2);
 }
 
+.profession-card {
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profession-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.08) !important;
+}
+
+.profession-card.soft {
+    background-color: var(--profession-accent-soft);
+    padding: 2rem;
+    border: 1px solid var(--profession-border);
+}
+
 /* ==========================================================================
    Header & Navbar
    ========================================================================== */
@@ -101,7 +126,7 @@ body {
    Hero Section
    ========================================================================== */
 .profession-hero {
-    padding: 60px 0 80px;
+    padding: 80px 0 100px;
     background: linear-gradient(164deg, rgba(234, 88, 12, 0.05) 50%, rgba(234, 88, 12, 0.02) 25%, transparent 50%);
 }
 
@@ -111,7 +136,7 @@ body {
     line-height: 1.7;
 }
 
-/* Pills "Capabilities" T.A.S.K */
+/* Pills Delle Competenze */
 .profession-hero-capabilities {
     display: flex;
     flex-wrap: wrap;
@@ -138,7 +163,7 @@ body {
     font-size: 1.1rem;
 }
 
-/* Sezione Media (Immagine e Cards Fluttuanti) */
+/* Hero Media (Immagine e Card Fluttuanti) */
 .profession-hero-media {
     position: relative;
     z-index: 1;
@@ -148,6 +173,7 @@ body {
     border-radius: 24px;
     box-shadow: 0 25px 50px rgba(15, 23, 42, 0.1);
     border: 1px solid var(--profession-border);
+    width: 100%;
 }
 
 .profession-hero-overlay {
@@ -198,16 +224,23 @@ body {
    Sezioni Generiche
    ========================================================================== */
 .profession-section {
-    padding: 90px 0;
-    background: var(--profession-accent-soft);
+    padding: 100px 0;
 }
 
-.profession-section.white {
-    background: #ffffff;
+/* Sovrascrivi il colore di focus sugli input del form */
+.form-control:focus {
+    border-color: var(--profession-accent);
+    box-shadow: 0 0 0 0.25rem rgba(234, 88, 12, 0.25);
 }
 
-/* Adattamenti Mobile */
+/* ==========================================================================
+   Media Queries (Responsive)
+   ========================================================================== */
 @media (max-width: 991px) {
+    .profession-hero {
+        padding-top: 40px;
+    }
+    
     .profession-hero-float {
         position: relative;
         top: auto !important;
@@ -216,7 +249,7 @@ body {
         bottom: auto !important;
         margin-top: 15px;
         width: 100%;
-        animation: none;
+        animation: none; /* Disattiva animazione su mobile per non sfasare layout */
     }
     
     .profession-hero-overlay {
@@ -224,5 +257,6 @@ body {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        margin-top: 20px;
     }
 }
