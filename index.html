@@ -1,349 +1,624 @@
-<!DOCTYPE html>
-<html lang="it">
-
+<!DOCTYPE html><html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alessandro Idà | Sales Manager & Project Developer</title>
-
-    <meta name="description"
-        content="Portfolio professionale di Alessandro Idà. Sales Manager, Key Account Manager e Project Developer.">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Alessandro Idà | Dietro Le Quinte della mia Crescita</title>
+    <meta name="description" content="Portfolio e CV di Alessandro Idà - Sales Manager, Key Account e Project Developer. Scopri i progetti, le metriche e le competenze commerciali di alto livello.">
+    
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+    <link href="style.css" rel="stylesheet">
 </head>
+<body class="portfolio-page">
 
-<body>
-
-    <!-- BACKGROUND EFFECTS -->
-    <div class="gradient-blob blob-1"></div>
-    <div class="gradient-blob blob-2"></div>
-    <div class="gradient-blob blob-3"></div>
-
-    <!-- NAVBAR -->
-
-    <header class="navbar">
-
-        <div class="container">
-
-            <a href="#" class="logo">
-                Alessandro Idà
+    <header id="header" class="fixed-top">
+        <div class="header-container">
+            <a href="#hero" class="logo-text">
+                AI<span>.</span>
             </a>
-
-            <nav>
-                <a href="#chi-sono">Chi Sono</a>
-                <a href="#skills">Skills</a>
-                <a href="#progetti">Progetti</a>
-                <a href="#risultati">Risultati</a>
-                <a href="#contatti">Contatti</a>
+            <nav id="navmenu">
+                <ul>
+                    <li><a href="#chi-sono">Chi Sono</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#task-framework">Framework TASK</a></li>
+                    <li><a href="#progetti">Progetti</a></li>
+                    <li><a href="#startup-zero">Startup Da Zero</a></li>
+                    <li><a href="#risultati">Risultati</a></li>
+                    <li><a href="#obiettivi">Obiettivi</a></li>
+                    <li><a href="#why-me">6 Reasons Why</a></li>
+                </ul>
             </nav>
-
-            <a href="#contatti" class="btn-primary">
-                Contattami
-            </a>
-
+            <a class="btn-cta-nav" href="#contatti">Contattami</a>
         </div>
-
     </header>
 
-    <!-- HERO -->
+    <main class="main-content">
 
-    <section class="hero">
-
-        <div class="container">
-
-            <div class="hero-badge">
-                SALES MANAGER • KEY ACCOUNT • PROJECT DEVELOPER
+        <section id="hero" class="hero-section">
+            <div class="container-custom">
+                <div class="hero-row">
+                    <div class="hero-left">
+                        <span class="section-kicker"><i class="bi bi-stars"></i> DIETRO LE QUINTE</span>
+                        <h1 class="hero-main-title">Il backstage della mia crescita professionale</h1>
+                        <p class="hero-lead-text">
+                            Presentata e realizzata da: <strong>Idà Alessandro</strong><br>
+                            <span class="role-highlight">Sales Manager | Key Account | Project Developer</span>
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#chi-sono" class="btn-primary">Entra nel Backstage</a>
+                            <a href="#risultati" class="btn-secondary">Vedi Risultati <i class="bi bi-graph-up-arrow"></i></a>
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <div class="hero-mockup-window">
+                            <div class="window-bar">
+                                <span></span><span></span><span></span>
+                                <strong class="window-title">career_matrix.sh</strong>
+                            </div>
+                            <div class="window-body">
+                                <div class="terminal-line"><span class="t-accent">> initialized:</span> Idà Alessandro</div>
+                                <div class="terminal-line"><span class="t-accent">> core_focus:</span> Sviluppo Business &amp; Strategia Retail</div>
+                                <div class="terminal-line"><span class="t-accent">> record_2023:</span> +351.000 € Fatturato Generato</div>
+                                <div class="terminal-line"><span class="t-accent">> skills_matrix:</span> Agilità Mentale | Leadership Coinvolgente</div>
+                                <div class="terminal-line-pulse">_</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <h1>
-                Dietro le Quinte
-                <span>della Mia Crescita</span>
-            </h1>
+        <section id="chi-sono" class="portfolio-section white-bg">
+            <div class="container-custom">
+                <div class="section-heading">
+                    <span class="section-kicker-blue">IL PROFILO</span>
+                    <h2>Chi sono veramente, oltre al semplice curriculum</h2>
+                    <p class="section-subtitle">Sono un giovane e intraprendente Sales Manager, Key Account e Project Developer, pronto a condividere con voi il lato autentico della mia carriera professionale, andando oltre al «semplice» curriculum. In questa presentazione vi porterò dietro le quinte del mio percorso, raccontando tutte le opportunità che ho colto al volo.</p>
+                </div>
 
-            <p class="hero-description">
-
-                Trasformo idee, relazioni e dati in risultati concreti.
-                Dalla vendita alla gestione clienti, fino allo sviluppo di
-                progetti e startup da zero.
-
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#chi-sono" class="btn-primary">
-                    Scopri il mio percorso
-                </a>
-
-                <a href="#contatti" class="btn-secondary">
-                    Contattami
-                </a>
-
+                <div class="grid-three-columns">
+                    <div class="feature-card-premium">
+                        <div class="card-icon-box"><i class="bi bi-rocket-takeoff-fill"></i></div>
+                        <h3>La Mission</h3>
+                        <p>Tradurre la complessità in soluzioni efficaci. La mia missione è creare un impatto reale attraverso l’analisi, la creatività e l’impegno costante.</p>
+                        <a href="#contatti" class="card-cta">Parliamo della tua mission →</a>
+                    </div>
+                    <div class="feature-card-premium">
+                        <div class="card-icon-box"><i class="bi bi-eye-fill"></i></div>
+                        <h3>La Vision</h3>
+                        <p>Essere riconosciuto come un professionista capace di fare la differenza. Ogni progetto è un’opportunità per creare valore e lasciare un’impronta positiva.</p>
+                        <a href="#obiettivi" class="card-cta">Scopri i miei obiettivi →</a>
+                    </div>
+                    <div class="feature-card-premium">
+                        <div class="card-icon-box"><i class="bi bi-building-fill-check"></i></div>
+                        <h3>Contesto Ideale</h3>
+                        <p>Cerco realtà dove trovino spazio marketing, vendita, tecnologia o progetti ambiziosi, in un contesto stimolante e orientato alla crescita.</p>
+                        <a href="#lead-form-section" class="card-cta">Proponi una posizione →</a>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="hero-stats">
-
-                <div class="stat-card">
-                    <h3>825K+</h3>
-                    <p>Fatturato gestito</p>
+        <section id="skills" class="portfolio-section soft-bg">
+            <div class="container-custom">
+                <div class="section-heading">
+                    <span class="section-kicker">COMPETENZE ASSET</span>
+                    <h2>Unione strategica di Hard &amp; Soft Skills</h2>
+                    <p class="section-subtitle">Unisco competenze tecniche e soft skills per affrontare sfide complesse, collaborare in team e contribuire concretamente alla crescita aziendale.</p>
                 </div>
 
-                <div class="stat-card">
-                    <h3>220+</h3>
-                    <p>Clienti seguiti</p>
+                <div class="grid-two-columns">
+                    <div class="skill-item-card">
+                        <div class="skill-header">
+                            <span class="skill-icon"><i class="bi bi-lightning-charge-fill"></i></span>
+                            <h3>Agilità mentale</h3>
+                        </div>
+                        <p>Apprendo rapidamente con curiosità, specialmente in contesti innovativi e smart.</p>
+                    </div>
+                    <div class="skill-item-card">
+                        <div class="skill-header">
+                            <span class="skill-icon"><i class="bi bi-chat-left-heart-fill"></i></span>
+                            <h3>Apertura al feedback</h3>
+                        </div>
+                        <p>Vedo il feedback come un’opportunità di crescita; accolgo le critiche costruttive.</p>
+                    </div>
+                    <div class="skill-item-card">
+                        <div class="skill-header">
+                            <span class="skill-icon"><i class="bi bi-brain-fill"></i></span>
+                            <h3>Pensiero critico</h3>
+                        </div>
+                        <p>Valuto con spirito critico le informazioni e formulo giudizi consapevoli.</p>
+                    </div>
+                    <div class="skill-item-card">
+                        <div class="skill-header">
+                            <span class="skill-icon"><i class="bi bi-currency-dollar"></i></span>
+                            <h3>Attitudine commerciale</h3>
+                        </div>
+                        <p>Competenze nella vendita e comunicazione verbale e paraverbale.</p>
+                    </div>
+                    <div class="skill-item-card">
+                        <div class="skill-header">
+                            <span class="skill-icon"><i class="bi bi-people-fill"></i></span>
+                            <h3>Leadership coinvolgente</h3>
+                        </div>
+                        <p>Guido il team con entusiasmo, coordinando le attività per raggiungere obiettivi condivisi.</p>
+                    </div>
+                    <div class="skill-item-card">
+                        <div class="skill-header">
+                            <span class="skill-icon"><i class="bi bi-folder-fill"></i></span>
+                            <h3>Portafoglio clienti</h3>
+                        </div>
+                        <p>Gestisco e sviluppo portafogli clienti, mantenendo sempre alta la soddisfazione.</p>
+                    </div>
                 </div>
 
-                <div class="stat-card">
-                    <h3>224+</h3>
-                    <p>Contratti chiusi</p>
+                <div class="section-inline-cta text-center">
+                    <a href="#contatti" class="btn-primary">Mettimi alla prova sulle mie Skills</a>
                 </div>
-
-                <div class="stat-card">
-                    <h3>10.000+</h3>
-                    <p>Combinazioni elaborate</p>
-                </div>
-
             </div>
+        </section>
 
-        </div>
+        <section id="task-framework" class="portfolio-section white-bg">
+            <div class="container-custom">
+                <div class="section-heading">
+                    <span class="section-kicker-blue">METODOLOGIA OPERATIVA</span>
+                    <h2>Il Framework "TASK" della Versatilità</h2>
+                    <p class="section-subtitle">Le attività che solitamente svolgo possono essere sintetizzate attraverso l'acronimo "TASK", rappresentando le seguenti aree chiave: Training, Account Manager, Sales e Key Leader. Questa versatilità mi permette di adattarmi facilmente alle esigenze aziendali, coprendo quasi tutte le principali aree operative.</p>
+                </div>
 
-    </section>
+                <div class="task-interactive-container">
+                    <div class="task-grid">
+                        <div class="task-box purple">
+                            <div class="task-letter">T</div>
+                            <div class="task-content">
+                                <h3>Training</h3>
+                                <p>Sviluppo e accrescimento costante delle risorse nelle seguenti aree chiave:</p>
+                                <div class="task-tags">
+                                    <span>Crescita personale</span><span>Tecniche di vendita</span><span>Marketing</span>
+                                    <span>Tecnologia e informatica</span><span>Project Management</span><span>Imprenditoria</span>
+                                </div>
+                            </div>
+                        </div>
 
-    <!-- CHI SONO -->
+                        <div class="task-box blue">
+                            <div class="task-letter">A</div>
+                            <div class="task-content">
+                                <h3>Account Manager</h3>
+                                <p>Gestisco le relazioni con i clienti: risolvo problemi, analizzo esigenze, seguo i clienti a 360°, intervengo rapidamente, gestisco gli insoluti, fidelizzo.</p>
+                            </div>
+                        </div>
 
-    <section id="chi-sono" class="section">
+                        <div class="task-box green">
+                            <div class="task-letter">S</div>
+                            <div class="task-content">
+                                <h3>Sales</h3>
+                                <p>Guida dei processi di vendita aziendali: trattative inbound, up/cross selling, negoziazioni, preparazione offerte, video dimostrazioni, analisi del business.</p>
+                            </div>
+                        </div>
 
-        <div class="container">
+                        <div class="task-box orange">
+                            <div class="task-letter">K</div>
+                            <div class="task-content">
+                                <h3>Key Leader</h3>
+                                <p>Assicuro il successo dei progetti aziendali: coordinamento team, ideazione/realizzazione progetti, presidi riunioni, redazione report, analisi dati, proposta soluzioni.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="section-title">
-
-                <span>CHI SONO</span>
-
-                <h2>
-                    Oltre il curriculum.
-                </h2>
-
-                <p>
-                    Un professionista orientato ai risultati che combina
-                    vendita, marketing, tecnologia e project management.
-                </p>
-
+                <div class="text-center mt-4">
+                    <a href="#progetti" class="btn-secondary">Scopri i progetti legati al framework TASK</a>
+                </div>
             </div>
+        </section>
 
-            <div class="grid-3">
-
-                <div class="glass-card">
-
-                    <i class="bi bi-bullseye"></i>
-
-                    <h3>Mission</h3>
-
-                    <p>
-                        Tradurre la complessità in soluzioni efficaci,
-                        creando impatto attraverso analisi,
-                        creatività e impegno costante.
-                    </p>
-
+        <section id="progetti" class="portfolio-section soft-bg">
+            <div class="container-custom">
+                <div class="section-heading">
+                    <span class="section-kicker">CASE STUDIES</span>
+                    <h2>I miei progetti: dall'autonomia al risultato concreto</h2>
+                    <p class="section-subtitle">Ho potuto mettere in campo la mia creatività, ideando, progettando e realizzando progetti in modo proattivo e autonomo.</p>
                 </div>
 
-                <div class="glass-card">
-
-                    <i class="bi bi-stars"></i>
-
-                    <h3>Vision</h3>
-
-                    <p>
-                        Essere riconosciuto come un professionista
-                        capace di fare la differenza e generare
-                        valore reale.
-                    </p>
-
+                <div class="grid-three-columns">
+                    <div class="project-card-premium">
+                        <div class="project-card-badge">Data Optimization</div>
+                        <h3>Algoritmo strategico</h3>
+                        <p>Sviluppato un algoritmo con oltre 8 macro, in grado di gestire 10.000+ combinazioni per calcolare il rendimento degli e-commerce.</p>
+                    </div>
+                    <div class="project-card-premium">
+                        <div class="project-card-badge">Live Tracking</div>
+                        <h3>Smart Tracking</h3>
+                        <p>Sviluppato su Google Sheet uno strumento con 12 macro per il monitoraggio in tempo reale degli obiettivi, con video tutorial dedicato.</p>
+                    </div>
+                    <div class="project-card-premium">
+                        <div class="project-card-badge">CRM Systems</div>
+                        <h3>CRM Custom Sheet</h3>
+                        <p>Creato un CRM su Google Sheet con 80+ fogli e tabelle pivot, per una visione completa delle performance dei clienti.</p>
+                    </div>
+                    <div class="project-card-premium">
+                        <div class="project-card-badge">Strategy &amp; HR</div>
+                        <h3>Piani di crescita</h3>
+                        <p>Ideati piani di crescita e strategie; realizzati script di vendita, piani operativi e materiali formativi per la formazione del team.</p>
+                    </div>
+                    <div class="project-card-premium">
+                        <div class="project-card-badge">Advertising &amp; Logistics</div>
+                        <h3>Lanci di successo</h3>
+                        <p>Lanciati diversi progetti aziendali, tra cui campagne Google Ads, integrazioni e convenzioni con corrieri.</p>
+                    </div>
+                    <div class="project-card-premium">
+                        <div class="project-card-badge">Full Stack Freelance</div>
+                        <h3>Dall’idea all’impresa</h3>
+                        <p>Gestito da zero un progetto freelance: branding, marketing, contenuti, offerta, contrattualistica e sviluppo sito web.</p>
+                    </div>
                 </div>
 
-                <div class="glass-card">
-
-                    <i class="bi bi-lightning-charge"></i>
-
-                    <h3>Contesto Ideale</h3>
-
-                    <p>
-                        Realtà dinamiche dove marketing,
-                        vendita, tecnologia e innovazione
-                        si incontrano.
-                    </p>
-
+                <div class="full-width-quote-box" style="margin-top: 40px;">
+                    <h4>IDEARE. SVILUPPARE. REALIZZARE.</h4>
+                    <p>Ho avuto molte opportunità di dare spazio alle mie idee, dando vita a progetti ambiziosi e innovativi - gestiti dall’ideazione al project management fino alla realizzazione - permettendomi di crescere giorno dopo giorno. Amo affrontare sempre nuove sfide e dare forma concreta alle idee: è questo che mi motiva e mi fa sentire davvero vivo.</p>
+                    <div class="text-center mt-3">
+                        <a href="#startup-zero" class="btn-primary">Approfondisci lo sviluppo Startup da Zero</a>
+                    </div>
                 </div>
-
             </div>
+        </section>
 
-        </div>
+        <section id="startup-zero" class="portfolio-section white-bg">
+            <div class="container-custom">
+                <div class="section-heading">
+                    <span class="section-kicker-blue">PROJECT DEVELOPMENT</span>
+                    <h2>Startup da zero: Gestione Freelance End-to-End</h2>
+                    <p class="section-subtitle">Ho avuto l’opportunità di lavorare a un grande progetto e di avviare da zero un’attività di un freelance, curando minuziosamente ogni singolo aspetto strutturale e operativo:</p>
+                </div>
 
-    </section>
+                <div class="startup-checklist-layout">
+                    <div class="grid-two-columns">
+                        <div class="checklist-item-box">
+                            <i class="bi bi-bezier2"></i>
+                            <div>
+                                <h4>Ideazione del brand</h4>
+                                <p>Creazione del concept di base, naming di impatto, brand identity coordinata, strategia marketing, biglietto da visita e design CV professionale.</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item-box">
+                            <i class="bi bi-cpu-fill"></i>
+                            <div>
+                                <h4>Strumenti digitali avanzati</h4>
+                                <p>Creati e configurati profili digitali ad alta conversione (Beacons, Calendly per appuntamenti, social media, canali WhatsApp) e firma Gmail aziendale in HTML custom.</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item-box">
+                            <i class="bi bi-code-slash"></i>
+                            <div>
+                                <h4>Sviluppo del sito web proprietario</h4>
+                                <p>Sito custom a sei pagine sviluppato in puro HTML, CSS e JS (senza l'uso di template preconfezionati), ottimizzato con sitemap logica, cookie policy a norma e integrazione Brevo.</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item-box">
+                            <i class="bi bi-pen-fill"></i>
+                            <div>
+                                <h4>Produzione contenuti &amp; Copywriting</h4>
+                                <p>Ideati tutti i copy persuasivi per sito e blog, redatta l'informativa sulla privacy e creato un piano editoriale mensile completo di testi e grafiche.</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item-box">
+                            <i class="bi bi-bar-chart-line-fill"></i>
+                            <div>
+                                <h4>Monitoraggio, SEO &amp; Analytics</h4>
+                                <p>Configurazione e ottimizzazione scheda Google My Business, attivazione e setup di Search Console, Google Tag Manager e Google Analytics per tracciamento KPI.</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item-box">
+                            <i class="bi bi-megaphone-fill"></i>
+                            <div>
+                                <h4>Advertising &amp; Lead Generation</h4>
+                                <p>Progettazione e lancio campagne Google Ads e annunci pubblicitari su piattaforme di scouting specifiche, curando sia i contenuti visivi che testuali.</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item-box">
+                            <i class="bi bi-envelope-paper-heart-fill"></i>
+                            <div>
+                                <h4>Email marketing automatizzato</h4>
+                                <p>Configurato Brevo con form di contatto avanzati e newsletter dedicate, realizzati più di 8 template email nativi in HTML e flussi di automatizzazione marketing automation.</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item-box">
+                            <i class="bi bi-file-earmark-gavel-fill"></i>
+                            <div>
+                                <h4>Materiali legali e fidelizzazione</h4>
+                                <p>Redazione contratto legale e Termini &amp; Condizioni (T&amp;C), creazione di fidelity card dinamiche con login e landing page dedicate, sviluppo materiali fisici (brochure, grafiche offline).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- SKILLS -->
-
-    <section id="skills" class="section dark-section">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <span>SKILLS</span>
-
-                <h2>Competenze che generano risultati</h2>
-
+                <div class="text-center mt-5">
+                    <a href="#risultati" class="btn-primary">Esamina l'Impatto di questi Progetti sui Numeri</a>
+                </div>
             </div>
+        </section>
 
-            <div class="skills-grid">
-
-                <div class="skill-card">
-                    <i class="bi bi-lightning"></i>
-                    <h3>Agilità Mentale</h3>
-                    <p>Apprendimento rapido e adattabilità.</p>
+        <section id="risultati" class="portfolio-section soft-bg">
+            <div class="container-custom">
+                <div class="section-heading">
+                    <span class="section-kicker">DATA ROOM</span>
+                    <h2>I Risultati Commerciali (Tabella 2022-2024)</h2>
+                    <p class="section-subtitle">Evidenza numerica delle performance di vendita e della gestione finanziaria del portafoglio clienti gestito negli ultimi tre anni solari.</p>
                 </div>
 
-                <div class="skill-card">
-                    <i class="bi bi-chat-square-dots"></i>
-                    <h3>Comunicazione</h3>
-                    <p>Capacità relazionali e negoziali.</p>
+                <div class="table-responsive-container">
+                    <table class="portfolio-data-table">
+                        <thead>
+                            <tr>
+                                <th>Anno</th>
+                                <th>Fatturato Generato</th>
+                                <th>Incidenza sul Margine</th>
+                                <th>Clienti Gestiti</th>
+                                <th>Ticket Medio per Chiusura</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="year-cell">2022</td>
+                                <td class="highlight-green">215.000 €</td>
+                                <td class="incidenza-cell">21%</td>
+                                <td>77 Clienti</td>
+                                <td>5.100 €</td>
+                            </tr>
+                            <tr>
+                                <td class="year-cell">2023</td>
+                                <td class="highlight-green">351.000 €</td>
+                                <td class="incidenza-cell">27%</td>
+                                <td>73 Clienti</td>
+                                <td>4.700 €</td>
+                            </tr>
+                            <tr>
+                                <td class="year-cell">2024</td>
+                                <td class="highlight-green">259.000 €</td>
+                                <td class="incidenza-cell">23%</td>
+                                <td>67 Clienti</td>
+                                <td>3.800 €</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
-                <div class="skill-card">
-                    <i class="bi bi-graph-up-arrow"></i>
-                    <h3>Sales</h3>
-                    <p>Vendita consulenziale orientata al valore.</p>
+                <div class="grid-two-columns mt-5">
+                    <div class="analysis-box-premium">
+                        <h4><i class="bi bi-pie-chart-fill"></i> Tipologia Pagamenti &amp; Flusso di Cassa</h4>
+                        <ul class="analysis-list">
+                            <li><span>Alla firma del contratto:</span> <strong>63%</strong></li>
+                            <li><span>A 30 giorni data fattura:</span> <strong>10%</strong></li>
+                            <li><span>A 60 giorni data fattura:</span> <strong>23%</strong></li>
+                            <li><span>A 90 giorni data fattura:</span> <strong>2%</strong></li>
+                            <li><span>Altre formule contrattuali:</span> <strong>2%</strong></li>
+                        </ul>
+                    </div>
+                    <div class="analysis-box-premium">
+                        <h4><i class="bi bi-cart-check-fill"></i> Tipologia Servizi Venduti</h4>
+                        <ul class="analysis-list">
+                            <li><span>Servizi di Marketing strategico:</span> <strong>33%</strong></li>
+                            <li><span>Integrazioni tecniche complesse:</span> <strong>29%</strong></li>
+                            <li><span>Nuove acquisizioni / Contratti:</span> <strong>18%</strong></li>
+                            <li><span>Convenzioni e accordi quadro:</span> <strong>15%</strong></li>
+                            <li><span>Rinnovi di contratti triennali:</span> <strong>3%</strong></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <i class="bi bi-people"></i>
-                    <h3>Leadership</h3>
-                    <p>Coinvolgimento e coordinamento del team.</p>
+                <div class="grid-two-columns mt-3">
+                    <div class="analysis-metric-summary-card">
+                        <span class="summary-label">Contratti Chiusi Annualmente</span>
+                        <div class="summary-sub-grid">
+                            <div><strong>80</strong> <small>Anno 2022</small></div>
+                            <div><strong>75</strong> <small>Anno 2023</small></div>
+                            <div><strong>69</strong> <small>Anno 2024</small></div>
+                        </div>
+                    </div>
+                    <div class="analysis-metric-summary-card">
+                        <span class="summary-label">Recensioni Positive Ottenute (Customer Satisfaction)</span>
+                        <div class="summary-sub-grid">
+                            <div><strong>11</strong> <small>Anno 2022</small></div>
+                            <div><strong>6</strong> <small>Anno 2023</small></div>
+                            <div class="text-glow-green"><strong>24</strong> <small>Anno 2024</small></div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="skill-card">
-                    <i class="bi bi-bar-chart"></i>
-                    <h3>Analisi</h3>
-                    <p>Decisioni guidate dai dati.</p>
+                
+                <div class="text-center mt-4">
+                    <a href="#obiettivi" class="btn-primary">Scopri dove sono diretto adesso</a>
                 </div>
-
-                <div class="skill-card">
-                    <i class="bi bi-diagram-3"></i>
-                    <h3>Project Management</h3>
-                    <p>Dall'idea alla realizzazione.</p>
-                </div>
-
             </div>
+        </section>
 
-        </div>
-
-    </section>
-
-    <!-- TASK FRAMEWORK -->
-
-    <section class="section">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <span>FRAMEWORK</span>
-
-                <h2>Il Metodo TASK</h2>
-
-                <p>
-                    Training, Account Manager, Sales e Key Leader:
-                    un approccio trasversale che mi permette di
-                    creare valore in più aree aziendali.
-                </p>
-
-            </div>
-
-            <div class="task-grid">
-
-                <div class="task-card">
-                    <h3>Training</h3>
-                    <p>Crescita personale, marketing, tecnologia e imprenditoria.</p>
+        <section id="obiettivi" class="portfolio-section white-bg">
+            <div class="container-custom">
+                <div class="section-heading">
+                    <span class="section-kicker-blue">CRESCITA FUTURA</span>
+                    <h2>I miei obiettivi di posizionamento professionale</h2>
+                    <p class="section-subtitle">Le direttrici su cui intendo sviluppare la mia collaborazione con la prossima grande azienda.</p>
                 </div>
 
-                <div class="task-card">
-                    <h3>Account Manager</h3>
-                    <p>Gestione clienti, fidelizzazione e problem solving.</p>
+                <div class="grid-three-columns">
+                    <div class="goal-target-card">
+                        <div class="goal-num">01</div>
+                        <h3>Formazione continua</h3>
+                        <p>Fornire un contributo incisivo al team, partecipando attivamente a progetti chiave, assumendo responsabilità aggiuntive e apportando valore aggiunto. Investire tempo nella formazione continua, partecipando a corsi, per rimanere aggiornato sulle ultime tendenze del settore.</p>
+                    </div>
+                    <div class="goal-target-card">
+                        <div class="goal-num">02</div>
+                        <h3>Libertà espressiva</h3>
+                        <p>Cercare un contesto stimolante in cui esprimere pienamente le mie potenzialità e affrontare sfide che mi permettano di superare i miei limiti.</p>
+                    </div>
+                    <div class="goal-target-card">
+                        <div class="goal-num">03</div>
+                        <h3>Fiducia reciproca</h3>
+                        <p>Stabilire un rapporto di fiducia reciproca con l'azienda, promuovendo una collaborazione sinergica e trasparenza, guidata da obiettivi comuni.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-me" class="portfolio-section soft-bg">
+            <div class="container-custom">
+                <div class="section-heading">
+                    <span class="section-kicker">VALORE AGGIUNTO</span>
+                    <h2>6 Reasons Why: Perché Scegliermi</h2>
+                    <p class="section-subtitle">Sono fiducioso che possiate trovare in me un candidato in grado di apportare un valore significativo all'azienda. Ecco 6 ragioni per cui dovreste scegliermi:</p>
                 </div>
 
-                <div class="task-card">
-                    <h3>Sales</h3>
-                    <p>Negoziazioni, offerte, upselling e sviluppo business.</p>
+                <div class="grid-three-columns">
+                    <div class="reason-premium-box">
+                        <div class="reason-icon-header">
+                            <i class="bi bi-heart-pulse-fill"></i>
+                            <span class="reason-index">01</span>
+                        </div>
+                        <h3>Passione professionale</h3>
+                        <p>La passione mi spinge a dare sempre il massimo; anche in contesti nuovi, quando il lavoro mi coinvolge, raggiungo risultati concreti.</p>
+                    </div>
+                    <div class="reason-premium-box">
+                        <div class="reason-icon-header">
+                            <i class="bi bi-chat-left-dots-fill"></i>
+                            <span class="reason-index">02</span>
+                        </div>
+                        <h3>Dialogo strategico</h3>
+                        <p>Ottime capacità comunicative, che mi permettono di trasmettere idee in modo chiaro, facilitando la collaborazione.</p>
+                    </div>
+                    <div class="reason-premium-box">
+                        <div class="reason-icon-header">
+                            <i class="bi bi-shield-fill-plus"></i>
+                            <span class="reason-index">03</span>
+                        </div>
+                        <h3>Resilienza attiva</h3>
+                        <p>Determinato e resiliente, mantengo impegno e motivazione anche nelle situazioni difficili, superando i miei limiti.</p>
+                    </div>
+                    <div class="reason-premium-box">
+                        <div class="reason-icon-header">
+                            <i class="bi bi-microsoft-teams"></i>
+                            <span class="reason-index">04</span>
+                        </div>
+                        <h3>Team player</h3>
+                        <p>Supporto il lavoro di squadra collaborando e guidando il team verso gli obiettivi comuni, con determinazione e positività.</p>
+                    </div>
+                    <div class="reason-premium-box">
+                        <div class="reason-icon-header">
+                            <i class="bi bi-lightbulb-fill"></i>
+                            <span class="reason-index">05</span>
+                        </div>
+                        <h3>Visione innovativa</h3>
+                        <p>Mi contraddistingue il pensiero innovativo; creo soluzioni fuori dagli schemi, esprimendo idee originali e anticipando le tendenze.</p>
+                    </div>
+                    <div class="reason-premium-box">
+                        <div class="reason-icon-header">
+                            <i class="bi bi-award-fill"></i>
+                            <span class="reason-index">06</span>
+                        </div>
+                        <h3>Dedizione costante</h3>
+                        <p>Metto il massimo impegno in ogni progetto, con l’obiettivo di superare le aspettative e raggiungere l’eccellenza.</p>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="task-card">
-                    <h3>Key Leader</h3>
-                    <p>Coordinamento team e sviluppo progetti strategici.</p>
+        <section id="lead-form-section" class="portfolio-section white-bg final-lead-section">
+            <div class="container-custom">
+                <div class="lead-form-box-wrapper">
+                    <div class="lead-form-header text-center">
+                        <span class="form-badge">CONNESSIONE IMMEDIATA</span>
+                        <h2>Fissiamo un colloquio conoscitivo</h2>
+                        <p>Scegli il canale che preferisci o compila la richiesta di contatto sottostante. Riceverai un riscontro immediato entro poche ore lavorative.</p>
+                    </div>
+                    
+                    <form id="portfolioContactForm" onsubmit="event.preventDefault(); alert('Grazie per il contatto! Questa è una simulazione per il portfolio GitHub.');">
+                        <div class="form-row-dual">
+                            <div class="form-group-custom">
+                                <label for="name">Nome e Cognome / Nome Azienda</label>
+                                <input type="text" id="name" class="form-input-field" placeholder="Es. Google Italia S.r.l." required>
+                            </div>
+                            <div class="form-group-custom">
+                                <label for="email">Indirizzo Email Aziendale</label>
+                                <input type="email" id="email" class="form-input-field" placeholder="Es. hr@azienda.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group-custom">
+                            <label for="message">Note sulla Posizione o Messaggio</label>
+                            <textarea id="message" class="form-input-field" rows="4" placeholder="Inserisci dettagli sull'opportunità di business...">Ho visto il tuo framework TASK e la tabella dei risultati 2022-2024. Vorremmo valutare il tuo profilo.</textarea>
+                        </div>
+                        <div class="text-center" style="margin-top: 20px;">
+                            <button type="submit" class="btn-primary-form">Invia Richiesta di Contatto Ufficiale</button>
+                        </div>
+                    </form>
                 </div>
-
             </div>
+        </section>
 
-        </div>
-
-    </section>
-
-    <!-- PROGETTI -->
-
-    <section id="progetti" class="section dark-section">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <span>PORTFOLIO</span>
-
-                <h2>Progetti Realizzati</h2>
-
+        <section id="contcontacts" class="contatti-footer-section">
+            <div class="container-custom">
+                <div class="footer-grid">
+                    <div class="footer-left-info">
+                        <h3>Alessandro Idà</h3>
+                        <p>Sales Manager | Key Account | Project Developer</p>
+                        <p class="thanks-message">Grazie per aver visionato il lato autentico del mio percorso. Parliamo adesso di risultati reali.</p>
+                    </div>
+                    <div id="contatti" class="footer-right-channels">
+                        <h4>Contattami cliccando il canale che preferisci:</h4>
+                        <div class="channels-links-wrapper">
+                            <a href="tel:+393342689942" class="channel-link-item card-phone">
+                                <div class="c-icon"><i class="bi bi-telephone-outbound-fill"></i></div>
+                                <div class="c-text">
+                                    <span>Telefono Chiamata Diretta</span>
+                                    <strong>+39 334-268-9942</strong>
+                                </div>
+                            </a>
+                            <a href="mailto:ida.alessandro@outlook.it" class="channel-link-item card-email">
+                                <div class="c-icon"><i class="bi bi-envelope-at-fill"></i></div>
+                                <div class="c-text">
+                                    <span>Invia un Messaggio Email</span>
+                                    <strong>ida.alessandro@outlook.it</strong>
+                                </div>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener" class="channel-link-item card-linkedin">
+                                <div class="c-icon"><i class="bi bi-linkedin"></i></div>
+                                <div class="c-text">
+                                    <span>Connettiti su Network Ufficiale</span>
+                                    <strong>LinkedIn Profile</strong>
+                                </div>
+                            </a>
+                            <a href="https://wa.me/393342689942" target="_blank" rel="noopener" class="channel-link-item card-whatsapp">
+                                <div class="c-icon"><i class="bi bi-whatsapp"></i></div>
+                                <div class="c-text">
+                                    <span>Chat Istantanea Crittografata</span>
+                                    <strong>WhatsApp Business</strong>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright text-center">
+                    <p>&copy; 2026 Idà Alessandro. Tutti i diritti riservati. Sito Web Custom Sviluppato per Portfolio ed Esecuzione Strategica.</p>
+                </div>
             </div>
+        </section>
 
-            <div class="projects-grid">
+    </main>
 
-                <article class="project-card">
-                    <h3>Algoritmo Strategico</h3>
-                    <p>10.000+ combinazioni per analizzare la redditività e-commerce.</p>
-                </article>
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-                <article class="project-card">
-                    <h3>Smart Tracking</h3>
-                    <p>Sistema con 12 macro per monitoraggio KPI in tempo reale.</p>
-                </article>
-
-                <article class="project-card">
-                    <h3>CRM Custom</h3>
-                    <p>80+ fogli e dashboard per analisi performance clienti.</p>
-                </article>
-
-                <article class="project-card">
-                    <h3>Piani di Crescita</h3>
-                    <p>Script commerciali, formazione e processi operativi.</p>
-                </article>
-
-                <article class="project-card">
-                    <h3>Lanci Aziendali</h3>
-                    <p>Google Ads, integrazioni e partnership strategiche.</p>
-                </article>
-
-                <article class="project-card">
-                    <h3>Startup da Zero</h3>
-                    <p>Branding, sito web, marketing, email automation e CRM.</p>
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(15, 23, 42, 0.96)';
+                header.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
+            } else {
+                header.style.background = 'rgba(15, 23, 42, 0.85)';
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
 </body>
-
 </html>
