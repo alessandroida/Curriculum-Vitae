@@ -4,50 +4,50 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Alessandro Idà | Sales Manager & Project Developer</title>
-    <meta name="description" content="Portfolio di Alessandro Idà: Sales Manager, Key Account e Project Developer. Tradurre la complessità in soluzioni efficaci.">
+    <meta name="description" content="Portfolio di Alessandro Idà: Sales Manager, Key Account e Project Developer.">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Inter:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Librerie CSS (Bootstrap, Bootstrap Icons, AOS per animazioni) -->
+    <!-- Librerie CSS (Bootstrap, Bootstrap Icons, AOS) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <!-- CSS Custom (nella stessa cartella) -->
+    <!-- CSS Custom -->
     <link href="style.css" rel="stylesheet">
 </head>
 
 <body class="index-page profession-page">
 
     <!-- HEADER & NAVBAR -->
-    <header id="header" class="header d-flex align-items-center fixed-top bg-white shadow-sm">
+    <header id="header" class="header d-flex align-items-center fixed-top bg-white">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
             <a href="index.html" class="logo text-decoration-none">
-                <span class="fw-bolder" style="font-size: 1.5rem; color: var(--profession-text);">Alessandro Idà</span>
+                <span class="fw-bolder" style="font-size: 1.5rem; color: var(--main-blue);">Alessandro Idà</span>
             </a>
 
             <nav id="navmenu" class="navmenu d-none d-xl-flex">
-                <ul class="d-flex list-unstyled m-0 gap-4 align-items-center fw-semibold">
-                    <li><a href="#hero" class="text-decoration-none active-link">Home</a></li>
-                    <li><a href="#chi-sono" class="text-decoration-none text-dark">Chi Sono</a></li>
-                    <li><a href="#task" class="text-decoration-none text-dark">Metodo TASK</a></li>
-                    <li><a href="#progetti" class="text-decoration-none text-dark">Progetti</a></li>
-                    <li><a href="#risultati" class="text-decoration-none text-dark">Risultati</a></li>
-                    <li><a href="#contatti" class="text-decoration-none text-dark">Contatti</a></li>
+                <ul class="d-flex list-unstyled m-0 gap-4 align-items-center fw-bold" style="font-size: 0.95rem;">
+                    <li><a href="index.html" class="text-decoration-none active-link">Home</a></li>
+                    <li><a href="chi-sono.html" class="text-decoration-none text-dark">Chi Sono</a></li>
+                    <li><a href="metodo.html" class="text-decoration-none text-dark">Metodo TASK</a></li>
+                    <li><a href="progetti.html" class="text-decoration-none text-dark">Progetti</a></li>
+                    <li><a href="risultati.html" class="text-decoration-none text-dark">Risultati</a></li>
+                    <li><a href="contatti.html" class="text-decoration-none text-dark">Contatti</a></li>
                 </ul>
             </nav>
 
-            <a class="btn btn-primary btn-getstarted rounded-pill fw-bold px-4 py-2 d-none d-md-block" target="_blank" href="Dietro_le_quinte_Il_backstage_della_mia_crescita.pdf">
+            <a class="btn btn-cta rounded-pill fw-bold px-4 py-2 d-none d-md-block" target="_blank" href="Dietro_le_quinte_Il_backstage_della_mia_crescita.pdf">
                 Scarica Pitch
             </a>
-            <i class="bi bi-list d-xl-none fs-1"></i>
+            <i class="bi bi-list d-xl-none fs-1" style="color: var(--main-blue);"></i>
         </div>
     </header>
 
     <main class="main">
         <!-- 1. HERO SECTION -->
-        <section id="hero" class="profession-hero">
+        <section class="profession-hero position-relative">
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-7" data-aos="fade-right">
@@ -55,44 +55,41 @@
                             <i class="bi bi-person-workspace me-2"></i> Sales Manager | Key Account | Project Developer
                         </span>
                         
-                        <h1 class="display-4 fw-black mt-2 mb-4 text-navy" style="line-height: 1.1;">
-                            Tradurre la complessità in soluzioni efficaci.
+                        <h1 class="display-4 fw-black mt-2 mb-4 text-main-blue" style="line-height: 1.15;">
+                            Tradurre la complessità in <span style="color: var(--cyan-blue);">soluzioni efficaci.</span>
                         </h1>
                         
                         <p class="profession-lead mb-4">
-                            Sono un professionista intraprendente, pronto a condividere il lato autentico della mia carriera professionale, andando oltre al "semplice" curriculum. In questo sito vi porto dietro le quinte del mio percorso, raccontando le sfide affrontate e le opportunità colte al volo.
+                            Unisco visione strategica, tecnologia e competenze commerciali per fare la differenza. Benvenuti dietro le quinte della mia crescita professionale.
                         </p>
                         
                         <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
-                            <a href="#progetti" class="btn btn-primary rounded-pill fw-bold px-4 py-3">Scopri i miei progetti <i class="bi bi-arrow-down ms-2"></i></a>
-                            <a href="#contatti" class="btn btn-outline-dark rounded-pill fw-bold px-4 py-3">Parliamone</a>
-                        </div>
-                        
-                        <div class="profession-hero-capabilities mt-5">
-                            <span class="profession-hero-capability"><i class="bi bi-rocket-takeoff"></i> Startup & Branding</span>
-                            <span class="profession-hero-capability"><i class="bi bi-bar-chart-steps"></i> Data Analysis</span>
-                            <span class="profession-hero-capability"><i class="bi bi-person-check"></i> Fidelizzazione</span>
-                            <span class="profession-hero-capability"><i class="bi bi-code-slash"></i> Sviluppo Web Custom</span>
+                            <a href="progetti.html" class="btn btn-cta rounded-pill fw-bold px-4 py-3">Esplora i progetti <i class="bi bi-arrow-right ms-2"></i></a>
+                            <a href="chi-sono.html" class="btn btn-outline-main rounded-pill fw-bold px-4 py-3">Scopri chi sono</a>
                         </div>
                     </div>
                     
                     <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
                         <div class="profession-hero-media">
                             <div class="profession-hero-image">
-                                <img src="https://via.placeholder.com/600x750/12253c/ea580c?text=Foto+Alessandro" alt="Alessandro Idà" class="img-fluid">
+                                <!-- Placeholder per la tua foto -->
+                                <img src="https://via.placeholder.com/500x600/003f5b/ffffff?text=Alessandro+Idà" alt="Alessandro Idà" class="img-fluid">
                             </div>
+                            <!-- Elementi fluttuanti d'impatto -->
                             <div class="profession-hero-overlay">
-                                <article class="profession-hero-float" style="top: 10%; left: -10%;">
-                                    <strong>Algoritmo Strategico</strong>
-                                    <small>10.000+ combinazioni gestite</small>
+                                <article class="profession-hero-float" style="top: 15%; left: -15%;">
+                                    <i class="bi bi-graph-up-arrow text-cta fs-4"></i>
+                                    <div>
+                                        <strong>Strategia</strong>
+                                        <small>Data Driven</small>
+                                    </div>
                                 </article>
-                                <article class="profession-hero-float" style="top: 45%; right: -5%;">
-                                    <strong>Portafoglio Clienti</strong>
-                                    <small>77 clienti gestiti direttamente</small>
-                                </article>
-                                <article class="profession-hero-float" style="bottom: 10%; left: 5%;">
-                                    <strong>Fatturato Generato</strong>
-                                    <small>+200k annui in trattative chiuse</small>
+                                <article class="profession-hero-float" style="bottom: 15%; right: -5%;">
+                                    <i class="bi bi-people-fill text-cyan fs-4"></i>
+                                    <div>
+                                        <strong>Vendita</strong>
+                                        <small>Key Account</small>
+                                    </div>
                                 </article>
                             </div>
                         </div>
@@ -101,303 +98,215 @@
             </div>
         </section>
 
-        <!-- 2. CHI SONO & 6 REASONS WHY -->
-        <section id="chi-sono" class="profession-section bg-white text-center">
-            <div class="container" data-aos="fade-up">
-                <span class="badge-kicker mb-3">Dietro le quinte</span>
-                <h2 class="fw-black text-navy mb-4 display-6">Oltre la scrivania</h2>
-                
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-9">
-                        <p class="fs-5 text-muted" style="line-height: 1.8;">
-                            Cerco realtà dove trovino spazio marketing, vendita, tecnologia o progetti ambiziosi. Quando stacco, la mia forma mentis non cambia: mi trovi su un campo da tennis (dove la precisione conta talmente tanto che preferisco studiare la tensione e incordarmi da solo la racchetta) o a pianificare itinerari strategici e logistici per il mio prossimo viaggio in Sicilia, tra Palermo, San Vito Lo Capo e la Riserva dello Zingaro. Ecosistemi mobile, protocolli di rete, sport agonistico e vendite: porto la stessa resilienza e curiosità in ogni ambito.
+        <!-- 2. CHI SONO IN BREVE (Skills & Obiettivi) -->
+        <section class="profession-section bg-soft-cyan">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-4" data-aos="fade-right">
+                        <span class="badge-kicker mb-3">Sintesi del Profilo</span>
+                        <h2 class="fw-black text-main-blue display-6 mb-4">Chi sono</h2>
+                        <p class="text-muted mb-4">
+                            Cerco contesti dove vendita, marketing e tecnologia si incontrano. Sono abituato a gestire la complessità, mantenendo alta l'attenzione ai dettagli, sia sul lavoro che fuori, tra un allenamento agonistico sui campi da tennis e la pianificazione millimetrica del prossimo viaggio.
                         </p>
+                        <a href="chi-sono.html" class="fw-bold text-decoration-none text-cta">Approfondisci il mio profilo <i class="bi bi-arrow-right"></i></a>
                     </div>
-                </div>
-
-                <!-- 6 Reasons Why Grid -->
-                <div class="row g-4 mt-2 text-start">
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="profession-card soft">
-                            <i class="bi bi-fire fs-1 text-primary-custom mb-3 d-block"></i>
-                            <h4 class="fw-bold">Passione Professionale</h4>
-                            <p class="text-muted mb-0">La passione mi spinge a dare sempre il massimo: anche in contesti nuovi, quando il lavoro mi coinvolge, raggiungo risultati concreti.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
-                        <div class="profession-card soft">
-                            <i class="bi bi-chat-quote fs-1 text-primary-custom mb-3 d-block"></i>
-                            <h4 class="fw-bold">Dialogo Strategico</h4>
-                            <p class="text-muted mb-0">Ottime capacità comunicative, che mi permettono di trasmettere idee in modo chiaro, facilitando la collaborazione.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="profession-card soft">
-                            <i class="bi bi-shield-check fs-1 text-primary-custom mb-3 d-block"></i>
-                            <h4 class="fw-bold">Resilienza Attiva</h4>
-                            <p class="text-muted mb-0">Determinato e resiliente: mantengo impegno e motivazione anche nelle situazioni difficili, superando i miei limiti.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="250">
-                        <div class="profession-card soft">
-                            <i class="bi bi-people fs-1 text-primary-custom mb-3 d-block"></i>
-                            <h4 class="fw-bold">Team Player</h4>
-                            <p class="text-muted mb-0">Supporto il lavoro di squadra collaborando e guidando il team verso gli obiettivi comuni, con determinazione e positività.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="profession-card soft">
-                            <i class="bi bi-lightbulb fs-1 text-primary-custom mb-3 d-block"></i>
-                            <h4 class="fw-bold">Visione Innovativa</h4>
-                            <p class="text-muted mb-0">Mi contraddistingue il pensiero innovativo: creo soluzioni fuori dagli schemi, esprimendo idee originali e anticipando le tendenze.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="350">
-                        <div class="profession-card soft">
-                            <i class="bi bi-graph-up fs-1 text-primary-custom mb-3 d-block"></i>
-                            <h4 class="fw-bold">Dedizione Costante</h4>
-                            <p class="text-muted mb-0">Metto il massimo impegno in ogni progetto, con l'obiettivo di superare le aspettative e raggiungere l'eccellenza.</p>
+                    
+                    <div class="col-lg-8" data-aos="fade-left">
+                        <div class="row g-4">
+                            <!-- Card Skills -->
+                            <div class="col-md-6">
+                                <div class="profession-card p-4 bg-white h-100">
+                                    <div class="d-flex align-items-center gap-3 mb-4">
+                                        <div class="icon-box bg-soft-cyan text-cyan"><i class="bi bi-lightning-charge-fill"></i></div>
+                                        <h4 class="fw-bold text-main-blue mb-0">Le mie Skills</h4>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="tag-pill">Attitudine Commerciale</span>
+                                        <span class="tag-pill">Data Analysis</span>
+                                        <span class="tag-pill">Ecosistemi Mobile</span>
+                                        <span class="tag-pill">Negoziazione</span>
+                                        <span class="tag-pill">Sviluppo Web Custom</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card Obiettivi -->
+                            <div class="col-md-6">
+                                <div class="profession-card p-4 bg-white h-100">
+                                    <div class="d-flex align-items-center gap-3 mb-4">
+                                        <div class="icon-box bg-soft-orange text-cta"><i class="bi bi-bullseye"></i></div>
+                                        <h4 class="fw-bold text-main-blue mb-0">I miei Obiettivi</h4>
+                                    </div>
+                                    <ul class="list-unstyled text-muted mb-0 d-flex flex-column gap-3">
+                                        <li><i class="bi bi-check2-circle text-cyan me-2 fw-bold"></i> Generare un impatto concreto</li>
+                                        <li><i class="bi bi-check2-circle text-cyan me-2 fw-bold"></i> Formazione tecnica continua</li>
+                                        <li><i class="bi bi-check2-circle text-cyan me-2 fw-bold"></i> Costruire fiducia reciproca</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 3. METODO TASK -->
-        <section id="task" class="profession-section">
+        <!-- 3. METODO TASK (Versione Grafica Overview) -->
+        <section class="profession-section bg-white">
             <div class="container">
-                <div class="profession-section-title mb-5 text-center" data-aos="fade-up">
-                    <span class="badge-kicker mb-3">Aree Chiave</span>
-                    <h2 class="fw-black text-navy display-6">Il mio approccio operativo: T.A.S.K.</h2>
-                    <p class="text-muted mx-auto" style="max-width: 700px;">Questa versatilità mi permette di adattarmi facilmente alle esigenze aziendali, coprendo in modo trasversale e analitico quasi tutte le principali aree operative.</p>
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="badge-kicker mb-3">Versatilità</span>
+                    <h2 class="fw-black text-main-blue display-6">L'approccio T.A.S.K.</h2>
+                    <p class="text-muted">Quattro aree operative per un adattamento completo alle esigenze aziendali.</p>
                 </div>
 
                 <div class="row g-4">
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="profession-card h-100 p-4 bg-white border">
-                            <div class="d-inline-block bg-primary-soft p-3 rounded-3 mb-4">
-                                <i class="bi bi-book fs-2 text-primary-custom"></i>
-                            </div>
-                            <h3 class="fw-bold mb-3">T - Training</h3>
-                            <ul class="list-unstyled text-muted lh-lg">
-                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Crescita personale</li>
-                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Tecniche di vendita</li>
-                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Marketing & Imprenditoria</li>
-                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Tecnologia e informatica</li>
-                            </ul>
+                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="task-card text-center p-4">
+                            <div class="task-letter text-cyan mb-3">T</div>
+                            <h4 class="fw-bold text-main-blue">Training</h4>
+                            <p class="text-muted small mb-0">Formazione continua tra marketing, tech e tecniche di vendita.</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="profession-card h-100 p-4 bg-white border">
-                            <div class="d-inline-block bg-primary-soft p-3 rounded-3 mb-4">
-                                <i class="bi bi-person-badge fs-2 text-primary-custom"></i>
-                            </div>
-                            <h3 class="fw-bold mb-3">A - Account</h3>
-                            <ul class="list-unstyled text-muted lh-lg">
-                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Analisi esigenze clienti</li>
-                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Problem solving diretto</li>
-                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Gestione insoluti</li>
-                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Fidelizzazione a 360°</li>
-                            </ul>
+                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="task-card text-center p-4">
+                            <div class="task-letter text-cyan mb-3">A</div>
+                            <h4 class="fw-bold text-main-blue">Account</h4>
+                            <p class="text-muted small mb-0">Gestione clienti a 360°, dall'analisi esigenze alla fidelizzazione.</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="profession-card h-100 p-4 bg-white border">
-                            <div class="d-inline-block bg-primary-soft p-3 rounded-3 mb-4">
-                                <i class="bi bi-currency-euro fs-2 text-primary-custom"></i>
-                            </div>
-                            <h3 class="fw-bold mb-3">S - Sales</h3>
-                            <ul class="list-unstyled text-muted lh-lg">
-                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Trattative inbound</li>
-                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Up & Cross selling</li>
-                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Negoziazioni complesse</li>
-                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Video dimostrazioni</li>
-                            </ul>
+                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="task-card text-center p-4">
+                            <div class="task-letter text-cta mb-3">S</div>
+                            <h4 class="fw-bold text-main-blue">Sales</h4>
+                            <p class="text-muted small mb-0">Negoziazioni, trattative inbound e incremento del business.</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="profession-card h-100 p-4 bg-white border">
-                            <div class="d-inline-block bg-primary-soft p-3 rounded-3 mb-4">
-                                <i class="bi bi-diagram-3 fs-2 text-primary-custom"></i>
-                            </div>
-                            <h3 class="fw-bold mb-3">K - Key Leader</h3>
-                            <ul class="list-unstyled text-muted lh-lg">
-                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Coordinamento team</li>
-                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Analisi dei dati</li>
-                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Ideazione progetti</li>
-                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Presidio riunioni</li>
-                            </ul>
+                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="task-card text-center p-4">
+                            <div class="task-letter text-cyan mb-3">K</div>
+                            <h4 class="fw-bold text-main-blue">Key Leader</h4>
+                            <p class="text-muted small mb-0">Data analysis, ideazione progetti e coordinamento attività.</p>
                         </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-5" data-aos="fade-up">
+                    <a href="metodo.html" class="btn btn-outline-main rounded-pill fw-bold px-4 py-2">Leggi i dettagli del metodo</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. I MIEI PROGETTI (Dall'idea al risultato) -->
+        <section class="profession-section bg-soft-cyan">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-end mb-5" data-aos="fade-up">
+                    <div>
+                        <span class="badge-kicker mb-3">Portfolio</span>
+                        <h2 class="fw-black text-main-blue display-6 m-0">Dall'idea al risultato</h2>
+                    </div>
+                    <a href="progetti.html" class="d-none d-md-flex align-items-center fw-bold text-cta text-decoration-none">Vedi tutti i progetti <i class="bi bi-arrow-right ms-2"></i></a>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Prog 1 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <a href="progetti.html#startup" class="project-card text-decoration-none">
+                            <div class="project-icon bg-soft-orange text-cta"><i class="bi bi-rocket-takeoff-fill"></i></div>
+                            <h4 class="fw-bold text-main-blue mt-4 mb-2">Startup da Zero</h4>
+                            <p class="text-muted small mb-0">Creazione brand, web dev e posizionamento per un'attività freelance.</p>
+                        </a>
+                    </div>
+                    <!-- Prog 2 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+                        <a href="progetti.html#algoritmo" class="project-card text-decoration-none">
+                            <div class="project-icon bg-white text-cyan shadow-sm"><i class="bi bi-calculator-fill"></i></div>
+                            <h4 class="fw-bold text-main-blue mt-4 mb-2">Algoritmo Strategico</h4>
+                            <p class="text-muted small mb-0">Gestione di oltre 10.000 combinazioni per il calcolo del rendimento e-commerce.</p>
+                        </a>
+                    </div>
+                    <!-- Prog 3 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <a href="progetti.html#crm" class="project-card text-decoration-none">
+                            <div class="project-icon bg-white text-cyan shadow-sm"><i class="bi bi-database-fill-gear"></i></div>
+                            <h4 class="fw-bold text-main-blue mt-4 mb-2">CRM Custom</h4>
+                            <p class="text-muted small mb-0">Visione completa delle performance su ecosistema di oltre 80 fogli connessi.</p>
+                        </a>
+                    </div>
+                    <!-- Prog 4 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+                        <a href="progetti.html#lanci" class="project-card text-decoration-none">
+                            <div class="project-icon bg-white text-cyan shadow-sm"><i class="bi bi-megaphone-fill"></i></div>
+                            <h4 class="fw-bold text-main-blue mt-4 mb-2">Lanci di Successo</h4>
+                            <p class="text-muted small mb-0">Integrazioni, campagne ADS e stipula di convenzioni logistiche operative.</p>
+                        </a>
+                    </div>
+                    <!-- Prog 5 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <a href="progetti.html#piani" class="project-card text-decoration-none">
+                            <div class="project-icon bg-white text-cyan shadow-sm"><i class="bi bi-journal-arrow-up"></i></div>
+                            <h4 class="fw-bold text-main-blue mt-4 mb-2">Piani di Crescita</h4>
+                            <p class="text-muted small mb-0">Strategie operative, materiali formativi e script avanzati per il team di vendita.</p>
+                        </a>
+                    </div>
+                    <!-- Prog 6 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
+                        <a href="progetti.html#tracking" class="project-card text-decoration-none">
+                            <div class="project-icon bg-white text-cyan shadow-sm"><i class="bi bi-crosshair"></i></div>
+                            <h4 class="fw-bold text-main-blue mt-4 mb-2">Smart Tracking</h4>
+                            <p class="text-muted small mb-0">Dashboard live per il monitoraggio degli obiettivi, supportata da video tutorial.</p>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 4. I MIEI PROGETTI -->
-        <section id="progetti" class="profession-section bg-white">
+        <!-- 5. RISULTATI IN SINTESI -->
+        <section class="profession-section bg-white border-bottom">
             <div class="container">
-                <div class="profession-section-title mb-5" data-aos="fade-up">
-                    <span class="badge-kicker mb-3">Case Studies</span>
-                    <h2 class="fw-black text-navy display-6">Dall'idea al risultato</h2>
-                    <p class="text-muted">Ho potuto mettere in campo la mia creatività, ideando, progettando e realizzando progetti in modo proattivo e autonomo, dall'ideazione fino al project management.</p>
-                </div>
-
-                <div class="row g-5 align-items-center">
-                    <!-- Progetto 1 -->
-                    <div class="col-lg-6" data-aos="fade-right">
-                        <div class="p-4 bg-light rounded-4 border">
-                            <span class="profession-badge mb-3">Data & Strategy</span>
-                            <h3 class="fw-bold mb-3">Algoritmo Strategico & CRM</h3>
-                            <p class="text-muted"><strong>Il Problema:</strong> Mancanza di una visione completa sulle performance dei clienti e rendimento degli e-commerce.</p>
-                            <p class="text-muted"><strong>La Soluzione:</strong> Ho sviluppato un algoritmo con oltre 8 macro, in grado di gestire 10.000+ combinazioni per calcolare i rendimenti. Parallelamente, ho creato un CRM su Google Sheet con 80+ fogli e tabelle pivot.</p>
-                            <p class="text-muted mb-0"><strong>Il Risultato:</strong> Monitoraggio in tempo reale (Smart Tracking) degli obiettivi con 12 macro, permettendo al team di avere dati chiari per agire tempestivamente sui portafogli clienti.</p>
-                        </div>
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5" data-aos="fade-right">
+                        <span class="badge-kicker mb-3">Numeri e Dati</span>
+                        <h2 class="fw-black text-main-blue display-6 mb-4">Risultati concreti.</h2>
+                        <p class="text-muted mb-4">
+                            L'impatto si misura. Negli ultimi tre anni ho garantito un apporto sostanziale in termini di volumi e incidenza sul fatturato totale, gestendo portafogli stabili.
+                        </p>
+                        <a href="risultati.html" class="btn btn-outline-main rounded-pill fw-bold px-4 py-2">Visualizza l'analisi completa</a>
                     </div>
-                    <div class="col-lg-6" data-aos="fade-left">
-                        <img src="https://via.placeholder.com/600x400/ea580c/ffffff?text=Data+Analysis" alt="Dashboard e Dati" class="img-fluid rounded-4 shadow-sm">
-                    </div>
-
-                    <!-- Progetto 2 -->
-                    <div class="col-lg-6 order-lg-2" data-aos="fade-left">
-                        <div class="p-4 bg-light rounded-4 border">
-                            <span class="profession-badge mb-3">Web & Marketing</span>
-                            <h3 class="fw-bold mb-3">Startup da zero: Dall'idea all'impresa</h3>
-                            <p class="text-muted"><strong>Il Contesto:</strong> Avvio totale di un'attività freelance, curando ogni singolo aspetto operativo, strategico e legale.</p>
-                            <ul class="text-muted lh-lg">
-                                <li><strong>Branding & Contenuti:</strong> Naming, brand identity, piano editoriale mensile e copy.</li>
-                                <li><strong>Sviluppo Web:</strong> Creazione sito custom HTML, CSS e JS (senza template), integrazione Brevo per Email Marketing.</li>
-                                <li><strong>Digital:</strong> Campagne Google Ads, Analytics, Search Console, Tag Manager e T&C legali.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1" data-aos="fade-right">
-                        <img src="https://via.placeholder.com/600x400/12253c/ffffff?text=Web+Development" alt="Sviluppo Web" class="img-fluid rounded-4 shadow-sm">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. RISULTATI -->
-        <section id="risultati" class="profession-section">
-            <div class="container">
-                <div class="profession-section-title text-center mb-5" data-aos="fade-up">
-                    <span class="badge-kicker mb-3">Le Performance</span>
-                    <h2 class="fw-black text-navy display-6">I risultati in numeri (2022 - 2024)</h2>
-                    <p class="text-muted">Oltre ai risultati qualitativi, ecco le metriche stimate della mia attività commerciale diretta.</p>
-                </div>
-
-                <div class="row g-4 justify-content-center">
-                    <!-- 2024 -->
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="profession-card h-100 p-4 bg-white border text-center">
-                            <h3 class="fw-bold text-muted mb-4">Anno 2024</h3>
-                            <div class="display-4 fw-black text-primary-custom mb-2">259K €</div>
-                            <p class="fw-bold text-navy mb-4">Fatturato Generato (23% incidenza)</p>
-                            <hr class="text-muted">
-                            <div class="d-flex justify-content-between text-muted mt-3">
-                                <span>Trattative Chiuse:</span>
-                                <strong>69</strong>
+                    
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="d-flex flex-column gap-3">
+                            <!-- riga risultato -->
+                            <div class="result-row d-flex align-items-center justify-content-between p-4 rounded-4 bg-soft-cyan">
+                                <div>
+                                    <h4 class="fw-bold text-main-blue mb-1">Anno 2024</h4>
+                                    <span class="text-muted small"><i class="bi bi-person-check text-cyan"></i> 67 Clienti</span>
+                                </div>
+                                <div class="text-end">
+                                    <h3 class="fw-black text-cta mb-0">259.000 €</h3>
+                                    <span class="text-muted small fw-semibold">Fatturato</span>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-between text-muted mt-2">
-                                <span>Clienti Gestiti:</span>
-                                <strong>67</strong>
+                            <div class="result-row d-flex align-items-center justify-content-between p-4 rounded-4 bg-soft-cyan border border-cyan shadow-sm position-relative">
+                                <span class="position-absolute top-0 start-0 translate-middle p-2 bg-cta border border-light rounded-circle" title="Miglior Anno">
+                                    <span class="visually-hidden">Best Year</span>
+                                </span>
+                                <div>
+                                    <h4 class="fw-bold text-main-blue mb-1">Anno 2023</h4>
+                                    <span class="text-muted small"><i class="bi bi-person-check text-cyan"></i> 73 Clienti</span>
+                                </div>
+                                <div class="text-end">
+                                    <h3 class="fw-black text-cta mb-0">351.000 €</h3>
+                                    <span class="text-muted small fw-semibold">Fatturato</span>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-between text-muted mt-2">
-                                <span>Ticket Medio:</span>
-                                <strong>3.700 €</strong>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2023 -->
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="profession-card h-100 p-4 bg-white border border-primary text-center position-relative shadow-sm">
-                            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-primary-custom px-3 py-2">Best Year</span>
-                            <h3 class="fw-bold text-muted mb-4 mt-2">Anno 2023</h3>
-                            <div class="display-4 fw-black text-primary-custom mb-2">351K €</div>
-                            <p class="fw-bold text-navy mb-4">Fatturato Generato (27% incidenza)</p>
-                            <hr class="text-muted">
-                            <div class="d-flex justify-content-between text-muted mt-3">
-                                <span>Trattative Chiuse:</span>
-                                <strong>75</strong>
-                            </div>
-                            <div class="d-flex justify-content-between text-muted mt-2">
-                                <span>Clienti Gestiti:</span>
-                                <strong>73</strong>
-                            </div>
-                            <div class="d-flex justify-content-between text-muted mt-2">
-                                <span>Ticket Medio:</span>
-                                <strong>4.700 €</strong>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2022 -->
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="profession-card h-100 p-4 bg-white border text-center">
-                            <h3 class="fw-bold text-muted mb-4">Anno 2022</h3>
-                            <div class="display-4 fw-black text-primary-custom mb-2">215K €</div>
-                            <p class="fw-bold text-navy mb-4">Fatturato Generato (21% incidenza)</p>
-                            <hr class="text-muted">
-                            <div class="d-flex justify-content-between text-muted mt-3">
-                                <span>Trattative Chiuse:</span>
-                                <strong>43</strong>
-                            </div>
-                            <div class="d-flex justify-content-between text-muted mt-2">
-                                <span>Clienti Gestiti:</span>
-                                <strong>77</strong>
-                            </div>
-                            <div class="d-flex justify-content-between text-muted mt-2">
-                                <span>Ticket Medio:</span>
-                                <strong>5.500 €</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. CONTATTI (FORM) -->
-        <section id="contatti" class="profession-section bg-white border-top">
-            <div class="container">
-                <div class="p-5 rounded-4" style="background-color: var(--profession-accent-soft); border: 1px solid var(--profession-border);">
-                    <div class="row g-5 align-items-center">
-                        <div class="col-lg-5" data-aos="fade-right">
-                            <h2 class="display-5 fw-black text-navy mb-4">Pronto per una nuova sfida?</h2>
-                            <p class="fs-5 text-muted mb-4">
-                                Sono sempre alla ricerca di contesti stimolanti in cui esprimere pienamente le mie potenzialità e affrontare sfide che mi permettano di superare i miei limiti.
-                            </p>
-                            <ul class="list-unstyled d-flex flex-column gap-3 text-navy fw-bold">
-                                <li><i class="bi bi-telephone text-primary-custom me-2 fs-5"></i> +39 334-268-9942</li>
-                                <li><i class="bi bi-envelope text-primary-custom me-2 fs-5"></i> ida.alessandro@outlook.it</li>
-                                <li><i class="bi bi-linkedin text-primary-custom me-2 fs-5"></i> LinkedIn: /in/alessandroida</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="col-lg-7" data-aos="fade-left">
-                            <div class="bg-white p-4 rounded-4 shadow-sm border">
-                                <form>
-                                    <div class="row g-3">
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control bg-light p-3 border-0" placeholder="Il tuo Nome" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control bg-light p-3 border-0" placeholder="Azienda" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="email" class="form-control bg-light p-3 border-0" placeholder="Email" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="tel" class="form-control bg-light p-3 border-0" placeholder="Telefono" required>
-                                        </div>
-                                        <div class="col-12">
-                                            <textarea class="form-control bg-light p-3 border-0" rows="4" placeholder="Come possiamo collaborare?"></textarea>
-                                        </div>
-                                        <div class="col-12 mt-4">
-                                            <button type="submit" class="btn btn-primary w-100 p-3 rounded-pill fw-bold fs-5">Invia Messaggio</button>
-                                        </div>
-                                    </div>
-                                </form>
+                            <div class="result-row d-flex align-items-center justify-content-between p-4 rounded-4 bg-soft-cyan">
+                                <div>
+                                    <h4 class="fw-bold text-main-blue mb-1">Anno 2022</h4>
+                                    <span class="text-muted small"><i class="bi bi-person-check text-cyan"></i> 77 Clienti</span>
+                                </div>
+                                <div class="text-end">
+                                    <h3 class="fw-black text-cta mb-0">215.000 €</h3>
+                                    <span class="text-muted small fw-semibold">Fatturato</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -408,9 +317,21 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer py-4 bg-white border-top text-center">
+    <footer class="footer py-5 bg-soft-cyan text-center text-md-start">
         <div class="container">
-            <p class="text-muted mb-0 fw-semibold">&copy; 2026 Alessandro Idà. Progettato e sviluppato con cura.</p>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h4 class="fw-black text-main-blue mb-2">Alessandro Idà</h4>
+                    <p class="text-muted small mb-0">Sales Manager, Key Account & Project Developer.<br>Disponibile per nuove opportunità sfidanti.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="contatti.html" class="btn btn-cta rounded-pill px-4 py-2 fw-bold mb-3 d-inline-block">Contattami Ora</a>
+                    <div class="social-links d-flex justify-content-center justify-content-md-end gap-3">
+                        <a href="#" class="text-cyan fs-4"><i class="bi bi-linkedin"></i></a>
+                        <a href="mailto:ida.alessandro@outlook.it" class="text-cyan fs-4"><i class="bi bi-envelope-fill"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -418,17 +339,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Inizializzazione Animazioni
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 50
-        });
-
-        // Sticky Navbar Background
+        AOS.init({ duration: 800, once: true, offset: 50 });
+        
+        // Sticky Navbar Shadow
         window.addEventListener('scroll', function() {
             const header = document.getElementById('header');
-            if (window.scrollY > 50) {
+            if (window.scrollY > 20) {
                 header.classList.add('shadow-sm');
             } else {
                 header.classList.remove('shadow-sm');
