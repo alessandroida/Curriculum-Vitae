@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ── Navbar scroll effect ── */
-    const navbar = document.querySelector('.navbar-custom');
+    const navbar = document.querySelector('.navbar-floating');
     if (navbar) {
         const onScroll = () => {
             navbar.classList.toggle('scrolled', window.scrollY > 50);
@@ -28,15 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const target = document.querySelector(id);
             if (target) {
                 e.preventDefault();
-                const offset = navbar ? navbar.offsetHeight + 10 : 80;
+                const offset = navbar ? navbar.offsetHeight + 30 : 80;
                 const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
                 window.scrollTo({ top, behavior: 'smooth' });
 
-                // Close mobile menu if open
-                const collapse = document.getElementById('navbarNav');
-                if (collapse && collapse.classList.contains('show')) {
-                    const toggler = document.querySelector('.navbar-toggler');
-                    if (toggler) toggler.click();
+                // Close sidebar menu if open
+                const mobileSidebar = document.getElementById('mobileSidebar');
+                const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+                if (mobileSidebar && mobileSidebar.classList.contains('open')) {
+                    mobileSidebar.classList.remove('open');
+                    if(sidebarBackdrop) sidebarBackdrop.classList.remove('show');
+                    document.body.style.overflow = '';
                 }
             }
         });
@@ -44,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ── Active nav link on scroll ── */
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.navbar-custom .nav-link:not(.nav-cta-btn)');
+    const navLinks = document.querySelectorAll('.navbar-floating .nav-link:not(.nav-cta-btn)');
 
     const setActive = () => {
         const scrollY = window.pageYOffset;
@@ -78,5 +80,64 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     window.addEventListener('scroll', animateProgress, { passive: true });
+
+    /* ── TASK Explorer Tabs ── */
+    const taskTabs = document.querySelectorAll('.task-tab');
+    const taskPanels = document.querySelectorAll('.task-panel');
+
+    if (taskTabs.length > 0 && taskPanels.length > 0) {
+        taskTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                taskTabs.forEach(t => t.classList.remove('active'));
+                taskPanels.forEach(p => p.classList.remove('active'));
+
+                tab.classList.add('active');
+                const targetId = 'panel-' + tab.getAttribute('data-tab');
+                const targetPanel = document.getElementById(targetId);
+                if (targetPanel) {
+                    targetPanel.classList.add('active');
+                }
+            });
+        });
+    }
+    /* ── Scroll to Top Button ── */
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (scrollTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        }, { passive: true });
+
+        scrollTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    /* ── Mobile Sidebar Menu 3/4 ── */
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    const mobileSidebar = document.getElementById('mobileSidebar');
+    const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+
+    if (mobileMenuBtn && mobileSidebar && mobileMenuClose && sidebarBackdrop) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileSidebar.classList.add('open');
+            sidebarBackdrop.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        const closeSidebar = () => {
+            mobileSidebar.classList.remove('open');
+            sidebarBackdrop.classList.remove('show');
+            document.body.style.overflow = '';
+        };
+
+        mobileMenuClose.addEventListener('click', closeSidebar);
+        sidebarBackdrop.addEventListener('click', closeSidebar);
+    }
 
 });
