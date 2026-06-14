@@ -17,100 +17,114 @@
 <body>
 
 <!-- ═══════════════════════════════════════════════════════════════
-     NAVBAR
+     NAVBAR — Floating Glassmorphism Pill
      ═══════════════════════════════════════════════════════════════ -->
-<nav id="navbar" class="navbar navbar-expand-lg navbar-custom">
-    <div class="container">
-        <a class="navbar-brand" href="#home">IDÀ<span>.</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item"><a class="nav-link" href="#chi-sono">Chi Sono</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#task">T.A.S.K.</a></li>
-                <li class="nav-item"><a class="nav-link" href="#progetti">Progetti</a></li>
-                <li class="nav-item"><a class="nav-link" href="#risultati">Risultati</a></li>
-                <li class="nav-item"><a class="nav-link" href="#reasons">Why me</a></li>
-                <li class="nav-item ms-lg-3"><a class="nav-link nav-cta-btn" href="#contatti">Contattami</a></li>
-            </ul>
+<div class="nav-wrapper">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-floating">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="#home">IDÀ<span>.</span></a>
+            <button class="custom-hamburger d-lg-none" id="mobileMenuBtn">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="d-none d-lg-block" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#chi-sono">Chi Sono</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#task">T.A.S.K.</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#progetti">Progetti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#risultati">Risultati</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reasons">Why me</a></li>
+                    <li class="nav-item ms-lg-3"><a class="nav-link nav-cta-btn" href="#contatti">Contattami</a></li>
+                </ul>
+            </div>
         </div>
+    </nav>
+</div>
+
+<!-- Mobile Sidebar Menu 3/4 -->
+<div class="mobile-sidebar-backdrop" id="sidebarBackdrop"></div>
+<div class="mobile-sidebar" id="mobileSidebar">
+    <div class="msb-header">
+        <span class="msb-logo">IDÀ.</span>
+        <button class="msb-close" id="mobileMenuClose"><i class="bi bi-x-lg"></i></button>
     </div>
-</nav>
+    <nav class="msb-nav">
+        <a href="#chi-sono" class="msb-link">Chi Sono</a>
+        <a href="#skills" class="msb-link">Skills</a>
+        <a href="#task" class="msb-link">T.A.S.K.</a>
+        <a href="#progetti" class="msb-link">Progetti</a>
+        <a href="#risultati" class="msb-link">Risultati</a>
+        <a href="#reasons" class="msb-link">Why me</a>
+        <a href="#contatti" class="msb-link cta">Contattami</a>
+    </nav>
+</div>
 
 
 <!-- ═══════════════════════════════════════════════════════════════
-     HERO — floating cards, waveform, chips (Everoo-style)
+     HERO — Bento Grid Layout (Ultra Modern)
      ═══════════════════════════════════════════════════════════════ -->
-<section id="home" class="hero">
+<section id="home" class="hero bento-hero">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="bento-hero-grid">
 
-            <!-- Left -->
-            <div class="col-lg-6" data-aos="fade-right" data-aos-duration="900">
+            <!-- Main Content Cell -->
+            <div class="bh-cell bh-main" data-aos="fade-up" data-aos-duration="900">
                 <div class="kicker"><i class="bi bi-stars"></i> Dietro le quinte</div>
                 <p class="hero-pain-line">Il backstage della mia crescita professionale</p>
                 <h1>Traduco la complessità in <em>risultati</em></h1>
                 <p class="hero-lead">Sono Idà Alessandro — Sales Manager, Key Account e Project Developer. Vi porto dietro le quinte del mio percorso, raccontando le opportunità che ho colto al volo.</p>
 
-                <div class="hero-actions">
+                <div class="hero-actions mt-4">
                     <a href="#chi-sono" class="btn-cta"><i class="bi bi-arrow-down-circle"></i> Scopri il percorso</a>
                     <a href="#contatti" class="btn-outline"><i class="bi bi-chat-dots"></i> Contattami</a>
                 </div>
+            </div>
 
-                <div class="hero-proof">
-                    <div class="hero-proof-item"><i class="bi bi-patch-check-fill"></i> Sales Manager & Key Account — 3+ anni di esperienza</div>
-                    <div class="hero-proof-item"><i class="bi bi-patch-check-fill"></i> +825K € di fatturato gestito nel triennio 2022-2024</div>
-                    <div class="hero-proof-item"><i class="bi bi-patch-check-fill"></i> Progetti ideati, sviluppati e realizzati in autonomia</div>
+            <!-- Profile Cell -->
+            <div class="bh-cell bh-profile" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+                <div class="bh-profile-top">
+                    <div class="bh-avatar">
+                        <!-- Sostituisci questo link con la tua foto reale -->
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=256&q=80" alt="Idà Alessandro">
+                        <div class="bh-status-dot"></div>
+                    </div>
+                    <div class="bh-profile-info">
+                        <strong>Idà Alessandro</strong>
+                        <span>Sales & Key Account</span>
+                    </div>
+                </div>
+                <div class="bh-profile-tags mt-4">
+                    <div class="bh-tag"><i class="bi bi-briefcase-fill"></i> 3+ anni di esperienza</div>
+                    <div class="bh-tag"><i class="bi bi-lightning-charge-fill"></i> Pronto all'azione</div>
                 </div>
             </div>
 
-            <!-- Right — Media with floating overlays -->
-            <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200">
-                <div class="hero-media">
-                    <div class="hero-image">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Business strategy">
+            <!-- Stats Cell 1: Fatturato -->
+            <div class="bh-cell bh-stat stat-revenue" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+                <div class="bh-stat-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                <div class="bh-stat-data">
+                    <h3>+825K €</h3>
+                    <p>Fatturato gestito (2022-2024)</p>
+                </div>
+                <div class="bh-stat-chart">
+                    <div class="bar bar-1"></div>
+                    <div class="bar bar-2"></div>
+                    <div class="bar bar-3"></div>
+                </div>
+            </div>
+
+            <!-- Stats Cell 2: Progetti -->
+            <div class="bh-cell bh-stat stat-projects" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+                <div class="bh-stat-top">
+                    <div class="bh-stat-icon"><i class="bi bi-kanban"></i></div>
+                    <div class="bh-avatars">
+                        <span><i class="bi bi-person-fill"></i></span>
+                        <span><i class="bi bi-robot"></i></span>
                     </div>
-
-                    <div class="hero-overlay">
-                        <!-- Float 1 — Revenue -->
-                        <div class="hero-float hero-float-1">
-                            <div class="hero-float-head">
-                                <div>
-                                    <div class="hero-chip"><i class="bi bi-graph-up-arrow"></i> FATTURATO</div>
-                                    <strong>+351.000 €</strong>
-                                    <small>Anno record 2023 — 27% incidenza</small>
-                                </div>
-                                <div class="float-icon"><i class="bi bi-arrow-up-right"></i></div>
-                            </div>
-                            <div class="waveform"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-                        </div>
-
-                        <!-- Float 2 — Projects -->
-                        <div class="hero-float hero-float-2">
-                            <div class="hero-chip"><i class="bi bi-kanban"></i> PROGETTI</div>
-                            <strong>Dall'idea al risultato</strong>
-                            <small>Gestione end-to-end in autonomia</small>
-                        </div>
-
-                        <!-- Float 3 — Clients -->
-                        <div class="hero-float hero-float-3">
-                            <div class="hero-float-head">
-                                <div>
-                                    <strong>77 clienti gestiti</strong>
-                                    <small>Fidelizzazione & soddisfazione</small>
-                                </div>
-                                <div class="float-icon"><i class="bi bi-people-fill"></i></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hero-caps">
-                        <div class="hero-cap"><i class="bi bi-briefcase-fill"></i> Sales</div>
-                        <div class="hero-cap"><i class="bi bi-person-badge-fill"></i> Account</div>
-                        <div class="hero-cap"><i class="bi bi-diagram-3-fill"></i> Project Dev</div>
-                        <div class="hero-cap"><i class="bi bi-rocket-takeoff-fill"></i> Startup</div>
-                        <div class="hero-cap"><i class="bi bi-megaphone-fill"></i> Marketing</div>
-                    </div>
+                </div>
+                <div class="bh-stat-data mt-auto pt-3">
+                    <h4>Progetti in Autonomia</h4>
+                    <p>Ideati e sviluppati end-to-end</p>
                 </div>
             </div>
 
@@ -124,7 +138,7 @@
      ═══════════════════════════════════════════════════════════════ -->
 <section id="chi-sono" class="cv-section white">
     <div class="container">
-        <div class="section-header center" data-aos="fade-up">
+        <div class="section-header" data-aos="fade-up">
             <div class="kicker"><i class="bi bi-person-fill"></i> Chi Sono</div>
             <h2>Oltre al semplice curriculum</h2>
             <p>Sono un giovane e intraprendente professionista, pronto a condividere con voi il lato autentico della mia carriera, andando oltre al «semplice» curriculum.</p>
@@ -153,8 +167,14 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-        <!-- Before / After — Obiettivi -->
+<!-- ═══════════════════════════════════════════════════════════════
+     OBIETTIVI — Before/After rows
+     ═══════════════════════════════════════════════════════════════ -->
+<section id="obiettivi" class="cv-section soft">
+    <div class="container">
         <div class="section-header" data-aos="fade-up">
             <div class="kicker"><i class="bi bi-flag-fill"></i> Obiettivi</div>
             <h2>Cosa cambio quando arrivo</h2>
@@ -198,9 +218,9 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════
-     SKILLS — "Pain card" style (tinted bg, icon+text side by side)
+     SKILLS — Stacked orbit layout
      ═══════════════════════════════════════════════════════════════ -->
-<section id="skills" class="cv-section soft">
+<section id="skills" class="cv-section white">
     <div class="container">
         <div class="section-header" data-aos="fade-up">
             <div class="kicker"><i class="bi bi-lightning-charge-fill"></i> Competenze</div>
@@ -208,30 +228,65 @@
             <p>Unisco competenze tecniche e soft skills per affrontare sfide complesse, collaborare in team e contribuire alla crescita aziendale.</p>
         </div>
 
-        <div class="skills-grid">
-            <div class="skill-pain" data-aos="fade-up" data-aos-delay="50">
-                <div class="skill-pain-icon"><i class="bi bi-brain"></i></div>
-                <div><h4>Agilità mentale</h4><p>Apprendo rapidamente con curiosità, specialmente in contesti innovativi e smart.</p></div>
+        <div class="skills-hub-wrapper" data-aos="fade-up" data-aos-delay="80">
+            <!-- LEFT COLUMN -->
+            <div class="sh-col sh-left">
+                <div class="sh-item">
+                    <div class="sh-text">
+                        <h4>Agilità mentale</h4>
+                        <p>Apprendo rapidamente con curiosità, specialmente in contesti innovativi e smart.</p>
+                    </div>
+                    <div class="sh-icon"><i class="bi bi-puzzle-fill"></i></div>
+                </div>
+                <div class="sh-item">
+                    <div class="sh-text">
+                        <h4>Apertura al feedback</h4>
+                        <p>Vedo il feedback come opportunità di crescita; accolgo le critiche costruttive con positività.</p>
+                    </div>
+                    <div class="sh-icon"><i class="bi bi-chat-dots-fill"></i></div>
+                </div>
+                <div class="sh-item">
+                    <div class="sh-text">
+                        <h4>Pensiero critico</h4>
+                        <p>Valuto con spirito critico le informazioni e formulo giudizi consapevoli per ogni decisione.</p>
+                    </div>
+                    <div class="sh-icon"><i class="bi bi-lightbulb-fill"></i></div>
+                </div>
             </div>
-            <div class="skill-pain" data-aos="fade-up" data-aos-delay="100">
-                <div class="skill-pain-icon"><i class="bi bi-chat-dots-fill"></i></div>
-                <div><h4>Apertura al feedback</h4><p>Vedo il feedback come opportunità di crescita; accolgo le critiche costruttive con positività.</p></div>
+
+            <!-- CENTER CORE -->
+            <div class="sh-center d-none d-lg-flex">
+                <div class="sh-core">
+                    <div class="core-inner">
+                        <i class="bi bi-star-fill"></i>
+                        <span>Le Mie<br>Skills</span>
+                    </div>
+                </div>
             </div>
-            <div class="skill-pain" data-aos="fade-up" data-aos-delay="150">
-                <div class="skill-pain-icon"><i class="bi bi-lightbulb-fill"></i></div>
-                <div><h4>Pensiero critico</h4><p>Valuto con spirito critico le informazioni e formulo giudizi consapevoli per ogni decisione.</p></div>
-            </div>
-            <div class="skill-pain" data-aos="fade-up" data-aos-delay="200">
-                <div class="skill-pain-icon"><i class="bi bi-briefcase-fill"></i></div>
-                <div><h4>Attitudine commerciale</h4><p>Competenze nella vendita e nella comunicazione verbale e paraverbale efficace.</p></div>
-            </div>
-            <div class="skill-pain" data-aos="fade-up" data-aos-delay="250">
-                <div class="skill-pain-icon"><i class="bi bi-people-fill"></i></div>
-                <div><h4>Leadership coinvolgente</h4><p>Guido il team con entusiasmo, coordinando le attività per raggiungere obiettivi condivisi.</p></div>
-            </div>
-            <div class="skill-pain" data-aos="fade-up" data-aos-delay="300">
-                <div class="skill-pain-icon"><i class="bi bi-person-lines-fill"></i></div>
-                <div><h4>Portafoglio clienti</h4><p>Gestisco e sviluppo portafogli clienti, mantenendo sempre alta la soddisfazione e la fidelizzazione.</p></div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="sh-col sh-right">
+                <div class="sh-item">
+                    <div class="sh-icon"><i class="bi bi-briefcase-fill"></i></div>
+                    <div class="sh-text">
+                        <h4>Attitudine commerciale</h4>
+                        <p>Competenze avanzate nella vendita e nella comunicazione verbale e paraverbale efficace.</p>
+                    </div>
+                </div>
+                <div class="sh-item">
+                    <div class="sh-icon"><i class="bi bi-people-fill"></i></div>
+                    <div class="sh-text">
+                        <h4>Leadership coinvolgente</h4>
+                        <p>Guido il team con entusiasmo, coordinando le attività per raggiungere obiettivi condivisi.</p>
+                    </div>
+                </div>
+                <div class="sh-item">
+                    <div class="sh-icon"><i class="bi bi-person-lines-fill"></i></div>
+                    <div class="sh-text">
+                        <h4>Portafoglio clienti</h4>
+                        <p>Gestisco e sviluppo portafogli clienti, mantenendo sempre alta la soddisfazione a 360°.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -239,102 +294,133 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════
-     T.A.S.K. — Hub Diagram (Everoo integrations-flow style)
-     Central circle + connected pills + manager window mockup
+     T.A.S.K. — Interactive tab layout
      ═══════════════════════════════════════════════════════════════ -->
-<section id="task" class="cv-section white">
+<section id="task" class="cv-section soft">
     <div class="container">
         <div class="section-header" data-aos="fade-up">
             <div class="kicker"><i class="bi bi-diagram-3-fill"></i> Il Modello</div>
             <h2>L'approccio T.A.S.K.</h2>
-            <p>Le attività che svolgo coprono quattro macro-aree strategiche: Training, Account, Sales, Key Leader. Questa versatilità mi permette di adattarmi a quasi tutte le esigenze aziendali.</p>
+            <p>Quattro macro-aree strategiche che definiscono il mio metodo di lavoro. Clicca su un'area per scoprire cosa faccio concretamente.</p>
         </div>
 
-        <div class="hub-visual" data-aos="fade-up" data-aos-delay="100">
-            <div class="hub-flow">
+        <div class="task-explorer" data-aos="fade-up" data-aos-delay="100">
 
-                <!-- Left — Role card -->
-                <div class="hub-role-card">
-                    <strong>Le mie aree operative</strong>
-                    <div class="hub-role-icons">
-                        <span><i class="bi bi-book-half"></i></span>
-                        <span><i class="bi bi-person-badge"></i></span>
-                        <span><i class="bi bi-graph-up-arrow"></i></span>
-                        <span><i class="bi bi-key-fill"></i></span>
-                        <span><i class="bi bi-megaphone"></i></span>
-                        <span><i class="bi bi-cpu"></i></span>
+            <!-- Left: tab navigation -->
+            <div class="task-tabs">
+                <button class="task-tab active" data-tab="training">
+                    <div class="task-tab-icon"><i class="bi bi-book-half"></i></div>
+                    <div>
+                        <strong>T — Training</strong>
+                        <span>Formazione & crescita</span>
                     </div>
-                    <div style="display:grid; gap:6px; width:100%; margin-top:6px;">
-                        <div style="display:flex; gap:6px;">
-                            <span style="flex:1; height:8px; border-radius:99px; background:var(--second); opacity:0.7"></span>
-                            <span style="flex:0.6; height:8px; border-radius:99px; background:var(--main); opacity:0.5"></span>
+                    <i class="bi bi-chevron-right task-tab-arrow"></i>
+                </button>
+                <button class="task-tab" data-tab="account">
+                    <div class="task-tab-icon"><i class="bi bi-person-badge"></i></div>
+                    <div>
+                        <strong>A — Account</strong>
+                        <span>Gestione clienti</span>
+                    </div>
+                    <i class="bi bi-chevron-right task-tab-arrow"></i>
+                </button>
+                <button class="task-tab" data-tab="sales">
+                    <div class="task-tab-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                    <div>
+                        <strong>S — Sales</strong>
+                        <span>Vendita & sviluppo</span>
+                    </div>
+                    <i class="bi bi-chevron-right task-tab-arrow"></i>
+                </button>
+                <button class="task-tab" data-tab="keyleader">
+                    <div class="task-tab-icon"><i class="bi bi-key-fill"></i></div>
+                    <div>
+                        <strong>K — Key Leader</strong>
+                        <span>Leadership & strategia</span>
+                    </div>
+                    <i class="bi bi-chevron-right task-tab-arrow"></i>
+                </button>
+            </div>
+
+            <!-- Right: detail panel -->
+            <div class="task-detail">
+
+                <div class="task-panel active" id="panel-training">
+                    <div class="tp-head">
+                        <div class="tp-icon"><i class="bi bi-book-half"></i></div>
+                        <div>
+                            <h3>Training</h3>
+                            <p class="tp-sub">Mi dedico alla formazione personale su:</p>
                         </div>
-                        <div style="display:flex; gap:6px;">
-                            <span style="flex:0.4; height:8px; border-radius:99px; background:var(--second); opacity:0.4"></span>
-                            <span style="flex:1; height:8px; border-radius:99px; background:var(--main); opacity:0.6"></span>
+                    </div>
+                    <div class="tp-items">
+                        <div class="tp-item-grid">
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Crescita personale</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Tecnologia e informatica</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Tecniche di vendita</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Project Management</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Marketing</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Imprenditoria</span></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Center — Sync hub -->
-                <div class="hub-sync">
-                    <div class="hub-pill"><i class="bi bi-arrow-left-right"></i> Versatilità</div>
-                    <div class="hub-core">
-                        <i class="bi bi-person-workspace"></i>
-                        <strong>Idà Alessandro</strong>
-                        <small>Sales · Account · Leader</small>
+                <div class="task-panel" id="panel-account">
+                    <div class="tp-head">
+                        <div class="tp-icon" style="background: color-mix(in srgb, var(--cta) 12%, white); color:var(--cta)"><i class="bi bi-person-badge"></i></div>
+                        <div>
+                            <h3>Account Manager</h3>
+                            <p class="tp-sub">Gestisco le relazioni con i clienti:</p>
+                        </div>
                     </div>
-                    <div class="hub-pill"><i class="bi bi-arrow-repeat"></i> Adattabilità</div>
+                    <div class="tp-items">
+                        <div class="tp-item-grid">
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Risolvendo problemi</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Intervenendo rapidamente</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Analizzando esigenze</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Gestendo gli insoluti</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Seguendoli a 360°</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Fidelizzandoli</span></div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Right — Window mockup -->
-                <div class="hub-manager">
-                    <div class="hub-window-bar"><span></span><span></span><span></span></div>
-                    <div class="hub-manager-body">
-                        <div class="hub-manager-nav">
-                            <span class="active"><i class="bi bi-house-fill"></i></span>
-                            <span><i class="bi bi-people"></i></span>
-                            <span><i class="bi bi-bar-chart"></i></span>
-                            <span><i class="bi bi-gear"></i></span>
+                <div class="task-panel" id="panel-sales">
+                    <div class="tp-head">
+                        <div class="tp-icon" style="background: color-mix(in srgb, #22c55e 12%, white); color:#16a34a"><i class="bi bi-graph-up-arrow"></i></div>
+                        <div>
+                            <h3>Sales</h3>
+                            <p class="tp-sub">Guido tutti i processi di vendita, occupandomi di:</p>
                         </div>
-                        <div class="hub-manager-content">
-                            <h3>Le 4 aree T.A.S.K.</h3>
-                            <div class="hub-panels">
-                                <!-- Training -->
-                                <div class="hub-panel">
-                                    <strong><i class="bi bi-book-half" style="color:var(--second)"></i> Training</strong>
-                                    <div class="cal-grid">
-                                        <span></span><span class="active"></span><span></span><span></span>
-                                        <span></span><span></span><span class="active"></span><span></span>
-                                    </div>
-                                </div>
-                                <!-- Account -->
-                                <div class="hub-panel">
-                                    <strong><i class="bi bi-person-badge" style="color:var(--second)"></i> Account</strong>
-                                    <ul class="apt-list">
-                                        <li><span></span><em>360°</em></li>
-                                        <li><span></span><em>Fidelizzo</em></li>
-                                        <li><span></span><em>Risolvo</em></li>
-                                    </ul>
-                                </div>
-                                <!-- Sales -->
-                                <div class="hub-panel">
-                                    <strong><i class="bi bi-graph-up-arrow" style="color:var(--second)"></i> Sales</strong>
-                                    <div class="cal-grid">
-                                        <span class="active"></span><span></span><span class="active"></span><span></span>
-                                        <span></span><span class="active"></span><span></span><span class="active"></span>
-                                    </div>
-                                </div>
-                                <!-- Key Leader -->
-                                <div class="hub-panel">
-                                    <strong><i class="bi bi-key-fill" style="color:var(--second)"></i> Key Leader</strong>
-                                    <ul class="apt-list">
-                                        <li><span></span><em>Team</em></li>
-                                        <li><span></span><em>Report</em></li>
-                                        <li><span></span><em>Soluzioni</em></li>
-                                    </ul>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="tp-items">
+                        <div class="tp-item-grid">
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Trattative inbound</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Preparazione offerte</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Up/Cross selling</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Video dimostrazioni</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Negoziazioni</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Analisi del business</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="task-panel" id="panel-keyleader">
+                    <div class="tp-head">
+                        <div class="tp-icon" style="background: color-mix(in srgb, var(--main) 12%, white); color:var(--main)"><i class="bi bi-key-fill"></i></div>
+                        <div>
+                            <h3>Key Leader</h3>
+                            <p class="tp-sub">Assicuro il successo dei progetti aziendali:</p>
+                        </div>
+                    </div>
+                    <div class="tp-items">
+                        <div class="tp-item-grid">
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Coordinando il team</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Redigendo i report</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Ideandoli/realizzandoli</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Analizzando i dati</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Presidiando riunioni</span></div>
+                            <div class="tp-item"><i class="bi bi-check2-circle"></i><span>Proponendo soluzioni</span></div>
                         </div>
                     </div>
                 </div>
@@ -348,7 +434,7 @@
 <!-- ═══════════════════════════════════════════════════════════════
      PROGETTI — Bento Grid (asymmetric layout)
      ═══════════════════════════════════════════════════════════════ -->
-<section id="progetti" class="cv-section soft">
+<section id="progetti" class="cv-section white">
     <div class="container">
         <div class="section-header" data-aos="fade-up">
             <div class="kicker"><i class="bi bi-folder2-open"></i> Portfolio</div>
@@ -356,48 +442,59 @@
             <p>Ho potuto mettere in campo la mia creatività, ideando, progettando e realizzando progetti in modo proattivo e autonomo.</p>
         </div>
 
-        <div class="bento-grid">
-            <!-- Algoritmo — wide -->
-            <div class="bento-card wide" data-aos="fade-up" data-aos-delay="50">
-                <div class="bento-icon"><i class="bi bi-calculator-fill"></i></div>
-                <h4>Algoritmo strategico</h4>
-                <p>Sviluppato un algoritmo con oltre 8 macro, in grado di gestire 10.000+ combinazioni per calcolare il rendimento degli e-commerce in modo automatico e preciso.</p>
-                <div class="bento-stat">
-                    <div class="bento-stat-item"><strong>8+</strong><small>Macro</small></div>
-                    <div class="bento-stat-item"><strong>10K+</strong><small>Combinazioni</small></div>
+        <div class="projects-bento-grid" data-aos="fade-up" data-aos-delay="100">
+            <!-- Box 1 (Largo) -->
+            <div class="pb-card pb-wide">
+                <span class="pb-num">01</span>
+                <div class="pb-content">
+                    <h4>Algoritmo strategico</h4>
+                    <p>Sviluppato un algoritmo con oltre 8 macro, in grado di gestire 10.000+ combinazioni per calcolare il rendimento degli e-commerce.</p>
                 </div>
             </div>
 
-            <!-- CRM — tall -->
-            <div class="bento-card tall featured" data-aos="fade-up" data-aos-delay="100">
-                <div class="bento-icon"><i class="bi bi-table"></i></div>
-                <h4>CRM Custom</h4>
-                <p>CRM completo su Google Sheet con 80+ fogli e tabelle pivot, per una visione centralizzata e completa delle performance dei clienti.</p>
-                <div class="bento-stat">
-                    <div class="bento-stat-item"><strong>80+</strong><small>Fogli</small></div>
-                    <div class="bento-stat-item"><strong>∞</strong><small>Pivot</small></div>
+            <!-- Box 2 (Alto) -->
+            <div class="pb-card pb-tall">
+                <span class="pb-num">02</span>
+                <div class="pb-content">
+                    <h4>CRM Avanzato</h4>
+                    <p>Creato un CRM su Google Sheet con 80+ fogli e tabelle pivot, per una visione completa delle performance dei clienti.</p>
                 </div>
             </div>
 
-            <!-- Smart Tracking -->
-            <div class="bento-card" data-aos="fade-up" data-aos-delay="150">
-                <div class="bento-icon"><i class="bi bi-crosshair"></i></div>
-                <h4>Smart Tracking</h4>
-                <p>Strumento con 12 macro per il monitoraggio real-time degli obiettivi aziendali, con video tutorial dedicato per il team.</p>
+            <!-- Box 3 (Normale) -->
+            <div class="pb-card">
+                <span class="pb-num">03</span>
+                <div class="pb-content">
+                    <h4>Lanci di successo</h4>
+                    <p>Lanciati diversi progetti aziendali, tra cui campagne Google Ads, integrazioni e convenzioni con corrieri.</p>
+                </div>
             </div>
 
-            <!-- Piani di crescita -->
-            <div class="bento-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="bento-icon"><i class="bi bi-clipboard2-pulse-fill"></i></div>
-                <h4>Piani di crescita</h4>
-                <p>Script di vendita, piani operativi e materiali formativi per la crescita e formazione del team.</p>
+            <!-- Box 4 (Normale) -->
+            <div class="pb-card">
+                <span class="pb-num">04</span>
+                <div class="pb-content">
+                    <h4>Smart Tracking</h4>
+                    <p>Strumento con 12 macro per il monitoraggio in tempo reale degli obiettivi, con video tutorial dedicato.</p>
+                </div>
             </div>
 
-            <!-- Lanci — wide -->
-            <div class="bento-card wide" data-aos="fade-up" data-aos-delay="250">
-                <div class="bento-icon"><i class="bi bi-rocket-takeoff-fill"></i></div>
-                <h4>Lanci di successo & Dall'idea all'impresa</h4>
-                <p>Lanciati progetti strategici: campagne Google Ads, integrazioni con corrieri, convenzioni. Gestito da zero un intero progetto freelance: branding, marketing, contenuti, contrattualistica e sviluppo sito web.</p>
+            <!-- Box 5 (Normale) -->
+            <div class="pb-card">
+                <span class="pb-num">05</span>
+                <div class="pb-content">
+                    <h4>Piani di crescita</h4>
+                    <p>Ideati piani e strategie; realizzati script di vendita, piani operativi e materiali formativi per il team.</p>
+                </div>
+            </div>
+
+            <!-- Box 6 (Largo/Messo in Evidenza) -->
+            <div class="pb-card pb-highlight">
+                <span class="pb-num">06</span>
+                <div class="pb-content">
+                    <h4>Dall'idea all'impresa</h4>
+                    <p>Gestito da zero un progetto freelance: branding, marketing, contenuti, offerta, contrattualistica e sviluppo web.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -407,7 +504,7 @@
 <!-- ═══════════════════════════════════════════════════════════════
      STARTUP DA ZERO — Accordion + Flow Chips (Everoo FAQ style)
      ═══════════════════════════════════════════════════════════════ -->
-<section class="cv-section white">
+<section class="cv-section soft">
     <div class="container">
         <div class="row">
             <div class="col-lg-5" data-aos="fade-right">
@@ -460,31 +557,14 @@
 </section>
 
 
-<!-- ═══════════════════════════════════════════════════════════════
-     IDEA BANNER — full-width gradient
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="idea-banner">
-    <div class="container" data-aos="zoom-in" data-aos-duration="700">
-        <div class="idea-words">
-            <span>IDEARE.</span>
-            <span>SVILUPPARE.</span>
-            <span>REALIZZARE.</span>
-        </div>
-        <p class="idea-text">Ho avuto molte opportunità di dare spazio alle mie idee, dando vita a progetti ambiziosi e innovativi — gestiti dall'ideazione al project management fino alla realizzazione. Amo affrontare sempre nuove sfide e dare forma concreta alle idee: è questo che mi motiva.</p>
-        <div class="d-flex justify-content-center gap-3 mt-5 flex-wrap">
-            <a href="#risultati" class="btn-cta-white"><i class="bi bi-bar-chart-line-fill"></i> Scopri i risultati</a>
-            <a href="#contatti" class="btn-outline-white"><i class="bi bi-envelope-fill"></i> Contattami ora</a>
-        </div>
-    </div>
-</section>
 
 
 <!-- ═══════════════════════════════════════════════════════════════
      RISULTATI — Dashboard window-mockup (macOS-style)
      ═══════════════════════════════════════════════════════════════ -->
-<section id="risultati" class="cv-section soft">
+<section id="risultati" class="cv-section white">
     <div class="container">
-        <div class="section-header center" data-aos="fade-up">
+        <div class="section-header" data-aos="fade-up">
             <div class="kicker"><i class="bi bi-bar-chart-fill"></i> Numeri</div>
             <h2>I Risultati (2022 — 2024)</h2>
             <p>I numeri parlano chiaro. Ecco una dashboard con i dati reali del mio percorso.</p>
@@ -593,9 +673,9 @@
 <!-- ═══════════════════════════════════════════════════════════════
      6 REASONS WHY — Quote cards (Everoo quote-grid pattern)
      ═══════════════════════════════════════════════════════════════ -->
-<section id="reasons" class="cv-section white">
+<section id="reasons" class="cv-section soft">
     <div class="container">
-        <div class="section-header center" data-aos="fade-up">
+        <div class="section-header" data-aos="fade-up">
             <div class="kicker"><i class="bi bi-patch-question-fill"></i> Perché me?</div>
             <h2>6 Reasons Why</h2>
             <p>Sono fiducioso che possiate trovare in me un candidato in grado di apportare un valore significativo. Ecco 6 ragioni per scegliermi.</p>
@@ -638,26 +718,59 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════
-     CONTATTI
+     CONTATTI — Split layout
      ═══════════════════════════════════════════════════════════════ -->
 <section id="contatti" class="contact-section">
     <div class="container">
-        <div class="row justify-content-center" data-aos="zoom-in" data-aos-duration="600">
-            <div class="col-lg-10">
-                <div class="contact-card">
-                    <div class="kicker" style="margin-bottom:22px"><i class="bi bi-envelope-paper-heart-fill"></i> Contattami</div>
-                    <h2 class="display-5 fw-bold mb-3">Pronto a fare la differenza?</h2>
-                    <p style="font-size:1.05rem;color:var(--text-secondary);max-width:620px;margin:0 auto 8px;line-height:1.7;">
-                        Grazie per aver esplorato il mio percorso! Se pensi che io possa essere il valore aggiunto che cerchi, scegli il canale che preferisci.
-                    </p>
-                    <div class="contact-links">
-                        <a href="tel:+393342689942" class="contact-btn phone"><i class="bi bi-telephone-fill"></i> +39 334 268 9942</a>
-                        <a href="mailto:ida.alessandro@outlook.it" class="contact-btn email"><i class="bi bi-envelope-fill"></i> Email</a>
-                        <a href="https://wa.me/393342689942" target="_blank" class="contact-btn whatsapp"><i class="bi bi-whatsapp"></i> WhatsApp</a>
-                        <a href="#" class="contact-btn linkedin"><i class="bi bi-linkedin"></i> LinkedIn</a>
-                    </div>
+        <div class="contact-split" data-aos="fade-up">
+
+            <!-- Left: message -->
+            <div class="contact-split-left">
+                <div class="kicker"><i class="bi bi-send-fill"></i> Contatti</div>
+                <h2>Parliamo.</h2>
+                <p>Hai visto chi sono e cosa so fare. Se pensi che possa essere il valore aggiunto che cerchi, sono a un messaggio di distanza.</p>
+                <div class="contact-availability">
+                    <div class="avail-dot"></div>
+                    <span>Disponibile per nuove opportunità</span>
                 </div>
             </div>
+
+            <!-- Right: channel cards -->
+            <div class="contact-split-right">
+                <a href="tel:+393342689942" class="contact-channel">
+                    <div class="cc-icon" style="background: color-mix(in srgb, var(--second) 10%, white); color:var(--second)"><i class="bi bi-telephone-fill"></i></div>
+                    <div class="cc-body">
+                        <strong>Telefono</strong>
+                        <span>+39 334 268 9942</span>
+                    </div>
+                    <i class="bi bi-arrow-up-right cc-arrow"></i>
+                </a>
+                <a href="mailto:ida.alessandro@outlook.it" class="contact-channel">
+                    <div class="cc-icon" style="background:#fef2f2; color:#dc2626"><i class="bi bi-envelope-fill"></i></div>
+                    <div class="cc-body">
+                        <strong>Email</strong>
+                        <span>ida.alessandro@outlook.it</span>
+                    </div>
+                    <i class="bi bi-arrow-up-right cc-arrow"></i>
+                </a>
+                <a href="https://wa.me/393342689942" target="_blank" class="contact-channel">
+                    <div class="cc-icon" style="background:#f0fdf4; color:#16a34a"><i class="bi bi-whatsapp"></i></div>
+                    <div class="cc-body">
+                        <strong>WhatsApp</strong>
+                        <span>Messaggio rapido</span>
+                    </div>
+                    <i class="bi bi-arrow-up-right cc-arrow"></i>
+                </a>
+                <a href="#" class="contact-channel">
+                    <div class="cc-icon" style="background:#eff6ff; color:#1d4ed8"><i class="bi bi-linkedin"></i></div>
+                    <div class="cc-body">
+                        <strong>LinkedIn</strong>
+                        <span>Connettiti al profilo</span>
+                    </div>
+                    <i class="bi bi-arrow-up-right cc-arrow"></i>
+                </a>
+            </div>
+
         </div>
     </div>
 </section>
@@ -666,10 +779,14 @@
 <!-- Footer -->
 <footer>
     <div class="container">
-        <p class="mb-0">© 2025 Idà Alessandro — Sales Manager · Key Account · Project Developer</p>
+        <p class="mb-0"><script>document.write(new Date().getFullYear())</script> — Sviluppato da Alessandro Idà</p>
     </div>
 </footer>
 
+<!-- ═══════════════════════════════════════════════════════════════
+     SCROLL TO TOP
+     ═══════════════════════════════════════════════════════════════ -->
+<a href="#" class="scroll-top-btn" id="scrollTopBtn"><i class="bi bi-arrow-up"></i></a>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
