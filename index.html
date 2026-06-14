@@ -1,624 +1,707 @@
-<!DOCTYPE html><html lang="it">
+<!DOCTYPE html>
+<html lang="it">
+
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Alessandro Idà | Dietro Le Quinte della mia Crescita</title>
-    <meta name="description" content="Portfolio e CV di Alessandro Idà - Sales Manager, Key Account e Project Developer. Scopri i progetti, le metriche e le competenze commerciali di alto livello.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idà Alessandro | Portfolio & Curriculum Vitae</title>
+    <meta name="description" content="Il backstage della mia crescita. Sales Manager, Key Account, Project Developer.">
     
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <link href="style.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
-<body class="portfolio-page">
 
-    <header id="header" class="fixed-top">
-        <div class="header-container">
-            <a href="#hero" class="logo-text">
-                AI<span>.</span>
-            </a>
-            <nav id="navmenu">
-                <ul>
-                    <li><a href="#chi-sono">Chi Sono</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#task-framework">Framework TASK</a></li>
-                    <li><a href="#progetti">Progetti</a></li>
-                    <li><a href="#startup-zero">Startup Da Zero</a></li>
-                    <li><a href="#risultati">Risultati</a></li>
-                    <li><a href="#obiettivi">Obiettivi</a></li>
-                    <li><a href="#why-me">6 Reasons Why</a></li>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
+
+    <!-- Header / Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">IDÀ<span class="text-accent">.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#chi-sono">Chi Sono</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills & Task</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#progetti">Progetti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#risultati">Risultati</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="#contatti" class="btn btn-primary-custom btn-sm px-4 py-2">Contattami</a>
+                    </li>
                 </ul>
-            </nav>
-            <a class="btn-cta-nav" href="#contatti">Contattami</a>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <main class="main-content">
-
-        <section id="hero" class="hero-section">
-            <div class="container-custom">
-                <div class="hero-row">
-                    <div class="hero-left">
-                        <span class="section-kicker"><i class="bi bi-stars"></i> DIETRO LE QUINTE</span>
-                        <h1 class="hero-main-title">Il backstage della mia crescita professionale</h1>
-                        <p class="hero-lead-text">
-                            Presentata e realizzata da: <strong>Idà Alessandro</strong><br>
-                            <span class="role-highlight">Sales Manager | Key Account | Project Developer</span>
-                        </p>
-                        <div class="hero-actions">
-                            <a href="#chi-sono" class="btn-primary">Entra nel Backstage</a>
-                            <a href="#risultati" class="btn-secondary">Vedi Risultati <i class="bi bi-graph-up-arrow"></i></a>
-                        </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="badge-custom">
+                        <i class="bi bi-stars"></i> Dietro le quinte
                     </div>
-                    <div class="hero-right">
-                        <div class="hero-mockup-window">
-                            <div class="window-bar">
-                                <span></span><span></span><span></span>
-                                <strong class="window-title">career_matrix.sh</strong>
+                    <h1>Il backstage della <br>mia <span class="text-accent">crescita</span></h1>
+                    <p class="hero-subtitle">
+                        Presentata e realizzata da: <strong>Idà Alessandro</strong><br>
+                        Ruolo: Sales Manager | Key Account | Project Developer
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#chi-sono" class="btn btn-primary-custom">Scopri il percorso</a>
+                        <a href="#contatti" class="btn btn-outline-custom">Mettiamoci in contatto</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+                    <div class="hero-visual">
+                        <div class="hero-image-wrap">
+                            <!-- Placeholder image representing professional growth/tech -->
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Business Strategy">
+                        </div>
+                        
+                        <!-- Floating Card 1 -->
+                        <div class="floating-card floating-card-1">
+                            <div class="fc-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                            <div class="fc-text">
+                                <strong>+350K €</strong>
+                                <span>Fatturato (2023)</span>
                             </div>
-                            <div class="window-body">
-                                <div class="terminal-line"><span class="t-accent">> initialized:</span> Idà Alessandro</div>
-                                <div class="terminal-line"><span class="t-accent">> core_focus:</span> Sviluppo Business &amp; Strategia Retail</div>
-                                <div class="terminal-line"><span class="t-accent">> record_2023:</span> +351.000 € Fatturato Generato</div>
-                                <div class="terminal-line"><span class="t-accent">> skills_matrix:</span> Agilità Mentale | Leadership Coinvolgente</div>
-                                <div class="terminal-line-pulse">_</div>
+                        </div>
+                        
+                        <!-- Floating Card 2 -->
+                        <div class="floating-card floating-card-2">
+                            <div class="fc-icon"><i class="bi bi-kanban"></i></div>
+                            <div class="fc-text">
+                                <strong>Gestione a 360°</strong>
+                                <span>Dall'idea al risultato</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="chi-sono" class="portfolio-section white-bg">
-            <div class="container-custom">
-                <div class="section-heading">
-                    <span class="section-kicker-blue">IL PROFILO</span>
-                    <h2>Chi sono veramente, oltre al semplice curriculum</h2>
-                    <p class="section-subtitle">Sono un giovane e intraprendente Sales Manager, Key Account e Project Developer, pronto a condividere con voi il lato autentico della mia carriera professionale, andando oltre al «semplice» curriculum. In questa presentazione vi porterò dietro le quinte del mio percorso, raccontando tutte le opportunità che ho colto al volo.</p>
+    <!-- Chi Sono & Obiettivi -->
+    <section id="chi-sono" class="about-section">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5" data-aos="fade-up">
+                <div class="col-lg-8 section-title">
+                    <div class="badge-custom"><i class="bi bi-person-fill"></i> Chi Sono</div>
+                    <h2>Oltre al semplice curriculum</h2>
+                    <p class="mx-auto">Sono un giovane e intraprendente Sales Manager, Key Account e Project Developer, pronto a condividere con voi il lato autentico della mia carriera professionale.</p>
                 </div>
+            </div>
 
-                <div class="grid-three-columns">
-                    <div class="feature-card-premium">
-                        <div class="card-icon-box"><i class="bi bi-rocket-takeoff-fill"></i></div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mission-card">
+                        <div class="mission-icon"><i class="bi bi-rocket-takeoff"></i></div>
                         <h3>La Mission</h3>
-                        <p>Tradurre la complessità in soluzioni efficaci. La mia missione è creare un impatto reale attraverso l’analisi, la creatività e l’impegno costante.</p>
-                        <a href="#contatti" class="card-cta">Parliamo della tua mission →</a>
+                        <p>Tradurre la complessità in soluzioni efficaci. La mia missione è creare un impatto reale attraverso l'analisi, la creatività e l'impegno costante.</p>
                     </div>
-                    <div class="feature-card-premium">
-                        <div class="card-icon-box"><i class="bi bi-eye-fill"></i></div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mission-card">
+                        <div class="mission-icon"><i class="bi bi-eye"></i></div>
                         <h3>La Vision</h3>
-                        <p>Essere riconosciuto come un professionista capace di fare la differenza. Ogni progetto è un’opportunità per creare valore e lasciare un’impronta positiva.</p>
-                        <a href="#obiettivi" class="card-cta">Scopri i miei obiettivi →</a>
+                        <p>Essere riconosciuto come un professionista capace di fare la differenza. Ogni progetto è un'opportunità per creare valore e lasciare un'impronta positiva.</p>
                     </div>
-                    <div class="feature-card-premium">
-                        <div class="card-icon-box"><i class="bi bi-building-fill-check"></i></div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mission-card">
+                        <div class="mission-icon"><i class="bi bi-building"></i></div>
                         <h3>Contesto Ideale</h3>
                         <p>Cerco realtà dove trovino spazio marketing, vendita, tecnologia o progetti ambiziosi, in un contesto stimolante e orientato alla crescita.</p>
-                        <a href="#lead-form-section" class="card-cta">Proponi una posizione →</a>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="skills" class="portfolio-section soft-bg">
-            <div class="container-custom">
-                <div class="section-heading">
-                    <span class="section-kicker">COMPETENZE ASSET</span>
-                    <h2>Unione strategica di Hard &amp; Soft Skills</h2>
-                    <p class="section-subtitle">Unisco competenze tecniche e soft skills per affrontare sfide complesse, collaborare in team e contribuire concretamente alla crescita aziendale.</p>
-                </div>
-
-                <div class="grid-two-columns">
-                    <div class="skill-item-card">
-                        <div class="skill-header">
-                            <span class="skill-icon"><i class="bi bi-lightning-charge-fill"></i></span>
-                            <h3>Agilità mentale</h3>
+            
+            <div class="row mt-5 pt-4 g-4 align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <h3 class="mb-4">I miei obiettivi principali</h3>
+                    <p class="text-muted mb-4">Punto a costruire valore non solo per me stesso, ma soprattutto per le realtà con cui collaboro.</p>
+                    
+                    <div class="d-flex align-items-start gap-3 mb-4">
+                        <div class="text-accent fs-4"><i class="bi bi-journal-bookmark-fill"></i></div>
+                        <div>
+                            <h5 class="mb-1">Formazione continua</h5>
+                            <p class="text-muted small mb-0">Fornire un contributo incisivo partecipando attivamente a progetti chiave. Investire tempo per rimanere aggiornato sulle ultime tendenze.</p>
                         </div>
-                        <p>Apprendo rapidamente con curiosità, specialmente in contesti innovativi e smart.</p>
                     </div>
-                    <div class="skill-item-card">
-                        <div class="skill-header">
-                            <span class="skill-icon"><i class="bi bi-chat-left-heart-fill"></i></span>
-                            <h3>Apertura al feedback</h3>
+                    <div class="d-flex align-items-start gap-3 mb-4">
+                        <div class="text-accent fs-4"><i class="bi bi-palette-fill"></i></div>
+                        <div>
+                            <h5 class="mb-1">Libertà espressiva</h5>
+                            <p class="text-muted small mb-0">Cercare un contesto stimolante in cui esprimere pienamente le mie potenzialità e superare i miei limiti.</p>
                         </div>
-                        <p>Vedo il feedback come un’opportunità di crescita; accolgo le critiche costruttive.</p>
                     </div>
-                    <div class="skill-item-card">
-                        <div class="skill-header">
-                            <span class="skill-icon"><i class="bi bi-brain-fill"></i></span>
-                            <h3>Pensiero critico</h3>
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="text-accent fs-4"><i class="bi bi-shield-check"></i></div>
+                        <div>
+                            <h5 class="mb-1">Fiducia reciproca</h5>
+                            <p class="text-muted small mb-0">Stabilire un rapporto di fiducia, promuovendo una collaborazione sinergica e trasparenza guidata da obiettivi comuni.</p>
                         </div>
-                        <p>Valuto con spirito critico le informazioni e formulo giudizi consapevoli.</p>
-                    </div>
-                    <div class="skill-item-card">
-                        <div class="skill-header">
-                            <span class="skill-icon"><i class="bi bi-currency-dollar"></i></span>
-                            <h3>Attitudine commerciale</h3>
-                        </div>
-                        <p>Competenze nella vendita e comunicazione verbale e paraverbale.</p>
-                    </div>
-                    <div class="skill-item-card">
-                        <div class="skill-header">
-                            <span class="skill-icon"><i class="bi bi-people-fill"></i></span>
-                            <h3>Leadership coinvolgente</h3>
-                        </div>
-                        <p>Guido il team con entusiasmo, coordinando le attività per raggiungere obiettivi condivisi.</p>
-                    </div>
-                    <div class="skill-item-card">
-                        <div class="skill-header">
-                            <span class="skill-icon"><i class="bi bi-folder-fill"></i></span>
-                            <h3>Portafoglio clienti</h3>
-                        </div>
-                        <p>Gestisco e sviluppo portafogli clienti, mantenendo sempre alta la soddisfazione.</p>
                     </div>
                 </div>
-
-                <div class="section-inline-cta text-center">
-                    <a href="#contatti" class="btn-primary">Mettimi alla prova sulle mie Skills</a>
+                <div class="col-lg-6 offset-lg-1" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Goals" class="img-fluid rounded-4 shadow-lg border">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="task-framework" class="portfolio-section white-bg">
-            <div class="container-custom">
-                <div class="section-heading">
-                    <span class="section-kicker-blue">METODOLOGIA OPERATIVA</span>
-                    <h2>Il Framework "TASK" della Versatilità</h2>
-                    <p class="section-subtitle">Le attività che solitamente svolgo possono essere sintetizzate attraverso l'acronimo "TASK", rappresentando le seguenti aree chiave: Training, Account Manager, Sales e Key Leader. Questa versatilità mi permette di adattarmi facilmente alle esigenze aziendali, coprendo quasi tutte le principali aree operative.</p>
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="row mb-5" data-aos="fade-up">
+                <div class="col-lg-6 section-title mb-0">
+                    <div class="badge-custom"><i class="bi bi-lightning-charge-fill"></i> Competenze</div>
+                    <h2>Le mie Skills</h2>
+                    <p>Unisco competenze tecniche e soft skills per affrontare sfide complesse, collaborare in team e contribuire concretamente alla crescita aziendale.</p>
                 </div>
+            </div>
 
-                <div class="task-interactive-container">
-                    <div class="task-grid">
-                        <div class="task-box purple">
-                            <div class="task-letter">T</div>
-                            <div class="task-content">
-                                <h3>Training</h3>
-                                <p>Sviluppo e accrescimento costante delle risorse nelle seguenti aree chiave:</p>
+            <div class="row">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="bi bi-brain"></i></div>
+                        <div class="skill-content">
+                            <h4>Agilità mentale</h4>
+                            <p>Apprendo rapidamente con curiosità, specialmente in contesti innovativi e smart.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="bi bi-chat-dots-fill"></i></div>
+                        <div class="skill-content">
+                            <h4>Apertura al feedback</h4>
+                            <p>Vedo il feedback come un'opportunità di crescita; accolgo le critiche costruttive.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="bi bi-lightbulb-fill"></i></div>
+                        <div class="skill-content">
+                            <h4>Pensiero critico</h4>
+                            <p>Valuto con spirito critico le informazioni e formulo giudizi consapevoli.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="bi bi-briefcase-fill"></i></div>
+                        <div class="skill-content">
+                            <h4>Attitudine commerciale</h4>
+                            <p>Competenze nella vendita e comunicazione verbale e paraverbale.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="bi bi-people-fill"></i></div>
+                        <div class="skill-content">
+                            <h4>Leadership coinvolgente</h4>
+                            <p>Guido il team con entusiasmo, coordinando le attività verso gli obiettivi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="bi bi-person-lines-fill"></i></div>
+                        <div class="skill-content">
+                            <h4>Portafoglio clienti</h4>
+                            <p>Gestisco e sviluppo portafogli clienti, mantenendo sempre alta la soddisfazione.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TASK Section -->
+    <section class="task-section">
+        <div class="container">
+            <div class="row text-center mb-5" data-aos="fade-up">
+                <div class="col-12 section-title">
+                    <div class="badge-custom"><i class="bi bi-diagram-3-fill"></i> Il Modello</div>
+                    <h2>L'approccio T.A.S.K.</h2>
+                    <p class="mx-auto">Le attività che solitamente svolgo possono essere sintetizzate attraverso l'acronimo "TASK", garantendo versatilità in diverse aree operative.</p>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="nav flex-column nav-pills task-nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link active" id="v-pills-t-tab" data-bs-toggle="pill" data-bs-target="#v-pills-t" type="button" role="tab">
+                            <i class="bi bi-book-half"></i> T - Training / Transversale
+                        </button>
+                        <button class="nav-link" id="v-pills-a-tab" data-bs-toggle="pill" data-bs-target="#v-pills-a" type="button" role="tab">
+                            <i class="bi bi-person-badge"></i> A - Account Manager
+                        </button>
+                        <button class="nav-link" id="v-pills-s-tab" data-bs-toggle="pill" data-bs-target="#v-pills-s" type="button" role="tab">
+                            <i class="bi bi-graph-up-arrow"></i> S - Sales
+                        </button>
+                        <button class="nav-link" id="v-pills-k-tab" data-bs-toggle="pill" data-bs-target="#v-pills-k" type="button" role="tab">
+                            <i class="bi bi-key-fill"></i> K - Key Leader
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-8 mt-4 mt-lg-0" data-aos="fade-left">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-t" role="tabpanel">
+                            <div class="task-pane-card">
+                                <h3><i class="bi bi-book-half"></i> Competenze Trasversali</h3>
+                                <p class="text-muted fs-5 mb-4">Questa versatilità mi permette di adattarmi facilmente alle esigenze aziendali, coprendo quasi tutte le principali aree operative con un focus su diverse macro aree.</p>
                                 <div class="task-tags">
-                                    <span>Crescita personale</span><span>Tecniche di vendita</span><span>Marketing</span>
-                                    <span>Tecnologia e informatica</span><span>Project Management</span><span>Imprenditoria</span>
+                                    <span class="task-tag">Crescita personale</span>
+                                    <span class="task-tag">Tecniche di vendita</span>
+                                    <span class="task-tag">Marketing</span>
+                                    <span class="task-tag">Tecnologia e informatica</span>
+                                    <span class="task-tag">Project Management</span>
+                                    <span class="task-tag">Imprenditoria</span>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="task-box blue">
-                            <div class="task-letter">A</div>
-                            <div class="task-content">
-                                <h3>Account Manager</h3>
-                                <p>Gestisco le relazioni con i clienti: risolvo problemi, analizzo esigenze, seguo i clienti a 360°, intervengo rapidamente, gestisco gli insoluti, fidelizzo.</p>
+                        <div class="tab-pane fade" id="v-pills-a" role="tabpanel">
+                            <div class="task-pane-card">
+                                <h3><i class="bi bi-person-badge"></i> Account Manager</h3>
+                                <p class="text-muted fs-5">Gestisco le relazioni con i clienti a 360° per garantire la massima soddisfazione e fidelizzazione.</p>
+                                <ul class="list-unstyled mt-4 text-muted">
+                                    <li class="mb-3"><i class="bi bi-check-circle-fill text-accent me-2"></i> Risoluzione problemi e intervento rapido</li>
+                                    <li class="mb-3"><i class="bi bi-check-circle-fill text-accent me-2"></i> Analisi approfondita delle esigenze</li>
+                                    <li class="mb-3"><i class="bi bi-check-circle-fill text-accent me-2"></i> Gestione degli insoluti</li>
+                                    <li class="mb-3"><i class="bi bi-check-circle-fill text-accent me-2"></i> Fidelizzazione a lungo termine</li>
+                                </ul>
                             </div>
                         </div>
-
-                        <div class="task-box green">
-                            <div class="task-letter">S</div>
-                            <div class="task-content">
-                                <h3>Sales</h3>
-                                <p>Guida dei processi di vendita aziendali: trattative inbound, up/cross selling, negoziazioni, preparazione offerte, video dimostrazioni, analisi del business.</p>
+                        <div class="tab-pane fade" id="v-pills-s" role="tabpanel">
+                            <div class="task-pane-card">
+                                <h3><i class="bi bi-graph-up-arrow"></i> Sales</h3>
+                                <p class="text-muted fs-5">Guida dei processi di vendita, dalla prima interazione fino alla chiusura del contratto.</p>
+                                <ul class="list-unstyled mt-4 text-muted">
+                                    <li class="mb-3"><i class="bi bi-check-circle-fill text-accent me-2"></i> Gestione trattative inbound</li>
+                                    <li class="mb-3"><i class="bi bi-check-circle-fill text-accent me-2"></i> Strategie di up/cross selling e negoziazione</li>
+                                    <li class="mb-3"><i class="bi bi-check-circle-fill text-accent me-2"></i> Preparazione offerte e video dimostrazioni</li>
+                                    <li class="mb-3"><i class="bi bi-check-circle-fill text-accent me-2"></i> Analisi dettagliata del business</li>
+                                </ul>
                             </div>
                         </div>
-
-                        <div class="task-box orange">
-                            <div class="task-letter">K</div>
-                            <div class="task-content">
-                                <h3>Key Leader</h3>
-                                <p>Assicuro il successo dei progetti aziendali: coordinamento team, ideazione/realizzazione progetti, presidi riunioni, redazione report, analisi dati, proposta soluzioni.</p>
+                        <div class="tab-pane fade" id="v-pills-k" role="tabpanel">
+                            <div class="task-pane-card">
+                                <h3><i class="bi bi-key-fill"></i> Key Leader</h3>
+                                <p class="text-muted fs-5">Assicuro il successo dei progetti aziendali guidando il team e sviluppando nuove soluzioni strategiche.</p>
+                                <ul class="list-unstyled mt-4 text-muted">
+                                    <li class="mb-3"><i class="bi bi-check-circle-fill text-accent me-2"></i> Coordinamento team e presidio riunioni</li>
+                                    <li class="mb-3"><i class="bi bi-check-circle-fill text-accent me-2"></i> Ideazione e realizzazione progetti</li>
+                                    <li class="mb-3"><i class="bi bi-check-circle-fill text-accent me-2"></i> Redazione report e analisi dati</li>
+                                    <li class="mb-3"><i class="bi bi-check-circle-fill text-accent me-2"></i> Proposta attiva di nuove soluzioni</li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="text-center mt-4">
-                    <a href="#progetti" class="btn-secondary">Scopri i progetti legati al framework TASK</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="progetti" class="portfolio-section soft-bg">
-            <div class="container-custom">
-                <div class="section-heading">
-                    <span class="section-kicker">CASE STUDIES</span>
-                    <h2>I miei progetti: dall'autonomia al risultato concreto</h2>
-                    <p class="section-subtitle">Ho potuto mettere in campo la mia creatività, ideando, progettando e realizzando progetti in modo proattivo e autonomo.</p>
-                </div>
-
-                <div class="grid-three-columns">
-                    <div class="project-card-premium">
-                        <div class="project-card-badge">Data Optimization</div>
-                        <h3>Algoritmo strategico</h3>
-                        <p>Sviluppato un algoritmo con oltre 8 macro, in grado di gestire 10.000+ combinazioni per calcolare il rendimento degli e-commerce.</p>
-                    </div>
-                    <div class="project-card-premium">
-                        <div class="project-card-badge">Live Tracking</div>
-                        <h3>Smart Tracking</h3>
-                        <p>Sviluppato su Google Sheet uno strumento con 12 macro per il monitoraggio in tempo reale degli obiettivi, con video tutorial dedicato.</p>
-                    </div>
-                    <div class="project-card-premium">
-                        <div class="project-card-badge">CRM Systems</div>
-                        <h3>CRM Custom Sheet</h3>
-                        <p>Creato un CRM su Google Sheet con 80+ fogli e tabelle pivot, per una visione completa delle performance dei clienti.</p>
-                    </div>
-                    <div class="project-card-premium">
-                        <div class="project-card-badge">Strategy &amp; HR</div>
-                        <h3>Piani di crescita</h3>
-                        <p>Ideati piani di crescita e strategie; realizzati script di vendita, piani operativi e materiali formativi per la formazione del team.</p>
-                    </div>
-                    <div class="project-card-premium">
-                        <div class="project-card-badge">Advertising &amp; Logistics</div>
-                        <h3>Lanci di successo</h3>
-                        <p>Lanciati diversi progetti aziendali, tra cui campagne Google Ads, integrazioni e convenzioni con corrieri.</p>
-                    </div>
-                    <div class="project-card-premium">
-                        <div class="project-card-badge">Full Stack Freelance</div>
-                        <h3>Dall’idea all’impresa</h3>
-                        <p>Gestito da zero un progetto freelance: branding, marketing, contenuti, offerta, contrattualistica e sviluppo sito web.</p>
-                    </div>
-                </div>
-
-                <div class="full-width-quote-box" style="margin-top: 40px;">
-                    <h4>IDEARE. SVILUPPARE. REALIZZARE.</h4>
-                    <p>Ho avuto molte opportunità di dare spazio alle mie idee, dando vita a progetti ambiziosi e innovativi - gestiti dall’ideazione al project management fino alla realizzazione - permettendomi di crescere giorno dopo giorno. Amo affrontare sempre nuove sfide e dare forma concreta alle idee: è questo che mi motiva e mi fa sentire davvero vivo.</p>
-                    <div class="text-center mt-3">
-                        <a href="#startup-zero" class="btn-primary">Approfondisci lo sviluppo Startup da Zero</a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="startup-zero" class="portfolio-section white-bg">
-            <div class="container-custom">
-                <div class="section-heading">
-                    <span class="section-kicker-blue">PROJECT DEVELOPMENT</span>
-                    <h2>Startup da zero: Gestione Freelance End-to-End</h2>
-                    <p class="section-subtitle">Ho avuto l’opportunità di lavorare a un grande progetto e di avviare da zero un’attività di un freelance, curando minuziosamente ogni singolo aspetto strutturale e operativo:</p>
+    <!-- Progetti Section -->
+    <section id="progetti" class="projects-section">
+        <div class="container">
+            <div class="row mb-5" data-aos="fade-up">
+                <div class="col-lg-8 section-title">
+                    <div class="badge-custom"><i class="bi bi-folder-fill"></i> Portfolio</div>
+                    <h2>I Miei Progetti</h2>
+                    <p>Ho potuto mettere in campo la mia creatività, ideando, progettando e realizzando progetti in modo proattivo e autonomo.</p>
                 </div>
+            </div>
 
-                <div class="startup-checklist-layout">
-                    <div class="grid-two-columns">
-                        <div class="checklist-item-box">
-                            <i class="bi bi-bezier2"></i>
-                            <div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-icon"><i class="bi bi-calculator-fill"></i></div>
+                        <h4>Algoritmo strategico</h4>
+                        <p>Sviluppato un algoritmo con oltre 8 macro, in grado di gestire 10.000+ combinazioni per calcolare il rendimento degli e-commerce in modo automatico.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-icon"><i class="bi bi-crosshair"></i></div>
+                        <h4>Smart Tracking</h4>
+                        <p>Sviluppato su Google Sheet uno strumento con 12 macro per il monitoraggio in tempo reale degli obiettivi aziendali, accompagnato da video tutorial dedicato.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <div class="project-icon"><i class="bi bi-people-fill"></i></div>
+                        <h4>CRM Custom</h4>
+                        <p>Creato un CRM su Google Sheet con 80+ fogli e tabelle pivot collegate, garantendo una visione centralizzata e completa delle performance dei clienti.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-card">
+                        <div class="project-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h4>Piani di crescita</h4>
+                        <p>Ideati piani di crescita e strategie; realizzati script di vendita personalizzati, piani operativi e materiali per la formazione del team.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-card">
+                        <div class="project-icon"><i class="bi bi-rocket-fill"></i></div>
+                        <h4>Lanci di successo</h4>
+                        <p>Lanciati diversi progetti aziendali strategici, tra cui campagne performanti Google Ads, nuove integrazioni e convenzioni con partner/corrieri.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-card">
+                        <div class="project-icon"><i class="bi bi-building-add"></i></div>
+                        <h4>Dall'idea all'impresa</h4>
+                        <p>Gestito da zero un progetto freelance: definizione branding, marketing, contenuti, offerta commerciale, contrattualistica e sviluppo del sito web.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Startup da zero Section -->
+    <section class="startup-section">
+        <div class="container">
+            <div class="row mb-5" data-aos="fade-up">
+                <div class="col-lg-8 section-title">
+                    <div class="badge-custom"><i class="bi bi-stars"></i> Case Study</div>
+                    <h2>Startup da zero</h2>
+                    <p>Ho avuto l'opportunità di lavorare a un grande progetto e di avviare da zero un'attività freelance, curandone ogni singolo aspetto in autonomia.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="timeline">
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-icon"><i class="bi bi-lightbulb"></i></div>
+                            <div class="timeline-content">
                                 <h4>Ideazione del brand</h4>
-                                <p>Creazione del concept di base, naming di impatto, brand identity coordinata, strategia marketing, biglietto da visita e design CV professionale.</p>
+                                <p>Dal concept iniziale al naming, sviluppo della brand identity, strategia di marketing complessiva, biglietto da visita e CV ottimizzati.</p>
                             </div>
                         </div>
-                        <div class="checklist-item-box">
-                            <i class="bi bi-cpu-fill"></i>
-                            <div>
-                                <h4>Strumenti digitali avanzati</h4>
-                                <p>Creati e configurati profili digitali ad alta conversione (Beacons, Calendly per appuntamenti, social media, canali WhatsApp) e firma Gmail aziendale in HTML custom.</p>
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-icon"><i class="bi bi-laptop"></i></div>
+                            <div class="timeline-content">
+                                <h4>Strumenti digitali</h4>
+                                <p>Creati e configurati profili digitali (Beacons, Calendly, social media, canale WhatsApp business) e firma Gmail in HTML personalizzata.</p>
                             </div>
                         </div>
-                        <div class="checklist-item-box">
-                            <i class="bi bi-code-slash"></i>
-                            <div>
-                                <h4>Sviluppo del sito web proprietario</h4>
-                                <p>Sito custom a sei pagine sviluppato in puro HTML, CSS e JS (senza l'uso di template preconfezionati), ottimizzato con sitemap logica, cookie policy a norma e integrazione Brevo.</p>
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-icon"><i class="bi bi-code-slash"></i></div>
+                            <div class="timeline-content">
+                                <h4>Sviluppo del sito web</h4>
+                                <p>Realizzato sito custom a sei pagine in HTML, CSS e JS (senza l'uso di template pre-fatti), inclusivo di sitemap, cookie policy e integrazione Brevo.</p>
                             </div>
                         </div>
-                        <div class="checklist-item-box">
-                            <i class="bi bi-pen-fill"></i>
-                            <div>
-                                <h4>Produzione contenuti &amp; Copywriting</h4>
-                                <p>Ideati tutti i copy persuasivi per sito e blog, redatta l'informativa sulla privacy e creato un piano editoriale mensile completo di testi e grafiche.</p>
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-icon"><i class="bi bi-pencil-square"></i></div>
+                            <div class="timeline-content">
+                                <h4>Produzione contenuti</h4>
+                                <p>Ideati tutti i copy per sito e blog, redatta informativa privacy, creato piano editoriale mensile con testi e grafiche coordinate.</p>
                             </div>
                         </div>
-                        <div class="checklist-item-box">
-                            <i class="bi bi-bar-chart-line-fill"></i>
-                            <div>
-                                <h4>Monitoraggio, SEO &amp; Analytics</h4>
-                                <p>Configurazione e ottimizzazione scheda Google My Business, attivazione e setup di Search Console, Google Tag Manager e Google Analytics per tracciamento KPI.</p>
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-icon"><i class="bi bi-megaphone"></i></div>
+                            <div class="timeline-content">
+                                <h4>Advertising & Monitoring</h4>
+                                <p>Configurato Google My Business, attivati Search Console, Tag Manager e Analytics. Gestione campagne Google Ads e annunci su piattaforme scouting.</p>
                             </div>
                         </div>
-                        <div class="checklist-item-box">
-                            <i class="bi bi-megaphone-fill"></i>
-                            <div>
-                                <h4>Advertising &amp; Lead Generation</h4>
-                                <p>Progettazione e lancio campagne Google Ads e annunci pubblicitari su piattaforme di scouting specifiche, curando sia i contenuti visivi che testuali.</p>
-                            </div>
-                        </div>
-                        <div class="checklist-item-box">
-                            <i class="bi bi-envelope-paper-heart-fill"></i>
-                            <div>
-                                <h4>Email marketing automatizzato</h4>
-                                <p>Configurato Brevo con form di contatto avanzati e newsletter dedicate, realizzati più di 8 template email nativi in HTML e flussi di automatizzazione marketing automation.</p>
-                            </div>
-                        </div>
-                        <div class="checklist-item-box">
-                            <i class="bi bi-file-earmark-gavel-fill"></i>
-                            <div>
-                                <h4>Materiali legali e fidelizzazione</h4>
-                                <p>Redazione contratto legale e Termini &amp; Condizioni (T&amp;C), creazione di fidelity card dinamiche con login e landing page dedicate, sviluppo materiali fisici (brochure, grafiche offline).</p>
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-icon"><i class="bi bi-envelope-paper"></i></div>
+                            <div class="timeline-content">
+                                <h4>Email Marketing & Materiali</h4>
+                                <p>Configurato Brevo, creati 8+ template email in HTML e automazioni. Redatti contratti, creata fidelity card con login e sviluppati materiali (brochure, grafiche).</p>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="text-center mt-5">
-                    <a href="#risultati" class="btn-primary">Esamina l'Impatto di questi Progetti sui Numeri</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="risultati" class="portfolio-section soft-bg">
-            <div class="container-custom">
-                <div class="section-heading">
-                    <span class="section-kicker">DATA ROOM</span>
-                    <h2>I Risultati Commerciali (Tabella 2022-2024)</h2>
-                    <p class="section-subtitle">Evidenza numerica delle performance di vendita e della gestione finanziaria del portafoglio clienti gestito negli ultimi tre anni solari.</p>
+    <!-- Idea to Result Banner -->
+    <section class="idea-banner">
+        <div class="container" data-aos="zoom-in">
+            <div class="idea-words">
+                <span>IDEARE.</span>
+                <span>SVILUPPARE.</span>
+                <span>REALIZZARE.</span>
+            </div>
+            <p class="idea-text">
+                Ho avuto molte opportunità di dare spazio alle mie idee, dando vita a progetti ambiziosi e innovativi — gestiti dall'ideazione al project management fino alla realizzazione — permettendomi di crescere giorno dopo giorno. Amo affrontare sempre nuove sfide e dare forma concreta alle idee: è questo che mi motiva e mi fa sentire davvero vivo.
+            </p>
+        </div>
+    </section>
+
+    <!-- Risultati e Analisi -->
+    <section id="risultati" class="results-section">
+        <div class="container">
+            <div class="row text-center mb-5" data-aos="fade-up">
+                <div class="col-12 section-title">
+                    <div class="badge-custom"><i class="bi bi-bar-chart-fill"></i> Numeri</div>
+                    <h2>I Risultati (2022-2024)</h2>
+                    <p class="mx-auto">I numeri parlano chiaro: crescita costante, gestione attenta e incremento della soddisfazione del cliente nel triennio.</p>
                 </div>
+            </div>
 
-                <div class="table-responsive-container">
-                    <table class="portfolio-data-table">
-                        <thead>
-                            <tr>
-                                <th>Anno</th>
-                                <th>Fatturato Generato</th>
-                                <th>Incidenza sul Margine</th>
-                                <th>Clienti Gestiti</th>
-                                <th>Ticket Medio per Chiusura</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="year-cell">2022</td>
-                                <td class="highlight-green">215.000 €</td>
-                                <td class="incidenza-cell">21%</td>
-                                <td>77 Clienti</td>
-                                <td>5.100 €</td>
-                            </tr>
-                            <tr>
-                                <td class="year-cell">2023</td>
-                                <td class="highlight-green">351.000 €</td>
-                                <td class="incidenza-cell">27%</td>
-                                <td>73 Clienti</td>
-                                <td>4.700 €</td>
-                            </tr>
-                            <tr>
-                                <td class="year-cell">2024</td>
-                                <td class="highlight-green">259.000 €</td>
-                                <td class="incidenza-cell">23%</td>
-                                <td>67 Clienti</td>
-                                <td>3.800 €</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="grid-two-columns mt-5">
-                    <div class="analysis-box-premium">
-                        <h4><i class="bi bi-pie-chart-fill"></i> Tipologia Pagamenti &amp; Flusso di Cassa</h4>
-                        <ul class="analysis-list">
-                            <li><span>Alla firma del contratto:</span> <strong>63%</strong></li>
-                            <li><span>A 30 giorni data fattura:</span> <strong>10%</strong></li>
-                            <li><span>A 60 giorni data fattura:</span> <strong>23%</strong></li>
-                            <li><span>A 90 giorni data fattura:</span> <strong>2%</strong></li>
-                            <li><span>Altre formule contrattuali:</span> <strong>2%</strong></li>
-                        </ul>
-                    </div>
-                    <div class="analysis-box-premium">
-                        <h4><i class="bi bi-cart-check-fill"></i> Tipologia Servizi Venduti</h4>
-                        <ul class="analysis-list">
-                            <li><span>Servizi di Marketing strategico:</span> <strong>33%</strong></li>
-                            <li><span>Integrazioni tecniche complesse:</span> <strong>29%</strong></li>
-                            <li><span>Nuove acquisizioni / Contratti:</span> <strong>18%</strong></li>
-                            <li><span>Convenzioni e accordi quadro:</span> <strong>15%</strong></li>
-                            <li><span>Rinnovi di contratti triennali:</span> <strong>3%</strong></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="grid-two-columns mt-3">
-                    <div class="analysis-metric-summary-card">
-                        <span class="summary-label">Contratti Chiusi Annualmente</span>
-                        <div class="summary-sub-grid">
-                            <div><strong>80</strong> <small>Anno 2022</small></div>
-                            <div><strong>75</strong> <small>Anno 2023</small></div>
-                            <div><strong>69</strong> <small>Anno 2024</small></div>
+            <!-- Stats grid -->
+            <div class="stats-grid mb-5">
+                <!-- 2022 -->
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-year">2022</div>
+                    <div class="stat-value">215.000 €</div>
+                    <div class="stat-details mt-4">
+                        <div class="stat-row">
+                            <span>Incidenza</span>
+                            <strong>21%</strong>
                         </div>
-                    </div>
-                    <div class="analysis-metric-summary-card">
-                        <span class="summary-label">Recensioni Positive Ottenute (Customer Satisfaction)</span>
-                        <div class="summary-sub-grid">
-                            <div><strong>11</strong> <small>Anno 2022</small></div>
-                            <div><strong>6</strong> <small>Anno 2023</small></div>
-                            <div class="text-glow-green"><strong>24</strong> <small>Anno 2024</small></div>
+                        <div class="stat-row">
+                            <span>Clienti gestiti</span>
+                            <strong>77</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Ticket medio</span>
+                            <strong>5.100 €</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Contratti chiusi</span>
+                            <strong>80</strong>
                         </div>
                     </div>
                 </div>
                 
-                <div class="text-center mt-4">
-                    <a href="#obiettivi" class="btn-primary">Scopri dove sono diretto adesso</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="obiettivi" class="portfolio-section white-bg">
-            <div class="container-custom">
-                <div class="section-heading">
-                    <span class="section-kicker-blue">CRESCITA FUTURA</span>
-                    <h2>I miei obiettivi di posizionamento professionale</h2>
-                    <p class="section-subtitle">Le direttrici su cui intendo sviluppare la mia collaborazione con la prossima grande azienda.</p>
-                </div>
-
-                <div class="grid-three-columns">
-                    <div class="goal-target-card">
-                        <div class="goal-num">01</div>
-                        <h3>Formazione continua</h3>
-                        <p>Fornire un contributo incisivo al team, partecipando attivamente a progetti chiave, assumendo responsabilità aggiuntive e apportando valore aggiunto. Investire tempo nella formazione continua, partecipando a corsi, per rimanere aggiornato sulle ultime tendenze del settore.</p>
-                    </div>
-                    <div class="goal-target-card">
-                        <div class="goal-num">02</div>
-                        <h3>Libertà espressiva</h3>
-                        <p>Cercare un contesto stimolante in cui esprimere pienamente le mie potenzialità e affrontare sfide che mi permettano di superare i miei limiti.</p>
-                    </div>
-                    <div class="goal-target-card">
-                        <div class="goal-num">03</div>
-                        <h3>Fiducia reciproca</h3>
-                        <p>Stabilire un rapporto di fiducia reciproca con l'azienda, promuovendo una collaborazione sinergica e trasparenza, guidata da obiettivi comuni.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="why-me" class="portfolio-section soft-bg">
-            <div class="container-custom">
-                <div class="section-heading">
-                    <span class="section-kicker">VALORE AGGIUNTO</span>
-                    <h2>6 Reasons Why: Perché Scegliermi</h2>
-                    <p class="section-subtitle">Sono fiducioso che possiate trovare in me un candidato in grado di apportare un valore significativo all'azienda. Ecco 6 ragioni per cui dovreste scegliermi:</p>
-                </div>
-
-                <div class="grid-three-columns">
-                    <div class="reason-premium-box">
-                        <div class="reason-icon-header">
-                            <i class="bi bi-heart-pulse-fill"></i>
-                            <span class="reason-index">01</span>
+                <!-- 2023 -->
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200" style="border-color: var(--cv-accent); transform: scale(1.05); z-index: 2; box-shadow: 0 20px 40px rgba(47, 191, 130, 0.15);">
+                    <div class="badge bg-accent mb-3 text-white">Anno Record</div>
+                    <div class="stat-year">2023</div>
+                    <div class="stat-value">351.000 €</div>
+                    <div class="stat-details mt-4">
+                        <div class="stat-row">
+                            <span>Incidenza</span>
+                            <strong>27%</strong>
                         </div>
-                        <h3>Passione professionale</h3>
+                        <div class="stat-row">
+                            <span>Clienti gestiti</span>
+                            <strong>73</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Ticket medio</span>
+                            <strong>4.700 €</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Contratti chiusi</span>
+                            <strong>75</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2024 -->
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-year">2024</div>
+                    <div class="stat-value">259.000 €</div>
+                    <div class="stat-details mt-4">
+                        <div class="stat-row">
+                            <span>Incidenza</span>
+                            <strong>23%</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Clienti gestiti</span>
+                            <strong>67</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Ticket medio</span>
+                            <strong>3.800 €</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Contratti chiusi</span>
+                            <strong>69</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analisi Extra -->
+            <div class="row g-4 mt-4">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="analysis-card">
+                        <h4 class="mb-4"><i class="bi bi-wallet2 text-accent me-2"></i> Tipologia Pagamenti</h4>
+                        <div class="progress-group">
+                            <div class="progress-label"><span>Alla firma</span> <span>63%</span></div>
+                            <div class="progress-custom"><div class="progress-bar-custom" style="width: 63%"></div></div>
+                        </div>
+                        <div class="progress-group">
+                            <div class="progress-label"><span>A 60 giorni</span> <span>23%</span></div>
+                            <div class="progress-custom"><div class="progress-bar-custom" style="width: 23%"></div></div>
+                        </div>
+                        <div class="progress-group">
+                            <div class="progress-label"><span>A 30 giorni</span> <span>10%</span></div>
+                            <div class="progress-custom"><div class="progress-bar-custom" style="width: 10%"></div></div>
+                        </div>
+                        <div class="progress-group">
+                            <div class="progress-label"><span>A 90 giorni / Altro</span> <span>4%</span></div>
+                            <div class="progress-custom"><div class="progress-bar-custom" style="width: 4%; background-color: var(--cv-muted)"></div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="analysis-card">
+                        <h4 class="mb-4"><i class="bi bi-pie-chart text-accent me-2"></i> Servizi Venduti & Recensioni</h4>
+                        
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <ul class="list-unstyled mb-0 text-muted small">
+                                    <li class="mb-2"><span class="badge bg-soft text-accent me-2">33%</span> Servizi marketing</li>
+                                    <li class="mb-2"><span class="badge bg-soft text-accent me-2">29%</span> Integrazioni tecniche</li>
+                                    <li class="mb-2"><span class="badge bg-soft text-accent me-2">18%</span> Nuovi contratti</li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="list-unstyled mb-0 text-muted small">
+                                    <li class="mb-2"><span class="badge bg-soft text-accent me-2">15%</span> Convenzioni</li>
+                                    <li class="mb-2"><span class="badge bg-soft text-accent me-2">3%</span> Rinnovi triennali</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-soft rounded-3 border border-success border-opacity-25 mt-4">
+                            <h5 class="fs-6 mb-3 text-success"><i class="bi bi-star-fill"></i> Trend Recensioni Positive</h5>
+                            <div class="d-flex justify-content-between text-center">
+                                <div><strong class="fs-4 d-block">11</strong> <small>2022</small></div>
+                                <div><strong class="fs-4 d-block">6</strong> <small>2023</small></div>
+                                <div><strong class="fs-4 d-block text-success">24</strong> <small>2024 <i class="bi bi-arrow-up-right"></i></small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6 Reasons Why -->
+    <section class="reasons-section">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5" data-aos="fade-up">
+                <div class="col-lg-8 section-title">
+                    <div class="badge-custom"><i class="bi bi-patch-question-fill"></i> Perchè me?</div>
+                    <h2>6 Reasons Why</h2>
+                    <p class="mx-auto">Sono fiducioso che possiate trovare in me un candidato in grado di apportare un valore significativo all'azienda. Ecco 6 ragioni per cui dovreste scegliermi:</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="reason-box">
+                        <div class="reason-number">01</div>
+                        <h4>Passione professionale</h4>
                         <p>La passione mi spinge a dare sempre il massimo; anche in contesti nuovi, quando il lavoro mi coinvolge, raggiungo risultati concreti.</p>
                     </div>
-                    <div class="reason-premium-box">
-                        <div class="reason-icon-header">
-                            <i class="bi bi-chat-left-dots-fill"></i>
-                            <span class="reason-index">02</span>
-                        </div>
-                        <h3>Dialogo strategico</h3>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="reason-box">
+                        <div class="reason-number">02</div>
+                        <h4>Dialogo strategico</h4>
                         <p>Ottime capacità comunicative, che mi permettono di trasmettere idee in modo chiaro, facilitando la collaborazione.</p>
                     </div>
-                    <div class="reason-premium-box">
-                        <div class="reason-icon-header">
-                            <i class="bi bi-shield-fill-plus"></i>
-                            <span class="reason-index">03</span>
-                        </div>
-                        <h3>Resilienza attiva</h3>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="reason-box">
+                        <div class="reason-number">03</div>
+                        <h4>Resilienza attiva</h4>
                         <p>Determinato e resiliente, mantengo impegno e motivazione anche nelle situazioni difficili, superando i miei limiti.</p>
                     </div>
-                    <div class="reason-premium-box">
-                        <div class="reason-icon-header">
-                            <i class="bi bi-microsoft-teams"></i>
-                            <span class="reason-index">04</span>
-                        </div>
-                        <h3>Team player</h3>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="reason-box">
+                        <div class="reason-number">04</div>
+                        <h4>Team player</h4>
                         <p>Supporto il lavoro di squadra collaborando e guidando il team verso gli obiettivi comuni, con determinazione e positività.</p>
                     </div>
-                    <div class="reason-premium-box">
-                        <div class="reason-icon-header">
-                            <i class="bi bi-lightbulb-fill"></i>
-                            <span class="reason-index">05</span>
-                        </div>
-                        <h3>Visione innovativa</h3>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="reason-box">
+                        <div class="reason-number">05</div>
+                        <h4>Visione innovativa</h4>
                         <p>Mi contraddistingue il pensiero innovativo; creo soluzioni fuori dagli schemi, esprimendo idee originali e anticipando le tendenze.</p>
                     </div>
-                    <div class="reason-premium-box">
-                        <div class="reason-icon-header">
-                            <i class="bi bi-award-fill"></i>
-                            <span class="reason-index">06</span>
-                        </div>
-                        <h3>Dedizione costante</h3>
-                        <p>Metto il massimo impegno in ogni progetto, con l’obiettivo di superare le aspettative e raggiungere l’eccellenza.</p>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="reason-box">
+                        <div class="reason-number">06</div>
+                        <h4>Dedizione costante</h4>
+                        <p>Metto il massimo impegno in ogni progetto, con l'obiettivo di superare le aspettative e raggiungere l'eccellenza.</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="lead-form-section" class="portfolio-section white-bg final-lead-section">
-            <div class="container-custom">
-                <div class="lead-form-box-wrapper">
-                    <div class="lead-form-header text-center">
-                        <span class="form-badge">CONNESSIONE IMMEDIATA</span>
-                        <h2>Fissiamo un colloquio conoscitivo</h2>
-                        <p>Scegli il canale che preferisci o compila la richiesta di contatto sottostante. Riceverai un riscontro immediato entro poche ore lavorative.</p>
+    <!-- Call To Action / Contatti -->
+    <section id="contatti" class="contact-section">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="zoom-in">
+                <div class="col-lg-10">
+                    <div class="contact-card">
+                        <div class="badge-custom mb-4"><i class="bi bi-envelope-paper-heart"></i> Contattami</div>
+                        <h2 class="display-5 fw-bold mb-4">Pronto a fare la differenza?</h2>
+                        <p class="fs-5 text-muted mb-5">Grazie per aver esplorato il mio percorso! Se pensi che io possa essere il valore aggiunto che cerchi per il tuo team, scegli il canale che preferisci per contattarmi.</p>
+                        
+                        <div class="contact-links">
+                            <a href="tel:+393342689942" class="contact-btn">
+                                <i class="bi bi-telephone-fill"></i> +39 334 268 9942
+                            </a>
+                            <a href="mailto:ida.alessandro@outlook.it" class="contact-btn email">
+                                <i class="bi bi-envelope-fill"></i> Email
+                            </a>
+                            <a href="https://wa.me/393342689942" target="_blank" class="contact-btn whatsapp">
+                                <i class="bi bi-whatsapp"></i> WhatsApp
+                            </a>
+                            <a href="#" class="contact-btn linkedin">
+                                <i class="bi bi-linkedin"></i> LinkedIn
+                            </a>
+                        </div>
                     </div>
-                    
-                    <form id="portfolioContactForm" onsubmit="event.preventDefault(); alert('Grazie per il contatto! Questa è una simulazione per il portfolio GitHub.');">
-                        <div class="form-row-dual">
-                            <div class="form-group-custom">
-                                <label for="name">Nome e Cognome / Nome Azienda</label>
-                                <input type="text" id="name" class="form-input-field" placeholder="Es. Google Italia S.r.l." required>
-                            </div>
-                            <div class="form-group-custom">
-                                <label for="email">Indirizzo Email Aziendale</label>
-                                <input type="email" id="email" class="form-input-field" placeholder="Es. hr@azienda.com" required>
-                            </div>
-                        </div>
-                        <div class="form-group-custom">
-                            <label for="message">Note sulla Posizione o Messaggio</label>
-                            <textarea id="message" class="form-input-field" rows="4" placeholder="Inserisci dettagli sull'opportunità di business...">Ho visto il tuo framework TASK e la tabella dei risultati 2022-2024. Vorremmo valutare il tuo profilo.</textarea>
-                        </div>
-                        <div class="text-center" style="margin-top: 20px;">
-                            <button type="submit" class="btn-primary-form">Invia Richiesta di Contatto Ufficiale</button>
-                        </div>
-                    </form>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contcontacts" class="contatti-footer-section">
-            <div class="container-custom">
-                <div class="footer-grid">
-                    <div class="footer-left-info">
-                        <h3>Alessandro Idà</h3>
-                        <p>Sales Manager | Key Account | Project Developer</p>
-                        <p class="thanks-message">Grazie per aver visionato il lato autentico del mio percorso. Parliamo adesso di risultati reali.</p>
-                    </div>
-                    <div id="contatti" class="footer-right-channels">
-                        <h4>Contattami cliccando il canale che preferisci:</h4>
-                        <div class="channels-links-wrapper">
-                            <a href="tel:+393342689942" class="channel-link-item card-phone">
-                                <div class="c-icon"><i class="bi bi-telephone-outbound-fill"></i></div>
-                                <div class="c-text">
-                                    <span>Telefono Chiamata Diretta</span>
-                                    <strong>+39 334-268-9942</strong>
-                                </div>
-                            </a>
-                            <a href="mailto:ida.alessandro@outlook.it" class="channel-link-item card-email">
-                                <div class="c-icon"><i class="bi bi-envelope-at-fill"></i></div>
-                                <div class="c-text">
-                                    <span>Invia un Messaggio Email</span>
-                                    <strong>ida.alessandro@outlook.it</strong>
-                                </div>
-                            </a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener" class="channel-link-item card-linkedin">
-                                <div class="c-icon"><i class="bi bi-linkedin"></i></div>
-                                <div class="c-text">
-                                    <span>Connettiti su Network Ufficiale</span>
-                                    <strong>LinkedIn Profile</strong>
-                                </div>
-                            </a>
-                            <a href="https://wa.me/393342689942" target="_blank" rel="noopener" class="channel-link-item card-whatsapp">
-                                <div class="c-icon"><i class="bi bi-whatsapp"></i></div>
-                                <div class="c-text">
-                                    <span>Chat Istantanea Crittografata</span>
-                                    <strong>WhatsApp Business</strong>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-copyright text-center">
-                    <p>&copy; 2026 Idà Alessandro. Tutti i diritti riservati. Sito Web Custom Sviluppato per Portfolio ed Esecuzione Strategica.</p>
-                </div>
-            </div>
-        </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="mb-0">© 2024 Idà Alessandro. Tutti i diritti riservati. CV & Portfolio.</p>
+        </div>
+    </footer>
 
-    </main>
-
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-    <script>
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.style.background = 'rgba(15, 23, 42, 0.96)';
-                header.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
-            } else {
-                header.style.background = 'rgba(15, 23, 42, 0.85)';
-                header.style.boxShadow = 'none';
-            }
-        });
-    </script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom Script -->
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
