@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetti | Idà Alessandro</title>
+    <meta name="description" content="I miei progetti principali, raccontati attraverso sfide, gestione e impatto reale.">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="nav-wrapper">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-floating">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">IDÀ<span>.</span></a>
+            <button class="custom-hamburger d-lg-none" id="mobileMenuBtn">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="d-none d-lg-block" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Panoramica</a></li>
+                    <li class="nav-item"><a class="nav-link" href="capacita.html">Capacità</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="progetti.html">Progetti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#risultati">Risultati</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#reasons">Recensioni</a></li>
+                    <li class="nav-item ms-lg-3"><a class="nav-link nav-cta-btn" href="index.html#contatti">Scarica CV</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- Mobile Sidebar Menu -->
+<div class="mobile-sidebar-backdrop" id="sidebarBackdrop"></div>
+<div class="mobile-sidebar" id="mobileSidebar">
+    <div class="msb-header">
+        <span class="msb-logo">IDÀ.</span>
+        <button class="msb-close" id="mobileMenuClose"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <nav class="msb-nav">
+        <a href="index.html" class="msb-link">Panoramica</a>
+        <a href="capacita.html" class="msb-link">Capacità</a>
+        <a href="progetti.html" class="msb-link active">Progetti</a>
+        <a href="index.html#risultati" class="msb-link">Risultati</a>
+        <a href="index.html#reasons" class="msb-link">Recensioni</a>
+        <a href="index.html#contatti" class="msb-link cta">Scarica CV</a>
+    </nav>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     HERO — Light Dynamic Mode
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="projects-hero">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <!-- Testo a Sinistra -->
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="kicker mb-3" style="display:inline-flex; background: var(--main); color: #fff; border: none; box-shadow: 0 8px 16px rgba(0,63,91,0.2);">
+                    <i class="bi bi-folder-fill" style="color: #fff;"></i> Portfolio Case Studies
+                </div>
+                <h1 class="display-3 fw-bold mb-4" style="color: var(--main);">I Miei Progetti</h1>
+                <p class="hero-lead text-muted mb-4" style="font-size: 1.15rem; line-height: 1.6;">
+                    Sei casi di successo in cui ho trasformato criticità in opportunità. Scopri l'infrastruttura tecnica, la gestione operativa e l'impatto reale di ciascun progetto, navigando attraverso le mie esperienze sul campo.
+                </p>
+                <a href="#project-1" class="btn" style="background: var(--cta); color: #fff; padding: 12px 28px; border-radius: 50px; font-weight: 600; box-shadow: 0 4px 15px rgba(249, 116, 74, 0.4);">Esplora i progetti <i class="bi bi-arrow-down ms-2"></i></a>
+            </div>
+            
+            <!-- Grafica Dinamica a Destra -->
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+                <div class="ph-visual-composition">
+                    <div class="ph-glow"></div>
+                    
+                    <div class="ph-main-dashboard">
+                        <div class="ph-dash-header">
+                            <div class="ph-dash-dots">
+                                <span style="background:#ff5f56;"></span>
+                                <span style="background:#ffbd2e;"></span>
+                                <span style="background:#27c93f;"></span>
+                            </div>
+                            <div class="ph-dash-title">Project_Analytics.exe</div>
+                        </div>
+                        <div class="ph-dash-body">
+                            <!-- Chart Layout -->
+                            <div class="ph-dash-chart">
+                                <div class="ph-bar" style="height: 40%;"></div>
+                                <div class="ph-bar" style="height: 70%;"></div>
+                                <div class="ph-bar" style="height: 50%;"></div>
+                                <div class="ph-bar" style="height: 100%;"></div>
+                                <div class="ph-bar" style="height: 80%;"></div>
+                            </div>
+                            <div class="ph-dash-data">
+                                <div class="ph-data-box">
+                                    <i class="bi bi-check-circle-fill text-success"></i>
+                                    <div>
+                                        <strong>12</strong>
+                                        <span>Progetti</span>
+                                    </div>
+                                </div>
+                                <div class="ph-data-box">
+                                    <i class="bi bi-graph-up-arrow text-primary"></i>
+                                    <div>
+                                        <strong>+240%</strong>
+                                        <span>Crescita</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="ph-floating-badge top-right">
+                            <i class="bi bi-rocket-takeoff-fill"></i> Scale-up Ready
+                        </div>
+                        <div class="ph-floating-badge bottom-left">
+                            <i class="bi bi-gear-fill"></i> System Optimized
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CASE STUDY 1: CRM CUSTOM
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="case-study-section" id="project-1">
+    <div class="container">
+        <div class="row">
+            <!-- Sticky Sidebar -->
+            <div class="col-lg-4" data-aos="fade-right">
+                <div class="cs-sidebar">
+                    <span class="cs-num">01</span>
+                    <h2>CRM Custom</h2>
+                    <p>Un sistema personalizzato da zero per ottimizzare i processi aziendali, sostituendo un leader di mercato per garantire prestazioni su misura.</p>
+                    
+                    <div class="cs-tags-wrapper">
+                        <div class="cs-tags-title">Tech Stack & Integrazioni</div>
+                        <div class="cs-tags">
+                            <span class="cs-tag"><i class="bi bi-braces"></i> Sviluppo Custom</span>
+                            <span class="cs-tag"><i class="bi bi-plugin"></i> API Esterne</span>
+                            <span class="cs-tag"><i class="bi bi-envelope-at"></i> Brevo Email</span>
+                            <span class="cs-tag"><i class="bi bi-check2-square"></i> Gestione Task</span>
+                            <span class="cs-tag"><i class="bi bi-diagram-3"></i> Workflow Autom.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="cs-content">
+                    
+                    <!-- Immagine Progetto -->
+                    <div class="cs-image-wrapper">
+                        <img src="images/CRM.png" alt="CRM Custom" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+
+                    <div class="cs-block cb-challenge">
+                        <div class="cs-block-header">
+                            <div class="cs-block-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                            <h4>La Sfida</h4>
+                        </div>
+                        <p>L'azienda utilizzava un CRM famoso e leader di mercato, ma era troppo limitato, poco customizzabile e costoso. Rallentava incredibilmente i processi aziendali perché non si sposava con le nostre reali esigenze operative.</p>
+                    </div>
+
+                    <div class="cs-block cb-mgmt">
+                        <div class="cs-block-header">
+                            <div class="cs-block-icon"><i class="bi bi-kanban-fill"></i></div>
+                            <h4>Il Management</h4>
+                        </div>
+                        <p>Ho proposto di sviluppare un CRM totalmente custom. Ho eseguito un'analisi dimostrando un abbattimento di migliaia di euro di costi annuali, stilando un piano delle feature attese. Ottenuta carta bianca, mi sono messo all'opera e l'ho sviluppato internamente da zero.</p>
+                    </div>
+
+                    <div class="cs-block cb-impact">
+                        <div class="cs-block-header">
+                            <div class="cs-block-icon"><i class="bi bi-check-circle-fill"></i></div>
+                            <h4>L'Impatto</h4>
+                        </div>
+                        <p>Il rilascio di un CRM totalmente personalizzato ha ottimizzato tutti i processi interni, adattandosi come un guanto al team e portando a notevoli miglioramenti sia sui rendimenti economici che su quelli operativi.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CASE STUDY 2: DALL'IDEA ALL'IMPRESA
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="case-study-section" id="project-2">
+    <div class="container">
+        <div class="row">
+            <!-- Sticky Sidebar -->
+            <div class="col-lg-4" data-aos="fade-right">
+                <div class="cs-sidebar">
+                    <span class="cs-num">02</span>
+                    <h2>Dall'idea all'impresa</h2>
+                    <p>Lancio e gestione da zero di un'attività freelance, curandone ogni singolo aspetto in totale autonomia.</p>
+
+                    <div class="cs-tags-wrapper">
+                        <div class="cs-tags-title">Strumenti & Operazioni</div>
+                        <div class="cs-tags">
+                            <span class="cs-tag"><i class="bi bi-fonts"></i> Naming & Logo</span>
+                            <span class="cs-tag"><i class="bi bi-browser-edge"></i> Web Design CSS/JS</span>
+                            <span class="cs-tag"><i class="bi bi-file-earmark-text"></i> Contrattualistica</span>
+                            <span class="cs-tag"><i class="bi bi-tags"></i> Pricing Strategy</span>
+                            <span class="cs-tag"><i class="bi bi-instagram"></i> Social Media</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="cs-content">
+                    
+                    <!-- Immagine Progetto -->
+                    <div class="cs-image-wrapper">
+                        <div class="cs-image-empty">
+                            <i class="bi bi-laptop"></i>
+                            <span>Inserisci qui il logo o il sito del freelance</span>
+                        </div>
+                        <!-- <img src="tua-immagine-freelance.png" alt="Startup"> -->
+                    </div>
+
+                    <div class="cs-block cb-challenge">
+                        <div class="cs-block-header">
+                            <div class="cs-block-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                            <h4>La Sfida</h4>
+                        </div>
+                        <p>La cliente aveva appena aperto la partita IVA come insegnante di canto, ma operava in una zona satura con centinaia di altri insegnanti. Ponendosi come semplice "privato", faticava a differenziarsi e attirare allievi.</p>
+                    </div>
+
+                    <div class="cs-block cb-mgmt">
+                        <div class="cs-block-header">
+                            <div class="cs-block-icon"><i class="bi bi-kanban-fill"></i></div>
+                            <h4>Il Management</h4>
+                        </div>
+                        <p>Mi sono proposto di gestire interamente il progetto. Le ho redatto un business plan per trasformarla da "privato" a "vera azienda". Ho creato tutto l'ecosistema del brand da zero per posizionarla come reale punto di riferimento sul territorio.</p>
+                    </div>
+
+                    <div class="cs-block cb-impact">
+                        <div class="cs-block-header">
+                            <div class="cs-block-icon"><i class="bi bi-check-circle-fill"></i></div>
+                            <h4>L'Impatto</h4>
+                        </div>
+                        <p>La nascita di un brand strutturato, forte e professionale capace di distinguersi nettamente dalla concorrenza locale, attraendo nuovi clienti grazie a una comunicazione solida e organizzata.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CASE STUDY 3: PIANI DI CRESCITA
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="case-study-section" id="project-3">
+    <div class="container">
+        <div class="row">
+            <!-- Sticky Sidebar -->
+            <div class="col-lg-4" data-aos="fade-right">
+                <div class="cs-sidebar">
+                    <span class="cs-num">03</span>
+                    <h2>Piani di Crescita</h2>
+                    <p>Analisi strategica e business planning a doppio binario: per l'efficienza del team interno e per la scalabilità degli e-commerce clienti.</p>
+
+                    <div class="cs-tags-wrapper">
+                        <div class="cs-tags-title">Strumenti & Operazioni</div>
+                        <div class="cs-tags">
+                            <span class="cs-tag"><i class="bi bi-graph-up-arrow"></i> Reportistica Dati</span>
+                            <span class="cs-tag"><i class="bi bi-people"></i> Riunioni Operative</span>
+                            <span class="cs-tag"><i class="bi bi-bullseye"></i> Consulenza MKTG</span>
+                            <span class="cs-tag"><i class="bi bi-cart3"></i> Strategia E-Commerce</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="cs-content">
+                    
+                    <!-- Immagine Progetto -->
+                    <div class="cs-image-wrapper">
+                        <div class="cs-image-empty">
+                            <i class="bi bi-bar-chart-line"></i>
+                            <span>Inserisci qui un grafico o report</span>
+                        </div>
+                    </div>
+
+                    <div class="cs-block cb-challenge">
+                        <div class="cs-block-header">
+                            <div class="cs-block-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                            <h4>La Sfida</h4>
+                        </div>
+                        <p>La necessità critica di individuare i colli di bottiglia nei rendimenti interni del team e dell'azienda, oltre alla forte responsabilità di guidare con proattività gli e-commerce dei clienti verso performance economiche superiori.</p>
+                    </div>
+
+                    <div class="cs-block cb-mgmt">
+                        <div class="cs-block-header">
+                            <div class="cs-block-icon"><i class="bi bi-kanban-fill"></i></div>
+                            <h4>Il Management</h4>
+                        </div>
+                        <p>Opero parallelamente su due fronti. <strong>Internamente:</strong> analizzo business e rendimenti (personali, del team e aziendali), stilando report e conducendo riunioni per implementare soluzioni. <strong>Esternamente:</strong> analizzo campagne, fatturati e fidelizzazione, prescrivendo strategie e promozioni per il portafoglio clienti.</p>
+                    </div>
+
+                    <div class="cs-block cb-impact">
+                        <div class="cs-block-header">
+                            <div class="cs-block-icon"><i class="bi bi-check-circle-fill"></i></div>
+                            <h4>L'Impatto</h4>
+                        </div>
+                        <p>Ottimizzazione continua delle performance operative interne e un incremento documentato delle vendite, margini e fidelizzazione per gli e-commerce gestiti.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CASE STUDY 4: ALGORITMO STRATEGICO
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="case-study-section" id="project-4">
+    <div class="container">
+        <div class="row">
+            <!-- Sticky Sidebar -->
+            <div class="col-lg-4" data-aos="fade-right">
+                <div class="cs-sidebar">
+                    <span class="cs-num">04</span>
+                    <h2>Algoritmo Strategico</h2>
+                    <p>Un sistema avanzato in grado di prevedere e calcolare in anticipo i rendimenti e la scalabilità degli investimenti.</p>
+
+                    <div class="cs-tags-wrapper">
+                        <div class="cs-tags-title">Tecnologia & Parametri</div>
+                        <div class="cs-tags">
+                            <span class="cs-tag"><i class="bi bi-file-earmark-spreadsheet"></i> Excel Avanzato</span>
+                            <span class="cs-tag"><i class="bi bi-calculator"></i> 8 Macro Formule</span>
+                            <span class="cs-tag"><i class="bi bi-infinity"></i> +10k Combinazioni</span>
+                            <span class="cs-tag"><i class="bi bi-currency-euro"></i> Budget & Margini</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="cs-content">
+                    
+                    <!-- Immagine Progetto -->
+                    <div class="cs-image-wrapper">
+                        <div class="cs-image-empty">
+                            <i class="bi bi-table"></i>
+                            <span>Inserisci uno screen dell'algoritmo Excel</span>
+                        </div>
+                    </div>
+
+                    <div class="cs-block cb-challenge">
+                        <div class="cs-block-header">
+                            <div class="cs-block-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                            <h4>La Sfida</h4>
+                        </div>
+                        <p>Forte diffidenza iniziale da parte dei clienti (come ad es. le farmacie) che, prima di investire, non avevano chiara visibilità su quali ordini, fatturati o margini potessero ragionevolmente aspettarsi.</p>
+                    </div>
+
+                    <div class="cs-block cb-mgmt">
+                        <div class="cs-block-header">
+                            <div class="cs-block-icon"><i class="bi bi-kanban-fill"></i></div>
+                            <h4>Il Management</h4>
+                        </div>
+                        <p>Per abbattere questa lacuna ho ideato, ingegnerizzato e creato un potente algoritmo predittivo in Excel. Basta inserire le variabili desiderate dal cliente (budget, ricarichi, logistica) e il tool restituisce le proiezioni matematiche in automatico.</p>
+                    </div>
+
+                    <div class="cs-block cb-impact">
+                        <div class="cs-block-header">
+                            <div class="cs-block-icon"><i class="bi bi-check-circle-fill"></i></div>
+                            <h4>L'Impatto</h4>
+                        </div>
+                        <p>Totale abbattimento della diffidenza. I clienti ottengono istantaneamente una proiezione trasparente, che dona sicurezza e prevedibilità economica all'investimento.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CASE STUDY 5: SMART TRACKING
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="case-study-section" id="project-5">
+    <div class="container">
+        <div class="row">
+            <!-- Sticky Sidebar -->
+            <div class="col-lg-4" data-aos="fade-right">
+                <div class="cs-sidebar">
+                    <span class="cs-num">05</span>
+                    <h2>Smart Tracking</h2>
+                    <p>Un cruscotto di monitoraggio in tempo reale degli obiettivi per mantenere il team costantemente allineato sulle performance.</p>
+
+                    <div class="cs-tags-wrapper">
+                        <div class="cs-tags-title">Tool & Formazione</div>
+                        <div class="cs-tags">
+                            <span class="cs-tag"><i class="bi bi-crosshair"></i> Monitoraggio KPI</span>
+                            <span class="cs-tag"><i class="bi bi-magic"></i> 12 Macro Analisi</span>
+                            <span class="cs-tag"><i class="bi bi-display"></i> Dashboard Real-Time</span>
+                            <span class="cs-tag"><i class="bi bi-camera-video"></i> Video Tutorial Interni</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="cs-content">
+                    
+                    <!-- Immagine Progetto -->
+                    <div class="cs-image-wrapper">
+                        <img src="images/Smart Tracking.png" alt="Smart Tracking" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+
+                    <div class="cs-block cb-challenge">
+                        <div class="cs-block-header">
+                            <div class="cs-block-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                            <h4>La Sfida</h4>
+                        </div>
+                        <p>L'obiettivo primario era far guadagnare il più possibile i clienti e i loro e-commerce. Ma le metriche e i KPI necessari per capire lo "stato di salute" e se si era "in target" erano troppi per essere analizzati a mano con reattività.</p>
+                    </div>
+
+                    <div class="cs-block cb-mgmt">
+                        <div class="cs-block-header">
+                            <div class="cs-block-icon"><i class="bi bi-kanban-fill"></i></div>
+                            <h4>Il Management</h4>
+                        </div>
+                        <p>Ho proposto e sviluppato interamente lo "Smart Tracking", uno strumento che processa le variabili e indica in tempo reale il raggiungimento degli obiettivi. Mi sono occupato dell'adozione interna registrando video training dedicati.</p>
+                    </div>
+
+                    <div class="cs-block cb-impact">
+                        <div class="cs-block-header">
+                            <div class="cs-block-icon"><i class="bi bi-check-circle-fill"></i></div>
+                            <h4>L'Impatto</h4>
+                        </div>
+                        <p>Massima trasparenza e monitoraggio istantaneo: il team è costantemente informato sui target in corso, migliorando l'efficienza e la rapidità d'intervento sui portafogli clienti.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CASE STUDY 6: LANCI DI SUCCESSO
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="case-study-section" id="project-6">
+    <div class="container">
+        <div class="row">
+            <!-- Sticky Sidebar -->
+            <div class="col-lg-4" data-aos="fade-right">
+                <div class="cs-sidebar">
+                    <span class="cs-num">06</span>
+                    <h2>Lanci di successo</h2>
+                    <p>Strategia e vendita diretta per l'introduzione sul mercato di servizi aziendali totalmente nuovi e ad alto valore.</p>
+
+                    <div class="cs-tags-wrapper">
+                        <div class="cs-tags-title">Competenze Impiegate</div>
+                        <div class="cs-tags">
+                            <span class="cs-tag"><i class="bi bi-google"></i> Google Ads Launch</span>
+                            <span class="cs-tag"><i class="bi bi-truck"></i> Contratti Corrieri</span>
+                            <span class="cs-tag"><i class="bi bi-megaphone"></i> Posizionamento Servizi</span>
+                            <span class="cs-tag"><i class="bi bi-person-check"></i> Vendita Diretta</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="cs-content">
+                    
+                    <!-- Immagine Progetto -->
+                    <div class="cs-image-wrapper">
+                        <div class="cs-image-empty">
+                            <i class="bi bi-rocket-takeoff"></i>
+                            <span>Immagine rappresentativa del lancio</span>
+                        </div>
+                    </div>
+
+                    <div class="cs-block cb-challenge">
+                        <div class="cs-block-header">
+                            <div class="cs-block-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                            <h4>La Sfida</h4>
+                        </div>
+                        <p>L'esigenza aziendale era di introdurre e monetizzare rapidamente nuovi servizi (mai commercializzati prima dall'azienda) ampliando l'offerta dedicata alla nostra clientela già acquisita.</p>
+                    </div>
+
+                    <div class="cs-block cb-mgmt">
+                        <div class="cs-block-header">
+                            <div class="cs-block-icon"><i class="bi bi-kanban-fill"></i></div>
+                            <h4>Il Management</h4>
+                        </div>
+                        <p>Ho gestito i progetti dall'inizio alla fine: dalla creazione dell'offerta per i pacchetti Google Ads e partnership con corrieri, fino al posizionamento del servizio. Sono poi sceso in campo per venderli personalmente ai clienti.</p>
+                    </div>
+
+                    <div class="cs-block cb-impact">
+                        <div class="cs-block-header">
+                            <div class="cs-block-icon"><i class="bi bi-check-circle-fill"></i></div>
+                            <h4>L'Impatto</h4>
+                        </div>
+                        <p>Adozione massiva da parte dei clienti con eccellenti risultati economici derivanti da questi servizi aggiuntivi, riuscendo a superare nettamente le aspettative di vendita aziendali.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p class="mb-0"><script>document.write(new Date().getFullYear())</script> — Sviluppato da Alessandro Idà</p>
+    </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<a href="#" class="scroll-top-btn" id="scrollTopBtn"><i class="bi bi-arrow-up"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
