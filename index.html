@@ -31,8 +31,8 @@
                     <li class="nav-item"><a class="nav-link active" href="index.html">Panoramica</a></li>
                     <li class="nav-item"><a class="nav-link" href="capacita.html">Capacità</a></li>
                     <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#risultati">Risultati</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#reasons">Recensioni</a></li>
+                    <li class="nav-item"><a class="nav-link" href="risultati.html">Risultati</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recensioni.html">Recensioni</a></li>
                     <li class="nav-item ms-lg-3"><a class="nav-link nav-cta-btn" href="#contatti">Scarica CV</a></li>
                 </ul>
             </div>
@@ -51,8 +51,8 @@
         <a href="index.html" class="msb-link active">Panoramica</a>
         <a href="capacita.html" class="msb-link">Capacità</a>
         <a href="progetti.html" class="msb-link">Progetti</a>
-        <a href="#risultati" class="msb-link">Risultati</a>
-        <a href="#reasons" class="msb-link">Recensioni</a>
+        <a href="risultati.html" class="msb-link">Risultati</a>
+        <a href="recensioni.html" class="msb-link">Recensioni</a>
         <a href="#contatti" class="msb-link cta">Scarica CV</a>
     </nav>
 </div>
@@ -73,7 +73,7 @@
                     <span class="d-none d-md-inline">Il backstage della mia crescita professionale</span>
                 </p>
                 <h1>Traduco la complessità in <em>risultati</em></h1>
-                <p class="hero-lead">Sono Idà Alessandro, Sales Manager e Project Developer. Qui condivido le esperienze e le opportunità che hanno segnato il mio cammino.</p>
+                <p class="hero-lead">Sono Idà Alessandro, Sales Manager, Key account e Project Developer. Qui condivido le esperienze e le opportunità che hanno segnato il mio cammino.</p>
 
                 <div class="hero-actions mt-4 d-flex flex-wrap gap-3">
                     <a href="#chi-sono" class="btn-cta"><i class="bi bi-arrow-down-circle"></i> Scopri il percorso</a>
@@ -122,7 +122,8 @@
                         <span><i class="bi bi-robot"></i></span>
                     </div>
                 </div>
-                <div class="bh-stat-data mt-auto pt-3">
+                <div class="bh-stat-data">
+                    <h3>50+</h3>
                     <h4>Progetti in Autonomia</h4>
                     <p>Ideati e sviluppati end-to-end</p>
                 </div>
@@ -132,6 +133,53 @@
     </div>
 </section>
 
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE INDEX / TIMELINE (IN QUESTA PAGINA TROVERAI)
+     ═══════════════════════════════════════════════════════════════ -->
+<section id="page-index" class="cv-section timeline-section">
+    <div class="container">
+        <div class="section-header mb-5" data-aos="fade-up">
+            <div class="kicker"><i class="bi bi-map-fill"></i> Esplora</div>
+            <h2>In questa pagina troverai</h2>
+        </div>
+
+        <div class="explore-matrix" data-aos="fade-up" data-aos-delay="100">
+            <a href="#chi-sono" class="matrix-item">
+                <div class="mi-dot">01</div>
+                <span class="mi-text">La mia missione</span>
+            </a>
+            <a href="#task" class="matrix-item">
+                <div class="mi-dot">02</div>
+                <span class="mi-text">Le mie competenze</span>
+            </a>
+            <a href="#progetti" class="matrix-item">
+                <div class="mi-dot">03</div>
+                <span class="mi-text">I miei progetti</span>
+            </a>
+            <a href="#startup" class="matrix-item">
+                <div class="mi-dot">04</div>
+                <span class="mi-text">Progetti freelance</span>
+            </a>
+            <a href="#obiettivi" class="matrix-item">
+                <div class="mi-dot">05</div>
+                <span class="mi-text">La mia evoluzione</span>
+            </a>
+            <a href="#risultati" class="matrix-item">
+                <div class="mi-dot">06</div>
+                <span class="mi-text">Risultati</span>
+            </a>
+            <a href="#reasons" class="matrix-item">
+                <div class="mi-dot">07</div>
+                <span class="mi-text">Perché scegliermi</span>
+            </a>
+            <a href="#contatti" class="matrix-item">
+                <div class="mi-dot">08</div>
+                <span class="mi-text">Contatti</span>
+            </a>
+        </div>
+    </div>
+</section>
 
 <!-- ═══════════════════════════════════════════════════════════════
      CHI SONO — accent-top vision cards + Before/After rows
@@ -400,7 +448,7 @@
 <!-- ═══════════════════════════════════════════════════════════════
      STARTUP DA ZERO — Accordion + Flow Chips (Everoo FAQ style)
      ═══════════════════════════════════════════════════════════════ -->
-<section class="cv-section soft">
+<section id="startup" class="cv-section soft">
     <div class="container">
         <div class="row">
             <div class="col-lg-5" data-aos="fade-right">
@@ -551,7 +599,7 @@
         <div class="section-header" data-aos="fade-up">
             <div class="kicker"><i class="bi bi-bar-chart-fill"></i> Numeri</div>
             <h2>I Risultati</h2>
-            <p>I numeri parlano chiaro. Ecco una dashboard con i dati economici commerciali del mio percorso.</p>
+            <p>I numeri parlano chiaro. Ecco una dashboard con i dati economici commerciali del mio percorso.*</p>
         </div>
 
         <div class="results-dashboard" data-aos="fade-up">
@@ -560,95 +608,121 @@
                 <span></span><span></span><span></span>
             </div>
 
-            <div class="results-body">
-                <!-- Tabs -->
-                <div class="results-tabs">
-                    <span class="results-tab active">Fatturato</span>
-                    <span class="results-tab">Incidenza</span>
-                    <span class="results-tab">Clienti</span>
-                    <span class="results-tab">Contratti</span>
-                </div>
-
+            <div class="results-body" style="padding-top: 10px;">
                 <!-- Year columns -->
                 <div class="year-grid">
                     <div class="year-col">
                         <div class="year-label">2022</div>
                         <div class="year-value">215.000 €</div>
                         <div class="year-rows">
-                            <div class="year-row"><span>Incidenza</span><strong>21%</strong></div>
+                            <div class="year-row"><span>Incidenza sul fatt. aziendale</span><strong>21%</strong></div>
                             <div class="year-row"><span>Clienti gestiti</span><strong>77</strong></div>
                             <div class="year-row"><span>Ticket medio</span><strong>5.100 €</strong></div>
                             <div class="year-row"><span>Contratti chiusi</span><strong>80</strong></div>
-                            <div class="year-row"><span>Recensioni</span><strong>11</strong></div>
                         </div>
                     </div>
-                    <div class="year-col featured">
-                        <div class="year-badge">Anno Record</div>
+                    <div class="year-col">
                         <div class="year-label">2023</div>
                         <div class="year-value">351.000 €</div>
                         <div class="year-rows">
-                            <div class="year-row"><span>Incidenza</span><strong>27%</strong></div>
+                            <div class="year-row"><span>Incidenza sul fatt. aziendale</span><strong>27%</strong></div>
                             <div class="year-row"><span>Clienti gestiti</span><strong>73</strong></div>
                             <div class="year-row"><span>Ticket medio</span><strong>4.700 €</strong></div>
                             <div class="year-row"><span>Contratti chiusi</span><strong>75</strong></div>
-                            <div class="year-row"><span>Recensioni</span><strong>6</strong></div>
                         </div>
                     </div>
                     <div class="year-col">
                         <div class="year-label">2024</div>
                         <div class="year-value">259.000 €</div>
                         <div class="year-rows">
-                            <div class="year-row"><span>Incidenza</span><strong>23%</strong></div>
+                            <div class="year-row"><span>Incidenza sul fatt. aziendale</span><strong>23%</strong></div>
                             <div class="year-row"><span>Clienti gestiti</span><strong>67</strong></div>
                             <div class="year-row"><span>Ticket medio</span><strong>3.800 €</strong></div>
                             <div class="year-row"><span>Contratti chiusi</span><strong>69</strong></div>
-                            <div class="year-row"><span>Recensioni</span><strong>24 ↑</strong></div>
+                        </div>
+                    </div>
+                    <div class="year-col">
+                        <div class="year-label">2025</div>
+                        <div class="year-value">163.697 €</div>
+                        <div class="year-rows">
+                            <div class="year-row"><span>Clienti gestiti</span><strong>61</strong></div>
+                            <div class="year-row"><span>Ticket medio</span><strong>4.300 €</strong></div>
+                            <div class="year-row"><span>Contratti chiusi</span><strong>38</strong></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Analysis panels -->
-                <div class="analysis-panels">
-                    <div class="analysis-panel">
-                        <h4><i class="bi bi-wallet2 me-2"></i> Tipologia Pagamenti</h4>
-                        <div class="progress-row">
-                            <div class="progress-head"><span>Alla firma</span><span>63%</span></div>
-                            <div class="progress-track"><div class="progress-fill" style="width:63%"></div></div>
+                <!-- 2026 Forecast Column -->
+                <div class="year-col-full" style="margin-top: 24px;">
+                    <div class="year-col featured dark-theme" style="background: var(--main); color: #fff; border: none; box-shadow: var(--shadow-lg);">
+                        <div class="year-badge" style="background: var(--second); color: #fff;">Anno in corso</div>
+                        <div class="year-label" style="color: rgba(255,255,255,0.7);">Previsione 2026</div>
+                        <div class="year-value" style="color: #fff; display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap;">
+                            <div>
+                                <span style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; line-height: 1;">354.000 €</span>
+                                <div style="font-size: 0.8rem; font-weight: normal; color: rgba(255,255,255,0.6); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Già consolidato</div>
+                            </div>
+                            <div style="margin-bottom: 5px;">
+                                <span class="forecast-arrow" style="font-size: 1.2rem; color: #22c55e; font-weight: 800;"><i class="bi bi-arrow-up-right"></i> +21%</span>
+                                <div style="font-size: 0.75rem; font-weight: bold; color: rgba(34,197,94,0.9); text-transform: uppercase; letter-spacing: 0.5px;">Stima a fine anno</div>
+                            </div>
                         </div>
-                        <div class="progress-row">
-                            <div class="progress-head"><span>A 60 giorni</span><span>23%</span></div>
-                            <div class="progress-track"><div class="progress-fill" style="width:23%"></div></div>
-                        </div>
-                        <div class="progress-row">
-                            <div class="progress-head"><span>A 30 giorni</span><span>10%</span></div>
-                            <div class="progress-track"><div class="progress-fill" style="width:10%"></div></div>
-                        </div>
-                        <div class="progress-row">
-                            <div class="progress-head"><span>A 90gg / Altro</span><span>4%</span></div>
-                            <div class="progress-track"><div class="progress-fill" style="width:4%"></div></div>
-                        </div>
-                    </div>
-
-                    <div class="analysis-panel">
-                        <h4><i class="bi bi-pie-chart-fill me-2"></i> Servizi Venduti</h4>
-                        <ul class="services-ul">
-                            <li><span class="svc-badge">33%</span> Servizi marketing</li>
-                            <li><span class="svc-badge">29%</span> Integrazioni tecniche</li>
-                            <li><span class="svc-badge">18%</span> Nuovi contratti</li>
-                            <li><span class="svc-badge">15%</span> Convenzioni</li>
-                            <li><span class="svc-badge">3%</span> Rinnovi triennali</li>
-                        </ul>
-                        <div class="review-box">
-                            <h5><i class="bi bi-star-fill"></i> Trend Recensioni</h5>
-                            <div class="d-flex justify-content-around text-center">
-                                <div><strong class="fs-4 d-block" style="color:var(--main)">11</strong><small class="text-muted">2022</small></div>
-                                <div><strong class="fs-4 d-block" style="color:var(--main)">6</strong><small class="text-muted">2023</small></div>
-                                <div><strong class="fs-4 d-block" style="color:var(--second)">24</strong><small style="color:var(--second);font-weight:700">2024 <i class="bi bi-arrow-up-right"></i></small></div>
+                        <div class="year-rows forecast-rows" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; border-top: 1px dashed rgba(255,255,255,0.2); padding-top: 20px;">
+                            <div class="year-row" style="border: none; padding: 0; flex-direction: column; align-items: flex-start;">
+                                <span style="color: rgba(255,255,255,0.7); margin-bottom: 12px; font-weight: 600;">Clienti gestiti</span>
+                                <div style="display:flex; width: 100%; gap: 20px;">
+                                    <div style="display: flex; flex-direction: column;">
+                                        <strong style="font-size: 1.6rem; color: #fff; line-height: 1;">65</strong>
+                                        <small style="font-size: 0.7rem; color: rgba(255,255,255,0.5); text-transform: uppercase; margin-top: 4px;">Già chiusi</small>
+                                    </div>
+                                    <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                                        <small style="color: #22c55e; font-weight: 800; font-size: 1.1rem; line-height: 1;"><i class="bi bi-arrow-up-right"></i> +15%</small>
+                                        <small style="font-size: 0.7rem; color: rgba(34,197,94,0.8); text-transform: uppercase; margin-top: 4px;">A fine anno</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="year-row" style="border: none; padding: 0; flex-direction: column; align-items: flex-start;">
+                                <span style="color: rgba(255,255,255,0.7); margin-bottom: 12px; font-weight: 600;">Ticket medio</span>
+                                <div style="display:flex; width: 100%; gap: 20px;">
+                                    <div style="display: flex; flex-direction: column;">
+                                        <strong style="font-size: 1.6rem; color: #fff; line-height: 1;">7.200 €</strong>
+                                        <small style="font-size: 0.7rem; color: rgba(255,255,255,0.5); text-transform: uppercase; margin-top: 4px;">Attuale</small>
+                                    </div>
+                                    <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                                        <small style="color: #22c55e; font-weight: 800; font-size: 1.1rem; line-height: 1;"><i class="bi bi-arrow-up-right"></i> +25%</small>
+                                        <small style="font-size: 0.7rem; color: rgba(34,197,94,0.8); text-transform: uppercase; margin-top: 4px;">A fine anno</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="year-row" style="border: none; padding: 0; flex-direction: column; align-items: flex-start;">
+                                <span style="color: rgba(255,255,255,0.7); margin-bottom: 12px; font-weight: 600;">Contratti chiusi</span>
+                                <div style="display:flex; width: 100%; gap: 20px;">
+                                    <div style="display: flex; flex-direction: column;">
+                                        <strong style="font-size: 1.6rem; color: #fff; line-height: 1;">49</strong>
+                                        <small style="font-size: 0.7rem; color: rgba(255,255,255,0.5); text-transform: uppercase; margin-top: 4px;">Già chiusi</small>
+                                    </div>
+                                    <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                                        <small style="color: #22c55e; font-weight: 800; font-size: 1.1rem; line-height: 1;"><i class="bi bi-arrow-up-right"></i> +18%</small>
+                                        <small style="font-size: 0.7rem; color: rgba(34,197,94,0.8); text-transform: uppercase; margin-top: 4px;">A fine anno</small>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Inner Disclaimer -->
+                <div class="mt-4 pt-3 text-center" style="border-top: 1px dashed var(--border-light);">
+                    <p class="text-muted mb-0" style="font-size: 0.75rem; max-width: 800px; margin: 0 auto; line-height: 1.5;">
+                        *Tutti i dati riportati sono stime semplificate relative alla mia attività, a mero scopo illustrativo. I numeri sono indicativi, arrotondati, non rappresentano comunicazioni ufficiali dell'azienda e non costituiscono garanzia di risultati futuri.
+                    </p>
+                </div>
             </div>
+        </div>
+
+        <!-- CTA ONLY -->
+        <div class="results-footer text-center mt-5" data-aos="fade-up">
+            <a href="risultati.html" class="btn-cta mb-4" style="text-decoration: none;"><i class="bi bi-bar-chart-steps"></i> Scopri tutti i dettagli</a>
         </div>
     </div>
 </section>
