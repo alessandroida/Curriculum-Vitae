@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risultati & Performance | Idà Alessandro</title>
+    <meta name="description" content="Dashboard dettagliata dei risultati raggiunti, con grafici e statistiche.">
+    <meta name="theme-color" content="#003f5b">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* HERO STYLES */
+        .page-hero {
+            background: #f8fafc;
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.1), transparent 70%);
+            z-index: 1;
+        }
+        .hero-title {
+            font-size: clamp(2.8rem, 5vw, 4rem);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            color: var(--main);
+        }
+
+        /* CUSTOM CSS ART per la parte destra della Hero */
+        .hero-data-art {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 20px;
+            padding-bottom: 50px;
+            z-index: 2;
+        }
+        .da-circle {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.15), transparent);
+            border: 2px dashed rgba(0, 63, 91, 0.1);
+            top: 5%;
+            z-index: 1;
+            animation: rotateSlow 20s linear infinite;
+        }
+        @keyframes rotateSlow { 100% { transform: rotate(360deg); } }
+        .da-bar {
+            width: 60px;
+            border-radius: 12px 12px 0 0;
+            background: var(--main);
+            z-index: 2;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,63,91,0.1);
+            animation: growBar 1.5s cubic-bezier(0.1, 0.8, 0.2, 1) forwards;
+            transform-origin: bottom;
+            opacity: 0;
+        }
+        .da-bar-1 { height: 120px; background: color-mix(in srgb, var(--main) 20%, white); animation-delay: 0.2s; }
+        .da-bar-2 { height: 200px; background: color-mix(in srgb, var(--main) 50%, white); animation-delay: 0.4s; }
+        .da-bar-3 { height: 280px; background: var(--main); animation-delay: 0.6s; }
+        
+        @keyframes growBar {
+            0% { transform: scaleY(0); opacity: 0; }
+            100% { transform: scaleY(1); opacity: 1; }
+        }
+        .da-card {
+            position: absolute;
+            bottom: 20px;
+            right: 5%;
+            background: #fff;
+            padding: 15px 25px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            font-weight: 800;
+            color: #22c55e;
+            z-index: 3;
+            border: 1px solid var(--border-light);
+            animation: floatUpDown 3s ease-in-out infinite;
+        }
+        @keyframes floatUpDown {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* CHART CARDS */
+        .chart-container {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+        .chart-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 63, 91, 0.05);
+            border: 1px solid var(--border-light);
+            height: 100%;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .chart-card:hover {
+            box-shadow: 0 12px 30px rgba(0, 63, 91, 0.1);
+            transform: translateY(-5px);
+            border-color: var(--second);
+        }
+        .chart-card-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--main);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .chart-card-title i {
+            font-size: 1.4rem;
+            color: var(--second);
+        }
+        .chart-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        /* PROGRESS LIST */
+        .progress-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .progress-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .pi-head {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--main);
+        }
+        .pi-track {
+            height: 10px;
+            background: #f0f4f8;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .pi-fill {
+            height: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="nav-wrapper">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-floating">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">IDÀ<span>.</span></a>
+            <button class="custom-hamburger d-lg-none" id="mobileMenuBtn">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="d-none d-lg-block" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Panoramica</a></li>
+                    <li class="nav-item"><a class="nav-link" href="capacita.html">Capacità</a></li>
+                    <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="risultati.html">Risultati</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recensioni.html">Recensioni</a></li>
+                    <li class="nav-item ms-lg-3"><a class="nav-link nav-cta-btn" href="index.html#contatti">Scarica CV</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- Mobile Sidebar Menu -->
+<div class="mobile-sidebar-backdrop" id="sidebarBackdrop"></div>
+<div class="mobile-sidebar" id="mobileSidebar">
+    <div class="msb-header">
+        <span class="msb-logo">IDÀ.</span>
+        <button class="msb-close" id="mobileMenuClose"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <nav class="msb-nav">
+        <a href="index.html" class="msb-link">Panoramica</a>
+        <a href="capacita.html" class="msb-link">Capacità</a>
+        <a href="progetti.html" class="msb-link">Progetti</a>
+        <a href="risultati.html" class="msb-link active">Risultati</a>
+        <a href="recensioni.html" class="msb-link">Recensioni</a>
+        <a href="index.html#contatti" class="msb-link cta">Scarica CV</a>
+    </nav>
+</div>
+
+<!-- HERO SECTION -->
+<section class="page-hero">
+    <div class="container" style="position: relative; z-index: 2;">
+        <div class="row align-items-center g-5">
+            <!-- Left: Text content -->
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="kicker mb-3"><i class="bi bi-graph-up-arrow"></i> Performance Commerciali</div>
+                <h1 class="hero-title">I Miei Risultati nel <em class="text-gradient">Dettaglio</em></h1>
+                <p class="hero-lead mt-4" style="font-size: 1.15rem; color: var(--text-muted); max-width: 550px;">
+                    Risultati trasparenti, scalabili e misurabili. Una panoramica approfondita sulle performance di vendita, l'evoluzione dei contratti e l'impatto aziendale degli ultimi anni.
+                </p>
+                <div class="mt-5 d-flex gap-3">
+                    <a href="#dashboard" class="btn-cta"><i class="bi bi-arrow-down-circle"></i> Esplora i dati</a>
+                </div>
+            </div>
+            
+            <!-- Right: CSS Art Component (Unique layout) -->
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+                <div class="hero-data-art">
+                    <div class="da-circle"></div>
+                    <div class="da-bar da-bar-1"></div>
+                    <div class="da-bar da-bar-2"></div>
+                    <div class="da-bar da-bar-3"></div>
+                    <div class="da-card">
+                        <i class="bi bi-graph-up-arrow"></i> 1,3+ Mln Generati
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DASHBOARD CONTENT -->
+<section id="dashboard" class="cv-section white">
+    <div class="container">
+        
+        <!-- ROW 1: Fatturato -->
+        <div class="row mb-4" data-aos="fade-up" data-aos-delay="50">
+            <div class="col-12">
+                <div class="chart-card">
+                    <div class="chart-card-title"><i class="bi bi-graph-up"></i> Fatturato Individuale Generato</div>
+                    <p class="chart-desc">Andamento del fatturato generato (2022 - Previsione 2026). I dati mostrano la resilienza e la capacità di scalare, raggiungendo picchi notevoli.</p>
+                    <div class="chart-container" style="height: 350px;">
+                        <canvas id="fatturatoChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROW 2: Clienti Gestiti, Contratti Chiusi, Recensioni -->
+        <div class="row g-4 mb-4">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="chart-card">
+                    <div class="chart-card-title"><i class="bi bi-people-fill"></i> Clienti Gestiti</div>
+                    <p class="chart-desc">Andamento del numero di clienti gestiti attivamente nel corso degli anni.</p>
+                    <div class="chart-container" style="height: 250px;">
+                        <canvas id="clientiChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                <div class="chart-card">
+                    <div class="chart-card-title"><i class="bi bi-file-earmark-check-fill"></i> Contratti Chiusi</div>
+                    <p class="chart-desc">Trattative andate a buon fine anno su anno, con un solido trend positivo.</p>
+                    <div class="chart-container" style="height: 250px;">
+                        <canvas id="contrattiChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="chart-card" style="justify-content: space-between;">
+                    <div class="chart-card-title"><i class="bi bi-chat-quote-fill"></i> Voice of Customer</div>
+                    
+                    <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 10px 0;">
+                        <div style="display: flex; gap: 4px; color: #f59e0b; font-size: 1.5rem; margin-bottom: 12px;">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <h2 style="font-size: 3.5rem; font-weight: 900; line-height: 1; margin-bottom: 5px; color: var(--main);">41</h2>
+                        <h4 style="color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">Recensioni Positive</h4>
+                    </div>
+
+                    <div style="background: rgba(34, 197, 94, 0.1); border-radius: 12px; padding: 16px; display: flex; align-items: center; justify-content: space-between; border: 1px solid rgba(34, 197, 94, 0.2);">
+                        <div style="font-size: 0.85rem; font-weight: 700; color: var(--main); text-transform: uppercase;">Tasso di Soddisfazione</div>
+                        <strong style="color: #22c55e; font-size: 1.4rem; font-weight: 800;">> 95%</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROW 3: Ticket Medio e Incidenza -->
+        <div class="row g-4 mb-4">
+            <div class="col-lg-5" data-aos="fade-up" data-aos-delay="250">
+                <div class="chart-card">
+                    <div class="chart-card-title"><i class="bi bi-pie-chart-fill"></i> Incidenza sul Fatturato</div>
+                    <p class="chart-desc">Percentuale di incidenza del mio fatturato individuale rispetto al totale aziendale.</p>
+                    <div class="chart-container" style="height: 280px;">
+                        <canvas id="incidenzaChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
+                <div class="chart-card">
+                    <div class="chart-card-title"><i class="bi bi-cash-stack"></i> Evoluzione Ticket Medio</div>
+                    <p class="chart-desc">L'aumento costante del valore del singolo contratto (High-Ticket Sales), segno di una maturazione nelle trattative e di un miglior posizionamento.</p>
+                    <div class="chart-container" style="height: 280px;">
+                        <canvas id="ticketChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROW 4: Servizi e Pagamenti -->
+        <div class="row g-4">
+            <!-- Servizi Venduti -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="350">
+                <div class="chart-card">
+                    <div class="chart-card-title"><i class="bi bi-ui-checks-grid"></i> Breakdown Servizi Venduti</div>
+                    <p class="chart-desc">Suddivisione percentuale delle tipologie di servizi collocati sul mercato, evidenziando le competenze trasversali.</p>
+                    <ul class="progress-list mt-4 flex-grow-1 justify-content-center">
+                        <li class="progress-item">
+                            <div class="pi-head"><span>Servizi marketing</span> <span>33%</span></div>
+                            <div class="pi-track"><div class="pi-fill" style="width: 33%; background: var(--main);"></div></div>
+                        </li>
+                        <li class="progress-item">
+                            <div class="pi-head"><span>Integrazioni tecniche</span> <span>29%</span></div>
+                            <div class="pi-track"><div class="pi-fill" style="width: 29%; background: var(--second);"></div></div>
+                        </li>
+                        <li class="progress-item">
+                            <div class="pi-head"><span>Nuovi contratti</span> <span>18%</span></div>
+                            <div class="pi-track"><div class="pi-fill" style="width: 18%; background: color-mix(in srgb, var(--main) 60%, white);"></div></div>
+                        </li>
+                        <li class="progress-item">
+                            <div class="pi-head"><span>Convenzioni</span> <span>15%</span></div>
+                            <div class="pi-track"><div class="pi-fill" style="width: 15%; background: color-mix(in srgb, var(--second) 60%, white);"></div></div>
+                        </li>
+                        <li class="progress-item">
+                            <div class="pi-head"><span>Rinnovi triennali</span> <span>3%</span></div>
+                            <div class="pi-track"><div class="pi-fill" style="width: 3%; background: #22c55e;"></div></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Pagamenti -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="chart-card">
+                    <div class="chart-card-title"><i class="bi bi-wallet2"></i> Metodologie di Incasso</div>
+                    <p class="chart-desc">Distribuzione dei termini di pagamento accordati. Una forte percentuale "Alla firma" garantisce solidità nei flussi di cassa.</p>
+                    <div class="chart-container" style="height: 250px;">
+                        <canvas id="pagamentiChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disclaimer in fondo -->
+        <div class="row mt-5">
+            <div class="col-12 text-center" data-aos="fade-up">
+                <p class="text-muted" style="font-size: 0.8rem; max-width: 900px; margin: 0 auto; line-height: 1.5;">
+                    *Tutti i dati riportati sono stime semplificate relative alla mia attività, a mero scopo illustrativo. I numeri sono indicativi, arrotondati, non rappresentano comunicazioni ufficiali dell'azienda e non costituiscono garanzia di risultati futuri.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p class="mb-0"><script>document.write(new Date().getFullYear())</script> — Sviluppato da Alessandro Idà</p>
+    </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<a href="#" class="scroll-top-btn" id="scrollTopBtn"><i class="bi bi-arrow-up"></i></a>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="main.js"></script>
+
+<!-- Chart.js Logic -->
+<script>
+    // Colori principali
+    const colorMain = '#003f5b';
+    const colorSecond = '#d47151'; 
+    const colorLightBlue = '#38bdf8';
+    const colorGreen = '#22c55e';
+    const colorYellow = '#eab308';
+
+    const labelsYears = ['2022', '2023', '2024', '2025', '2026 (Prev)'];
+
+    // 1. Fatturato Line Chart
+    const ctxFatturato = document.getElementById('fatturatoChart').getContext('2d');
+    new Chart(ctxFatturato, {
+        type: 'line',
+        data: {
+            labels: labelsYears,
+            datasets: [{
+                label: 'Fatturato (€)',
+                data: [215000, 351000, 259000, 163697, 354000],
+                borderColor: colorMain,
+                backgroundColor: 'rgba(0, 63, 91, 0.08)',
+                borderWidth: 3,
+                pointBackgroundColor: [colorMain, colorMain, colorMain, colorMain, colorGreen],
+                pointRadius: 6,
+                pointHoverRadius: 8,
+                fill: true,
+                tension: 0.4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(context.parsed.y);
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: { callback: function(value) { return '€' + (value/1000) + 'k'; } }
+                }
+            }
+        }
+    });
+
+    // 2. Clienti Gestiti
+    const ctxClienti = document.getElementById('clientiChart').getContext('2d');
+    new Chart(ctxClienti, {
+        type: 'line',
+        data: {
+            labels: labelsYears,
+            datasets: [{
+                label: 'Clienti Gestiti',
+                data: [77, 73, 67, 61, 65],
+                borderColor: colorSecond,
+                borderWidth: 3,
+                pointBackgroundColor: colorSecond,
+                fill: false,
+                tension: 0.2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: { y: { beginAtZero: false, min: 40 } }
+        }
+    });
+
+    // 3. Contratti Chiusi
+    const ctxContratti = document.getElementById('contrattiChart').getContext('2d');
+    new Chart(ctxContratti, {
+        type: 'bar',
+        data: {
+            labels: labelsYears,
+            datasets: [{
+                label: 'Contratti Chiusi',
+                data: [80, 75, 69, 38, 49],
+                backgroundColor: colorMain,
+                borderRadius: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: { y: { beginAtZero: true, max: 100 } }
+        }
+    });
+
+    // 4. Incidenza (Radar Chart)
+    const ctxIncidenza = document.getElementById('incidenzaChart').getContext('2d');
+    new Chart(ctxIncidenza, {
+        type: 'polarArea',
+        data: {
+            labels: ['2022', '2023', '2024', '2025', '2026'],
+            datasets: [{
+                data: [21, 27, 23, 20, 25],
+                backgroundColor: [
+                    'rgba(0, 63, 91, 0.7)',
+                    'rgba(212, 113, 81, 0.7)',
+                    'rgba(56, 189, 248, 0.7)',
+                    'rgba(203, 213, 225, 0.7)',
+                    'rgba(34, 197, 94, 0.7)'
+                ],
+                borderWidth: 2,
+                borderColor: '#fff'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'right' },
+                tooltip: { callbacks: { label: function(c) { return ' Incidenza: ' + c.parsed.r + '%'; } } }
+            }
+        }
+    });
+
+    // 5. Ticket Medio (Step Line Chart)
+    const ctxTicket = document.getElementById('ticketChart').getContext('2d');
+    new Chart(ctxTicket, {
+        type: 'line',
+        data: {
+            labels: labelsYears,
+            datasets: [{
+                label: 'Ticket Medio (€)',
+                data: [5100, 4700, 3800, 4300, 7200],
+                borderColor: colorLightBlue,
+                backgroundColor: 'rgba(56, 189, 248, 0.2)',
+                borderWidth: 3,
+                stepped: true,
+                pointBackgroundColor: colorMain,
+                pointRadius: 5,
+                fill: true
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(context.parsed.y);
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: { beginAtZero: false, min: 3000 }
+            }
+        }
+    });
+
+    // 6. Pagamenti Doughnut Chart
+    const ctxPagamenti = document.getElementById('pagamentiChart').getContext('2d');
+    new Chart(ctxPagamenti, {
+        type: 'doughnut',
+        data: {
+            labels: ['Alla firma', 'A 60 giorni', 'A 30 giorni', 'A 90 giorni', 'Altro'],
+            datasets: [{
+                data: [63, 23, 10, 2, 2],
+                backgroundColor: [ colorMain, colorYellow, colorGreen, '#ec4899', '#14b8a6' ],
+                borderWidth: 2,
+                borderColor: '#ffffff'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '60%',
+            plugins: {
+                legend: { position: 'right', labels: { usePointStyle: true, padding: 15 } },
+                tooltip: { callbacks: { label: function(c) { return ' ' + c.label + ': ' + c.parsed + '%'; } } }
+            }
+        }
+    });
+
+</script>
+</body>
+</html>
