@@ -29,8 +29,8 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Panoramica</a></li>
                     <li class="nav-item"><a class="nav-link" href="capacita.html">Capacità</a></li>
                     <li class="nav-item"><a class="nav-link active" href="progetti.html">Progetti</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#risultati">Risultati</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#reasons">Recensioni</a></li>
+                    <li class="nav-item"><a class="nav-link" href="risultati.html">Risultati</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recensioni.html">Recensioni</a></li>
                     <li class="nav-item ms-lg-3"><a class="nav-link nav-cta-btn" href="index.html#contatti">Scarica CV</a></li>
                 </ul>
             </div>
@@ -49,81 +49,165 @@
         <a href="index.html" class="msb-link">Panoramica</a>
         <a href="capacita.html" class="msb-link">Capacità</a>
         <a href="progetti.html" class="msb-link active">Progetti</a>
-        <a href="index.html#risultati" class="msb-link">Risultati</a>
-        <a href="index.html#reasons" class="msb-link">Recensioni</a>
+        <a href="risultati.html" class="msb-link">Risultati</a>
+        <a href="recensioni.html" class="msb-link">Recensioni</a>
         <a href="index.html#contatti" class="msb-link cta">Scarica CV</a>
     </nav>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════════
-     HERO — Light Dynamic Mode
+     HERO — Premium UI Dashboard Mode
      ═══════════════════════════════════════════════════════════════ -->
 <section class="projects-hero">
-    <div class="container">
+    <div class="ph-bg-blob blob-1"></div>
+    <div class="ph-bg-blob blob-2"></div>
+    
+    <div class="container position-relative" style="z-index:1;">
         <div class="row align-items-center g-5">
             <!-- Testo a Sinistra -->
             <div class="col-lg-6" data-aos="fade-right">
                 <div class="kicker mb-3" style="display:inline-flex; background: var(--main); color: #fff; border: none; box-shadow: 0 8px 16px rgba(0,63,91,0.2);">
-                    <i class="bi bi-folder-fill" style="color: #fff;"></i> Portfolio Case Studies
+                    <i class="bi bi-folder-fill text-white"></i>&nbsp;Portfolio Case Studies
                 </div>
-                <h1 class="display-3 fw-bold mb-4" style="color: var(--main);">I Miei Progetti</h1>
-                <p class="hero-lead text-muted mb-4" style="font-size: 1.15rem; line-height: 1.6;">
-                    Sei casi di successo in cui ho trasformato criticità in opportunità. Scopri l'infrastruttura tecnica, la gestione operativa e l'impatto reale di ciascun progetto, navigando attraverso le mie esperienze sul campo.
+                <h1 class="display-3 fw-bold mb-4" style="color: var(--main); letter-spacing: -0.04em;">I Miei Progetti</h1>
+                <p class="hero-lead text-muted mb-4" style="font-size: 1.15rem; line-height: 1.6; max-width: 560px;">
+                    Casi di successo in cui ho trasformato criticità in opportunità. Scopri l'infrastruttura tecnica, la gestione operativa e l'impatto reale di ciascun progetto, navigando attraverso le mie esperienze sul campo.
                 </p>
-                <a href="#project-1" class="btn" style="background: var(--cta); color: #fff; padding: 12px 28px; border-radius: 50px; font-weight: 600; box-shadow: 0 4px 15px rgba(249, 116, 74, 0.4);">Esplora i progetti <i class="bi bi-arrow-down ms-2"></i></a>
+                <a href="#project-1" class="btn ph-btn-cta">
+                    Esplora i progetti <i class="bi bi-arrow-down ms-2"></i>
+                </a>
             </div>
             
-            <!-- Grafica Dinamica a Destra -->
+            <!-- UI Dashboard a Destra -->
             <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-                <div class="ph-visual-composition">
-                    <div class="ph-glow"></div>
+                <div class="ph-ui-window-wrapper">
+                    <div class="ph-bg-glow"></div>
                     
-                    <div class="ph-main-dashboard">
-                        <div class="ph-dash-header">
-                            <div class="ph-dash-dots">
-                                <span style="background:#ff5f56;"></span>
-                                <span style="background:#ffbd2e;"></span>
-                                <span style="background:#27c93f;"></span>
+                    <div class="ph-ui-glass">
+                        <!-- Header stile Mac -->
+                        <div class="ph-ui-header">
+                            <div class="ph-ui-dots">
+                                <span style="background: #ff5f56;"></span>
+                                <span style="background: #ffbd2e;"></span>
+                                <span style="background: #27c93f;"></span>
                             </div>
-                            <div class="ph-dash-title">Project_Analytics.exe</div>
-                        </div>
-                        <div class="ph-dash-body">
-                            <!-- Chart Layout -->
-                            <div class="ph-dash-chart">
-                                <div class="ph-bar" style="height: 40%;"></div>
-                                <div class="ph-bar" style="height: 70%;"></div>
-                                <div class="ph-bar" style="height: 50%;"></div>
-                                <div class="ph-bar" style="height: 100%;"></div>
-                                <div class="ph-bar" style="height: 80%;"></div>
-                            </div>
-                            <div class="ph-dash-data">
-                                <div class="ph-data-box">
-                                    <i class="bi bi-check-circle-fill text-success"></i>
-                                    <div>
-                                        <strong>12</strong>
-                                        <span>Progetti</span>
-                                    </div>
-                                </div>
-                                <div class="ph-data-box">
-                                    <i class="bi bi-graph-up-arrow text-primary"></i>
-                                    <div>
-                                        <strong>+240%</strong>
-                                        <span>Crescita</span>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="ph-ui-title"><i class="bi bi-briefcase"></i> Project_Workspace.app</div>
                         </div>
                         
-                        <div class="ph-floating-badge top-right">
-                            <i class="bi bi-rocket-takeoff-fill"></i> Scale-up Ready
-                        </div>
-                        <div class="ph-floating-badge bottom-left">
-                            <i class="bi bi-gear-fill"></i> System Optimized
+                        <!-- Corpo della finestra -->
+                        <div class="ph-ui-body">
+                            <!-- Sidebar -->
+                            <div class="ph-ui-sidebar" id="ph-hero-tabs">
+                                <div class="ph-ui-nav active" data-target="tab-overview"><i class="bi bi-grid-fill"></i> Overview</div>
+                                <div class="ph-ui-nav" data-target="tab-analytics"><i class="bi bi-graph-up-arrow"></i> Analytics</div>
+                                <div class="ph-ui-nav" data-target="tab-archives"><i class="bi bi-folder-fill"></i> Archives</div>
+                            </div>
+                            
+                            <!-- Contenuto principale -->
+                            <div class="ph-ui-content">
+                                <!-- OVERVIEW TAB -->
+                                <div class="ph-tab-pane" id="tab-overview">
+                                    <!-- Statistiche rapide -->
+                                    <div class="ph-ui-stat-row">
+                                        <div class="ph-ui-stat-box">
+                                            <span class="ph-ui-stat-num">6</span>
+                                            <span class="ph-ui-stat-label">Total Projects</span>
+                                        </div>
+                                        <div class="ph-ui-stat-box">
+                                            <span class="ph-ui-stat-num text-success"><i class="bi bi-arrow-up-right"></i> 100%</span>
+                                            <span class="ph-ui-stat-label">Success Rate</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Lista progetti in miniatura -->
+                                    <div class="ph-ui-project-list">
+                                        <div class="ph-ui-project-item">
+                                            <div class="ph-ui-pi-icon" style="background: color-mix(in srgb, var(--second) 15%, white); color: var(--second);"><i class="bi bi-database-fill"></i></div>
+                                            <div class="ph-ui-pi-info">
+                                                <strong>CRM Custom</strong>
+                                                <span>Sviluppo & Integrazione</span>
+                                            </div>
+                                            <div class="ph-ui-pi-status">Delivered</div>
+                                        </div>
+                                        <div class="ph-ui-project-item">
+                                            <div class="ph-ui-pi-icon" style="background: color-mix(in srgb, var(--cta) 15%, white); color: var(--cta);"><i class="bi bi-lightbulb-fill"></i></div>
+                                            <div class="ph-ui-pi-info">
+                                                <strong>Business Launch</strong>
+                                                <span>Strategia & Posizionamento</span>
+                                            </div>
+                                            <div class="ph-ui-pi-status">Delivered</div>
+                                        </div>
+                                        <div class="ph-ui-project-item">
+                                            <div class="ph-ui-pi-icon" style="background: color-mix(in srgb, #16a34a 15%, white); color: #16a34a;"><i class="bi bi-graph-up-arrow"></i></div>
+                                            <div class="ph-ui-pi-info">
+                                                <strong>Piani di Crescita</strong>
+                                                <span>Analisi & Reportistica</span>
+                                            </div>
+                                            <div class="ph-ui-pi-status">Delivered</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- ANALYTICS TAB -->
+                                <div class="ph-tab-pane" id="tab-analytics" style="display: none; animation: fadeIn 0.3s ease;">
+                                    <div class="ph-ui-stat-row">
+                                        <div class="ph-ui-stat-box">
+                                            <span class="ph-ui-stat-num" style="color: var(--main);">€ 1.3M</span>
+                                            <span class="ph-ui-stat-label">Revenue Generated</span>
+                                        </div>
+                                        <div class="ph-ui-stat-box">
+                                            <span class="ph-ui-stat-num text-success"><i class="bi bi-arrow-up-right"></i> +27%</span>
+                                            <span class="ph-ui-stat-label">Growth (YoY)</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 p-3" style="background: rgba(0,0,0,0.03); border-radius: 12px; text-align: center; border: 1px dashed var(--border-light);">
+                                        <i class="bi bi-bar-chart-line" style="font-size: 2rem; color: var(--second);"></i>
+                                        <p class="mb-0 mt-2 text-muted fw-bold" style="font-size: 0.9rem;">[ INSERISCI QUI IL GRAFICO ]</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- ARCHIVES TAB -->
+                                <div class="ph-tab-pane" id="tab-archives" style="display: none; animation: fadeIn 0.3s ease;">
+                                    <div class="ph-ui-project-list" style="margin-top: 0;">
+                                        <div class="ph-ui-project-item opacity-75">
+                                            <div class="ph-ui-pi-icon bg-light text-secondary"><i class="bi bi-file-earmark-zip"></i></div>
+                                            <div class="ph-ui-pi-info">
+                                                <strong>Progetto Alpha</strong>
+                                                <span>2023 • Chiuso</span>
+                                            </div>
+                                            <div class="ph-ui-pi-status text-muted">Archived</div>
+                                        </div>
+                                        <div class="ph-ui-project-item opacity-75">
+                                            <div class="ph-ui-pi-icon bg-light text-secondary"><i class="bi bi-file-earmark-zip"></i></div>
+                                            <div class="ph-ui-pi-info">
+                                                <strong>Campagna Beta</strong>
+                                                <span>2022 • Chiuso</span>
+                                            </div>
+                                            <div class="ph-ui-pi-status text-muted">Archived</div>
+                                        </div>
+                                        <div class="ph-ui-project-item opacity-75">
+                                            <div class="ph-ui-pi-icon bg-light text-secondary"><i class="bi bi-file-earmark-zip"></i></div>
+                                            <div class="ph-ui-pi-info">
+                                                <strong>Vecchio Gestionale</strong>
+                                                <span>2021 • Dismesso</span>
+                                            </div>
+                                            <div class="ph-ui-pi-status text-muted">Archived</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
                         </div>
                     </div>
-
+                    
+                    <!-- Floating Badge -->
+                    <div class="ph-ui-floating-badge">
+                        <i class="bi bi-check-circle-fill"></i> End-to-End Management
+                    </div>
+                    
                 </div>
             </div>
+            
         </div>
     </div>
 </section>
@@ -534,6 +618,30 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="main.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const tabs = document.querySelectorAll('#ph-hero-tabs .ph-ui-nav');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Hide all panes
+                document.querySelectorAll('.ph-tab-pane').forEach(pane => {
+                    pane.style.display = 'none';
+                });
+                
+                // Show target pane
+                const targetId = tab.getAttribute('data-target');
+                const targetPane = document.getElementById(targetId);
+                if (targetPane) {
+                    targetPane.style.display = 'block';
+                }
+            });
+        });
+    });
+</script>
 
 </body>
 </html>
