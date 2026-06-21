@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recensioni e Dicono di Me | Idà Alessandro</title>
+    <meta name="description" content="Oltre 40 recensioni positive. Scopri cosa dicono clienti e aziende di Alessandro Idà.">
+    <meta name="theme-color" content="#003f5b">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        /* ============================================
+           GLOBAL & HERO
+        ============================================ */
+        .page-hero {
+            background: #f8fafc;
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 70% 0%, rgba(56,189,248,0.05), transparent 60%);
+            z-index: 1;
+        }
+        .hero-title { font-size: clamp(2.8rem, 5vw, 4rem); font-weight: 900; line-height: 1.1; letter-spacing: -1px; color: var(--main); }
+        .hero-feedback-art { position: relative; width: 100%; display: flex; justify-content: flex-end; align-items: center; z-index: 2; }
+        .trust-dashboard {
+            width: 100%; max-width: 480px;
+            background: #fff;
+            border-radius: 30px; padding: 45px; color: var(--main);
+            box-shadow: 0 20px 50px rgba(0,63,91,0.08);
+            position: relative; overflow: hidden;
+            border: 1px solid var(--border-light);
+        }
+        .trust-dashboard::before {
+            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(0,63,91,0.02) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .td-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 35px; position: relative; z-index: 2; }
+        .td-stars { color: #f59e0b; font-size: 1.2rem; display: flex; gap: 4px; }
+        .td-badge { background: #f0f5f8; color: var(--main); padding: 8px 16px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(0,63,91,0.1); }
+        .td-body { margin-bottom: 35px; position: relative; z-index: 2; }
+        .td-number { font-size: 6rem; font-weight: 900; line-height: 1; margin-bottom: 15px; letter-spacing: -2px; color: var(--main); }
+        .td-label { font-size: 1.15rem; color: var(--text-muted); line-height: 1.6; }
+        .td-footer { display: flex; align-items: center; gap: 20px; border-top: 1px solid var(--border-light); padding-top: 30px; position: relative; z-index: 2; }
+        .td-icons { display: flex; }
+        .td-icon-circle { width: 50px; height: 50px; border-radius: 50%; background: #f8fafc; color: var(--second); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-left: -15px; border: 3px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .td-icon-circle:first-child { margin-left: 0; }
+        .td-footer-text { font-size: 1.1rem; color: var(--main); }
+
+        /* ============================================
+           HEADER SECTIONS
+        ============================================ */
+        .sec-header { margin-bottom: 50px; }
+        .sec-header h2 { font-size: clamp(2rem, 3.5vw, 2.5rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.5px; color: var(--main); margin-bottom: 15px; }
+        .sec-header p { font-size: 1.1rem; color: var(--text-muted); max-width: 650px; line-height: 1.6; margin-bottom: 0; }
+        .kicker { display: inline-block; background-color: var(--main); color: white; padding: 6px 16px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
+
+        /* REUSABLE PARTS */
+        .stars { color: #f59e0b; font-size: 1rem; margin-bottom: 12px; }
+        .author { font-weight: 800; color: var(--main); font-size: 1rem; }
+        .company { font-size: 0.85rem; color: var(--second); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* ============================================
+           SEZIONE 1: TIMELINE COMPATTA (Chat Bubbles in Grid)
+        ============================================ */
+        .timeline-wrapper {
+            position: relative; padding: 40px 0;
+            display: grid; grid-template-columns: 1fr 1fr; column-gap: 80px; row-gap: 30px;
+        }
+        .timeline-wrapper::before {
+            content: ''; position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%);
+            width: 2px; background: var(--border-light);
+        }
+        .timeline-item { position: relative; width: 100%; display: flex; }
+        .timeline-item.left { justify-content: flex-end; }
+        .timeline-item.right { justify-content: flex-start; }
+        
+        .chat-bubble {
+            background: #fff; width: 100%; padding: 30px;
+            border-radius: 20px; box-shadow: 0 10px 30px rgba(0,63,91,0.05);
+            border: 1px solid var(--border-light); position: relative;
+        }
+        .timeline-item.left .chat-bubble { border-bottom-right-radius: 0; }
+        .timeline-item.right .chat-bubble { border-bottom-left-radius: 0; }
+        
+        /* The tail of the chat bubble */
+        .chat-bubble::after {
+            content: ''; position: absolute; bottom: -1px; width: 25px; height: 25px;
+            background: #fff; border-bottom: 1px solid var(--border-light);
+        }
+        .timeline-item.left .chat-bubble::after { right: -25px; border-right: 1px solid var(--border-light); clip-path: polygon(0 0, 0 100%, 100% 100%); }
+        .timeline-item.right .chat-bubble::after { left: -25px; border-left: 1px solid var(--border-light); clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+
+        /* Dots on the line */
+        .timeline-dot {
+            position: absolute; top: 50%;
+            width: 20px; height: 20px; border-radius: 50%; background: var(--second);
+            border: 4px solid #f8fafc; z-index: 2; box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
+        }
+        .timeline-item.left .timeline-dot { right: -50px; transform: translateY(-50%); }
+        .timeline-item.right .timeline-dot { left: -50px; transform: translateY(-50%); }
+
+        .chat-text { font-size: 1rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 15px; }
+
+        @media (max-width: 991px) {
+            .timeline-wrapper { grid-template-columns: 1fr; gap: 40px; padding-left: 30px; }
+            .timeline-wrapper::before { left: 10px; }
+            .timeline-item.left, .timeline-item.right { justify-content: flex-start; }
+            .chat-bubble { border-bottom-left-radius: 0; border-bottom-right-radius: 20px !important; }
+            .chat-bubble::after { left: -25px !important; right: auto !important; border-left: 1px solid var(--border-light) !important; border-right: none !important; clip-path: polygon(100% 0, 100% 100%, 0 100%) !important; }
+            .timeline-item.left .timeline-dot, .timeline-item.right .timeline-dot { left: -30px; right: auto; transform: translateY(-50%); }
+        }
+
+        /* ============================================
+           SEZIONE 2: CAROSELLO (Forma Pillola)
+        ============================================ */
+        .pill-carousel-section { background: #f0f4f8; padding: 100px 0; overflow: hidden; }
+        .pill-track { display: flex; gap: 30px; width: max-content; animation: scrollPill 100s linear infinite; padding: 20px 0; }
+        .pill-track:hover { animation-play-state: paused; }
+        
+        .pill-card {
+            background: #fff; width: 450px; padding: 35px 45px;
+            border-radius: 60px; /* Forma a pillola */
+            box-shadow: 0 8px 25px rgba(0,63,91,0.04);
+            flex-shrink: 0; display: flex; flex-direction: column; justify-content: center;
+        }
+        .pill-text { font-size: 1.05rem; line-height: 1.6; color: var(--text-muted); font-style: italic; margin-bottom: 15px; }
+        
+        @keyframes scrollPill { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        /* Velocità mobile */
+        @media (max-width: 768px) {
+            .pill-track { animation-duration: 60s; gap: 20px; }
+            .pill-card { width: 320px; padding: 25px 30px; border-radius: 40px; }
+            .pill-text { font-size: 0.95rem; }
+        }
+
+        /* ============================================
+           SEZIONE 3: TABS INTERATTIVE (Il Raccoglitore)
+        ============================================ */
+        .tabs-section { padding: 100px 0; background: #fff; }
+        
+        .nav-pills-custom { display: flex; flex-direction: column; gap: 12px; }
+        .nav-pills-custom .nav-link {
+            text-align: left; padding: 20px 25px; border-radius: 16px;
+            background: #fff; color: var(--text-muted);
+            border: 1px solid var(--border-light); transition: all 0.3s ease;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 4px 15px rgba(0,63,91,0.02);
+            position: relative; overflow: hidden;
+        }
+        .nav-pills-custom .nav-link::before {
+            content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+            background: transparent; transition: background 0.3s ease;
+        }
+        .nav-pills-custom .nav-link:hover { background: #f8fafc; transform: translateX(5px); box-shadow: 0 8px 20px rgba(0,63,91,0.05); }
+        .nav-pills-custom .nav-link:hover::before { background: var(--second); }
+        .nav-pills-custom .nav-link.active {
+            background: var(--main); color: #fff; border-color: var(--main);
+            transform: translateX(10px);
+            box-shadow: 0 15px 30px rgba(0,63,91,0.2);
+        }
+        .nav-pills-custom .nav-link.active::before { background: var(--second); width: 6px; }
+        
+        .nav-pills-custom .nav-link .company { color: var(--main); transition: color 0.3s ease; font-size: 1.05rem; }
+        .nav-pills-custom .nav-link.active .company { color: #fff !important; }
+        .nav-pills-custom .nav-link .small { font-weight: 500; font-size: 0.9rem; }
+        .nav-pills-custom .nav-link.active .small { color: rgba(255,255,255,0.8); }
+
+        .nav-pills-custom .nav-link i { opacity: 0; transition: all 0.3s ease; transform: translateX(-10px); }
+        .nav-pills-custom .nav-link.active i { opacity: 1; transform: translateX(0); }
+
+        .tab-review-box {
+            background: #f8fafc; border-radius: 24px; padding: 60px;
+            height: 100%; display: flex; flex-direction: column; justify-content: center;
+            border: 1px solid var(--border-light);
+        }
+        .tr-quote-mark { font-size: 8rem; color: rgba(56,189,248,0.15); line-height: 0.5; font-family: serif; margin-bottom: 20px; }
+        .tr-text { font-size: 1.3rem; line-height: 1.7; color: var(--main); font-weight: 300; margin-bottom: 40px; }
+        .tr-author { font-size: 1.2rem; font-weight: 800; color: var(--main); }
+        .tr-company { font-size: 1rem; font-weight: 600; color: var(--second); text-transform: uppercase; letter-spacing: 1px; }
+
+        @media (max-width: 991px) {
+            .nav-pills-custom { flex-direction: row; overflow-x: auto; padding-bottom: 15px; white-space: nowrap; gap: 15px; }
+            .nav-pills-custom .nav-link { border-radius: 50px; padding: 12px 24px; transform: none !important; }
+            .nav-pills-custom .nav-link::before { display: none; }
+            .tab-review-box { padding: 30px; margin-top: 20px; }
+            .tr-text { font-size: 1.1rem; }
+        }
+
+        /* ============================================
+           SEZIONE 4: FORME GEOMETRICHE (Valore Aggiunto)
+        ============================================ */
+        .shapes-section { padding: 100px 0; background: #fff; }
+        
+        .shape-card {
+            padding: 60px; display: flex; flex-direction: column; justify-content: center;
+            height: 100%; position: relative;
+        }
+        /* Leaf Shape Dark */
+        .shape-leaf {
+            background: var(--main);
+            border-radius: 0 80px 0 80px;
+            color: #fff;
+        }
+        .shape-leaf .shape-text { color: rgba(255,255,255,0.9); font-size: 1.2rem; font-style: italic; line-height: 1.7; font-weight: 300; margin-bottom: 30px; }
+        .shape-leaf .author { color: #fff; font-size: 1.1rem; }
+        .shape-leaf .company { color: var(--second); }
+
+        /* Organic Shape Light */
+        .shape-organic {
+            background: #f0f5f8;
+            border-radius: 80px 0 80px 0;
+            border: 1px solid rgba(0,63,91,0.05);
+        }
+        .shape-organic .shape-text { color: var(--main); font-size: 1.2rem; font-style: italic; line-height: 1.7; margin-bottom: 30px; }
+        .shape-organic .author { color: var(--main); font-size: 1.1rem; }
+        .shape-organic .company { color: var(--second); }
+
+        @media (max-width: 767px) {
+            .shape-card { padding: 40px 30px; border-radius: 40px !important; }
+            .shape-leaf .shape-text, .shape-organic .shape-text { font-size: 1.05rem; }
+        }
+
+        /* ============================================
+           SEZIONE 5: BENTO BOX (Clienti Privati)
+        ============================================ */
+        .bento-section { padding: 100px 0; background: #f8fafc; }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, minmax(220px, auto));
+            gap: 24px;
+        }
+        
+        .bento-item {
+            border-radius: 24px; padding: 35px;
+            display: flex; flex-direction: column; justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,63,91,0.04);
+            border: 1px solid var(--border-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative; overflow: hidden;
+        }
+        .bento-item:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,63,91,0.08); }
+        
+        /* Grid Area Assignments */
+        .bento-1 { grid-column: span 1; grid-row: span 2; background: var(--main); color: #fff; border: none; }
+        .bento-2 { grid-column: span 2; grid-row: span 1; background: #fff; border-top: 4px solid var(--second); }
+        .bento-3 { grid-column: span 1; grid-row: span 1; background: #fff; border-top: 4px solid var(--second); }
+        .bento-4 { grid-column: span 1; grid-row: span 1; background: #fff; border-top: 4px solid var(--second); }
+        .bento-5 { grid-column: span 2; grid-row: span 1; background: #fff; border-top: 4px solid var(--second); }
+
+        .bento-text { font-size: 1.05rem; line-height: 1.6; margin-bottom: 25px; font-style: italic; z-index: 2; position: relative; }
+        .bento-1 .bento-text { color: rgba(255,255,255,0.9); font-size: 1.15rem; }
+        .bento-2 .bento-text, .bento-3 .bento-text, .bento-4 .bento-text, .bento-5 .bento-text { color: var(--text-muted); }
+
+        .bento-author { font-weight: 800; font-size: 1.05rem; z-index: 2; position: relative; margin-bottom: 2px; }
+        .bento-1 .bento-author { color: #fff; }
+        .bento-2 .bento-author, .bento-3 .bento-author, .bento-4 .bento-author, .bento-5 .bento-author { color: var(--main); }
+
+        .bento-company { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; z-index: 2; position: relative; font-weight: 700; }
+        .bento-1 .bento-company { color: rgba(255,255,255,0.6); }
+        .bento-2 .bento-company, .bento-3 .bento-company, .bento-4 .bento-company, .bento-5 .bento-company { color: var(--second); }
+
+        .bento-qm { position: absolute; font-family: Georgia, serif; line-height: 1; pointer-events: none; z-index: 1; opacity: 0.05; }
+        .bento-1 .bento-qm { color: #fff; opacity: 0.1; top: -20px; right: -10px; font-size: 14rem; }
+        .bento-2 .bento-qm { color: var(--main); top: -20px; right: 20px; font-size: 10rem; }
+
+        @media (max-width: 991px) {
+            .bento-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+            .bento-1 { grid-column: span 2; grid-row: span 1; }
+            .bento-2 { grid-column: span 2; }
+            .bento-3 { grid-column: span 1; }
+            .bento-4 { grid-column: span 1; }
+            .bento-5 { grid-column: span 2; }
+        }
+        @media (max-width: 767px) {
+            .bento-grid { grid-template-columns: 1fr; }
+            .bento-item { grid-column: span 1 !important; grid-row: span 1 !important; padding: 30px; }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="nav-wrapper">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-floating">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">IDÀ<span>.</span></a>
+            <button class="custom-hamburger d-lg-none" id="mobileMenuBtn"><span></span><span></span><span></span></button>
+            <div class="d-none d-lg-block" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Panoramica</a></li>
+                    <li class="nav-item"><a class="nav-link" href="capacita.html">Capacità</a></li>
+                    <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="risultati.html">Risultati</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="recensioni.html">Recensioni</a></li>
+                    <li class="nav-item ms-lg-3"><a class="nav-link nav-cta-btn" href="index.html#contatti">Scarica CV</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="mobile-sidebar-backdrop" id="sidebarBackdrop"></div>
+<div class="mobile-sidebar" id="mobileSidebar">
+    <div class="msb-header"><span class="msb-logo">IDÀ.</span><button class="msb-close" id="mobileMenuClose"><i class="bi bi-x-lg"></i></button></div>
+    <nav class="msb-nav">
+        <a href="index.html" class="msb-link">Panoramica</a>
+        <a href="capacita.html" class="msb-link">Capacità</a>
+        <a href="progetti.html" class="msb-link">Progetti</a>
+        <a href="risultati.html" class="msb-link">Risultati</a>
+        <a href="recensioni.html" class="msb-link active">Recensioni</a>
+        <a href="index.html#contatti" class="msb-link cta">Scarica CV</a>
+    </nav>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+    <div class="container" style="position:relative;z-index:2;">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="kicker mb-3"><i class="bi bi-chat-quote-fill"></i> Voice of Customer</div>
+                <h1 class="hero-title">La Voce di chi ha Scelto <em class="text-gradient">l'Eccellenza</em></h1>
+                <p class="hero-lead mt-4">
+                    Oltre 40 recensioni positive e un tasso di soddisfazione superiore al <strong>97%</strong>. Scopri cosa dicono professionisti e aziende che hanno scelto di crescere insieme a me.
+                </p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+                <div class="hero-feedback-art">
+                    <div class="trust-dashboard">
+                        <div class="td-header">
+                            <div class="td-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            <div class="td-badge">Eccellenza B2B</div>
+                        </div>
+                        <div class="td-body">
+                            <h2 class="td-number">> 97<span style="font-size: 0.5em; margin-left: 5px;">%</span></h2>
+                            <p class="td-label">Clienti pienamente soddisfatti dei risultati ottenuti dopo il primo anno di affiancamento aziendale.</p>
+                        </div>
+                        <div class="td-footer">
+                            <div class="td-icons">
+                                <div class="td-icon-circle"><i class="bi bi-building"></i></div>
+                                <div class="td-icon-circle"><i class="bi bi-shop"></i></div>
+                                <div class="td-icon-circle"><i class="bi bi-person-workspace"></i></div>
+                            </div>
+                            <div class="td-footer-text"><strong>40+</strong> Recensioni scritte</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SEZIONE 1: TIMELINE (E-commerce) -->
+<section class="cv-section white" style="padding: 80px 0;">
+    <div class="container">
+        <div class="sec-header" data-aos="fade-up">
+            <div class="kicker mb-3"><i class="bi bi-graph-up-arrow"></i> Strategia e Risultati</div>
+            <h2>E-commerce & Crescita</h2>
+            <p>I professionisti del settore farmaceutico che hanno affidato la loro evoluzione digitale a una guida esperta, ottenendo risultati misurabili lungo il percorso.</p>
+        </div>
+        
+        <div class="timeline-wrapper">
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-dot"></div>
+                <div class="chat-bubble">
+                    <div class="stars">★★★★★</div>
+                    <div class="chat-text">"Piattaforma valida, semplice ed intuitiva per realizzare velocemente un ottimo e-commerce. Buona parte dei nostri clienti ci ha recensita per la facilità di utilizzo. Il nostro referente Alessandro Idà è sempre stato disponibile ad analizzare e risolvere le nostre problematiche."</div>
+                    <div class="author">Rosario F.</div><div class="company">Farmanetstore</div>
+                </div>
+            </div>
+
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-dot"></div>
+                <div class="chat-bubble">
+                    <div class="stars">★★★★★</div>
+                    <div class="chat-text">"Per la nostra azienda loro hanno rappresentato il punto di riferimento sin dal primo approccio online. Siamo sempre state supportate nelle strategie di comunicazione e di marketing che ci hanno consentito di crescere. Un ringraziamento speciale ad Alessandro."</div>
+                    <div class="author">Livia S.</div><div class="company">Farmacia del Mare</div>
+                </div>
+            </div>
+
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-dot"></div>
+                <div class="chat-bubble">
+                    <div class="stars">★★★★★</div>
+                    <div class="chat-text">"Mi sono affidato a loro per migliorare il mio e-commerce farmaceutico e non potevo fare scelta migliore! Grazie a loro sono riuscito a far crescere la mia farmacia online e ad attirare più clienti a livello locale."</div>
+                    <div class="author">Luca T.</div><div class="company">Farmacia S. Donato</div>
+                </div>
+            </div>
+
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-dot"></div>
+                <div class="chat-bubble">
+                    <div class="stars">★★★★★</div>
+                    <div class="chat-text">"Ciò che ci ha colpito è il team altamente qualificato, soprattutto il nostro Account Manager Alessandro che ci supporta costantemente. Ci sta aiutando a crescere in modo sostenibile adottando strategie personalizzate."</div>
+                    <div class="author">Luigi G.</div><div class="company">Farmacia Andreotti</div>
+                </div>
+            </div>
+
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-dot"></div>
+                <div class="chat-bubble">
+                    <div class="stars">★★★★★</div>
+                    <div class="chat-text">"Sono sinonimo di professionalità. Alessandro e il suo team risolvono ogni richiesta in breve tempo. L'e-commerce a soli pochi giorni dall'avvio conta già centinaia di ordini, grazie alla loro strategia."</div>
+                    <div class="author">Ciro T.</div><div class="company">Farmacia Tancredi</div>
+                </div>
+            </div>
+
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-dot"></div>
+                <div class="chat-bubble">
+                    <div class="stars">★★★★★</div>
+                    <div class="chat-text">"Team di ragazzi molto competenti e attenti ad ogni richiesta. Un ringraziamento particolare ad Alessandro, per noi punto di riferimento sia per il punto vendita fisico che per l'e-commerce."</div>
+                    <div class="author">Francesco A.</div><div class="company">Farmacia Abela</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SEZIONE 2: CAROSELLO PILLOLE (Dicono di me) -->
+<section class="pill-carousel-section">
+    <div class="container">
+        <div class="sec-header" data-aos="fade-up">
+            <div class="kicker mb-3"><i class="bi bi-people-fill"></i> Feedback Veloci</div>
+            <h2>Dicono di me</h2>
+            <p>Le reazioni a caldo: messaggi e opinioni che testimoniano la rapidità e l'efficienza nel risolvere problemi quotidiani.</p>
+        </div>
+    </div>
+
+    <!-- Carosello rallentato, forma a pillola -->
+    <div style="overflow: hidden; position: relative;" data-aos="fade-in" data-aos-delay="100">
+        <div class="pill-track">
+            <!-- Blocco Originale -->
+            <div class="pill-card">
+                <div class="stars mb-2" style="font-size: 0.9rem;">★★★★★</div>
+                <div class="pill-text">"Una persona sempre disponibile, cortese e preparata, davvero professionale, puntuale sul lavoro che svolge con passione."</div>
+                <div><div class="author">Federico G.</div><div class="company" style="font-size: 0.8rem;">Farmacia Galasso</div></div>
+            </div>
+            <div class="pill-card">
+                <div class="stars mb-2" style="font-size: 0.9rem;">★★★★★</div>
+                <div class="pill-text">"Il nostro account manager Alessandro ci segue con professionalità e costanza, aiutandoci a migliorare! Veramente a modo."</div>
+                <div><div class="author">Fabrizio M.</div><div class="company" style="font-size: 0.8rem;">Parafarmacia Eritrea</div></div>
+            </div>
+            <div class="pill-card">
+                <div class="stars mb-2" style="font-size: 0.9rem;">★★★★★</div>
+                <div class="pill-text">"Team superlativo! Affidabile e sempre disponibile. Persona competente, gentile e attento a soddisfare ogni esigenza."</div>
+                <div><div class="author">Irene C.</div><div class="company" style="font-size: 0.8rem;">Farmacia Creazzo</div></div>
+            </div>
+            <div class="pill-card">
+                <div class="stars mb-2" style="font-size: 0.9rem;">★★★★★</div>
+                <div class="pill-text">"Alessandro e Simona si sono distinti per disponibilità e presenza costante nei nostri confronti."</div>
+                <div><div class="author">Matteo P.</div><div class="company" style="font-size: 0.8rem;">Farmacia Pioli</div></div>
+            </div>
+            <div class="pill-card">
+                <div class="stars mb-2" style="font-size: 0.9rem;">★★★★★</div>
+                <div class="pill-text">"Ottima esperienza. Professionali e ben organizzati. Sempre stato disponibile ed attento alle richieste."</div>
+                <div><div class="author">Enrico B.</div><div class="company" style="font-size: 0.8rem;">Farmacia Mazzini</div></div>
+            </div>
+            <!-- Duplicati per Loop Infinito Continuo -->
+            <div class="pill-card">
+                <div class="stars mb-2" style="font-size: 0.9rem;">★★★★★</div>
+                <div class="pill-text">"Una persona sempre disponibile, cortese e preparata, davvero professionale, puntuale sul lavoro che svolge con passione."</div>
+                <div><div class="author">Federico G.</div><div class="company" style="font-size: 0.8rem;">Farmacia Galasso</div></div>
+            </div>
+            <div class="pill-card">
+                <div class="stars mb-2" style="font-size: 0.9rem;">★★★★★</div>
+                <div class="pill-text">"Il nostro account manager Alessandro ci segue con professionalità e costanza, aiutandoci a migliorare! Veramente a modo."</div>
+                <div><div class="author">Fabrizio M.</div><div class="company" style="font-size: 0.8rem;">Parafarmacia Eritrea</div></div>
+            </div>
+            <div class="pill-card">
+                <div class="stars mb-2" style="font-size: 0.9rem;">★★★★★</div>
+                <div class="pill-text">"Team superlativo! Affidabile e sempre disponibile. Persona competente, gentile e attento a soddisfare ogni esigenza."</div>
+                <div><div class="author">Irene C.</div><div class="company" style="font-size: 0.8rem;">Farmacia Creazzo</div></div>
+            </div>
+            <div class="pill-card">
+                <div class="stars mb-2" style="font-size: 0.9rem;">★★★★★</div>
+                <div class="pill-text">"Alessandro e Simona si sono distinti per disponibilità e presenza costante nei nostri confronti."</div>
+                <div><div class="author">Matteo P.</div><div class="company" style="font-size: 0.8rem;">Farmacia Pioli</div></div>
+            </div>
+            <div class="pill-card">
+                <div class="stars mb-2" style="font-size: 0.9rem;">★★★★★</div>
+                <div class="pill-text">"Ottima esperienza. Professionali e ben organizzati. Sempre stato disponibile ed attento alle richieste."</div>
+                <div><div class="author">Enrico B.</div><div class="company" style="font-size: 0.8rem;">Farmacia Mazzini</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SEZIONE 3: TABS INTERATTIVE (Il Raccoglitore) -->
+<section class="tabs-section" id="assistenza">
+    <div class="container">
+        <div class="sec-header" data-aos="fade-up">
+            <div class="kicker mb-3"><i class="bi bi-headset"></i> Supporto Dedicato</div>
+            <h2>Assistenza e Formazione</h2>
+            <p>Seleziona un cliente dall'elenco per scoprire come il supporto continuo garantisce serenità in ogni fase tecnologica.</p>
+        </div>
+
+        <div class="row g-5 align-items-stretch">
+            <!-- Colonna di sinistra: Nomi -->
+            <div class="col-lg-4" data-aos="fade-right">
+                <div class="nav nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link active" id="tab1-tab" data-bs-toggle="pill" data-bs-target="#tab1" type="button" role="tab">
+                        <div><div class="company mb-1">Farmacia Settefarine</div><div class="small">Simona B.</div></div>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button class="nav-link" id="tab2-tab" data-bs-toggle="pill" data-bs-target="#tab2" type="button" role="tab">
+                        <div><div class="company mb-1">Farmacia Bassano</div><div class="small">Silvia A.</div></div>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button class="nav-link" id="tab3-tab" data-bs-toggle="pill" data-bs-target="#tab3" type="button" role="tab">
+                        <div><div class="company mb-1">Farmacia Lo Speziale</div><div class="small">Simone T.</div></div>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button class="nav-link" id="tab4-tab" data-bs-toggle="pill" data-bs-target="#tab4" type="button" role="tab">
+                        <div><div class="company mb-1">Farmacia Cocconcelli</div><div class="small">Roberto Z.</div></div>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button class="nav-link" id="tab5-tab" data-bs-toggle="pill" data-bs-target="#tab5" type="button" role="tab">
+                        <div><div class="company mb-1">F. Petracchini</div><div class="small">Silvia P.</div></div>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                    <button class="nav-link" id="tab6-tab" data-bs-toggle="pill" data-bs-target="#tab6" type="button" role="tab">
+                        <div><div class="company mb-1">F. Saladino</div><div class="small">Olivia S.</div></div>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Colonna di destra: Contenuto -->
+            <div class="col-lg-8" data-aos="fade-left">
+                <div class="tab-content h-100" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active h-100" id="tab1" role="tabpanel">
+                        <div class="tab-review-box">
+                            <div class="tr-quote-mark">"</div>
+                            <div class="stars">★★★★★</div>
+                            <div class="tr-text">"Il nostro consulente Alessandro è cordiale, competente e molto professionale. Mi segue step dopo step dimostrando sempre una grande preparazione e una grande disponibilità a qualsiasi chiarimento o problematica."</div>
+                            <div><div class="tr-author">Simona B.</div><div class="tr-company">Farmacia Settefarine</div></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade h-100" id="tab2" role="tabpanel">
+                        <div class="tab-review-box">
+                            <div class="tr-quote-mark">"</div>
+                            <div class="stars">★★★★★</div>
+                            <div class="tr-text">"Il nostro referente Alessandro è sempre molto professionale, cortese, disponibile. Interviene con successo in tempi rapidi, cerca sempre di capire bene le necessità e gli eventuali problemi. È preciso, molto competente."</div>
+                            <div><div class="tr-author">Silvia A.</div><div class="tr-company">Farmacia Bassano</div></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade h-100" id="tab3" role="tabpanel">
+                        <div class="tab-review-box">
+                            <div class="tr-quote-mark">"</div>
+                            <div class="stars">★★★★★</div>
+                            <div class="tr-text">"Sin da subito i collaboratori ed in particolare il mio consulente Alessandro si sono dimostrati competenti e cordiali. Alessandro è sempre disponibile per qualsiasi chiarimento o problematica. Mi sono trovato benissimo."</div>
+                            <div><div class="tr-author">Simone T.</div><div class="tr-company">Farmacia Lo Speziale</div></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade h-100" id="tab4" role="tabpanel">
+                        <div class="tab-review-box">
+                            <div class="tr-quote-mark">"</div>
+                            <div class="stars">★★★★★</div>
+                            <div class="tr-text">"Non sono mai mancati attenzione e assistenza. Consigliamo anche a chi è alle prime armi, che cerca un supporto per partire da zero: uno su tutti Alessandro, collaboratore sempre gentile e disponibile."</div>
+                            <div><div class="tr-author">Roberto Z.</div><div class="tr-company">Farmacia Cocconcelli</div></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade h-100" id="tab5" role="tabpanel">
+                        <div class="tab-review-box">
+                            <div class="tr-quote-mark">"</div>
+                            <div class="stars">★★★★★</div>
+                            <div class="tr-text">"Abbiamo fatto il passaggio da un' altra azienda e abbiamo visto la differenza di professionalità. Alessandro è sempre disponibile e attento alle nostre esigenze in modo tempestivo."</div>
+                            <div><div class="tr-author">Silvia P.</div><div class="tr-company">F. Petracchini</div></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade h-100" id="tab6" role="tabpanel">
+                        <div class="tab-review-box">
+                            <div class="tr-quote-mark">"</div>
+                            <div class="stars">★★★★★</div>
+                            <div class="tr-text">"Siamo stati contattati da Alessandro. Servizio ottimo e sempre presente dalla prima chiamata ad oggi. Nessuna nota negativa. Celerità e professionalità nel servizio, difficile da trovare oggi."</div>
+                            <div><div class="tr-author">Olivia S.</div><div class="tr-company">F. Saladino</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SEZIONE 4: FORME GEOMETRICHE (Valore Aggiunto) -->
+<section class="shapes-section" id="valore">
+    <div class="container">
+        <div class="sec-header" data-aos="fade-up">
+            <div class="kicker mb-3"><i class="bi bi-star"></i> Il Valore Aggiunto</div>
+            <h2>Parole che contano</h2>
+            <p>Due testimonianze chiave racchiuse in un design essenziale ed elegante, a testimonianza di relazioni solide.</p>
+        </div>
+
+        <div class="row g-5 align-items-stretch">
+            <div class="col-lg-6" data-aos="fade-up">
+                <!-- Forma a Goccia/Foglia elegante, colori corporate -->
+                <div class="shape-card shape-leaf">
+                    <div class="stars" style="color: #fff;">★★★★★</div>
+                    <div class="shape-text">"Ho iniziato una collaborazione da sei mesi e devo dire che mi trovo molto bene. Alessandro è molto bravo a spiegare e i risultati raggiunti, in effetti, sono tangibili."</div>
+                    <div>
+                        <div class="author">Pietro S.</div>
+                        <div class="company" style="color: rgba(255,255,255,0.7);">Farmacia dei Mille</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <!-- Forma asimmetrica invertita, fondo chiaro -->
+                <div class="shape-card shape-organic">
+                    <div class="stars">★★★★★</div>
+                    <div class="shape-text">"Disponibili, attenti e pronti ad ogni esigenza che spazia dall'assistenza tecnica al personale dedicato al marketing nella persona di Alessandro. Unico in professionalità e cortesia."</div>
+                    <div>
+                        <div class="author">Fulvio M.</div>
+                        <div class="company">Farmacia Bono</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SEZIONE 5: BENTO BOX (Clienti Privati) -->
+<section class="bento-section">
+    <div class="container">
+        <div class="sec-header" data-aos="fade-up">
+            <div class="kicker mb-3"><i class="bi bi-person-check-fill"></i> Oltre il B2B</div>
+            <h2>I Clienti Privati</h2>
+            <p>La stessa dedizione e professionalità applicata per risolvere i problemi quotidiani nel settore retail e assistenza.</p>
+        </div>
+
+        <div class="bento-grid">
+            <div class="bento-item bento-1" data-aos="zoom-in" data-aos-delay="0">
+                <div class="bento-qm">"</div>
+                <div class="stars" style="color: #fff; margin-bottom: 20px;">★★★★★</div>
+                <div class="bento-text">"Da mesi vado da Alessandro a Paderno. Competente su ogni assistenza, mi stupisce sempre per la sua vasta preparazione su ogni tipo di argomento o problematica."</div>
+                <div><div class="bento-author">Francesco A.</div><div class="bento-company">Privato</div></div>
+            </div>
+
+            <div class="bento-item bento-2" data-aos="zoom-in" data-aos-delay="100">
+                <div class="bento-qm">"</div>
+                <div class="stars" style="margin-bottom: 15px;">★★★★★</div>
+                <div class="bento-text">"I ragazzi al Carrefour tutti preparatissimi. Alessandro il top. Lo consiglio vivamente a chiunque abbia problemi con telefoni di tutti i tipi e pc."</div>
+                <div><div class="bento-author">Manola</div><div class="bento-company">Privato</div></div>
+            </div>
+
+            <div class="bento-item bento-3" data-aos="zoom-in" data-aos-delay="200">
+                <div class="stars" style="margin-bottom: 15px;">★★★★★</div>
+                <div class="bento-text">"Alessandro è stato gentilissimo e disponibilissimo. Veramente onesto, merita un'ottima recensione."</div>
+                <div><div class="bento-author">Paolo G.</div><div class="bento-company">Privato</div></div>
+            </div>
+
+            <div class="bento-item bento-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="stars" style="margin-bottom: 15px;">★★★★★</div>
+                <div class="bento-text">"Tecnici veramente bravi e soprattutto cortesi, qualità difficile da trovare oggi. Un saluto ad Alessandro sempre super disponibile."</div>
+                <div><div class="bento-author">Marco M.</div><div class="bento-company">Privato</div></div>
+            </div>
+
+            <div class="bento-item bento-5" data-aos="zoom-in" data-aos-delay="200">
+                <div class="stars" style="margin-bottom: 15px;">★★★★★</div>
+                <div class="bento-text">"Al Centro Commerciale offrono assistenza ragazzi preparatissimi. Uno tra loro è Alessandro, gentile, serio e competente."</div>
+                <div><div class="bento-author">Giovanni G.</div><div class="bento-company">Privato</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p class="mb-0"><script>document.write(new Date().getFullYear())</script> — Sviluppato da Alessandro Idà</p>
+    </div>
+</footer>
+<a href="#" class="scroll-top-btn" id="scrollTopBtn"><i class="bi bi-arrow-up"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
