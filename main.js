@@ -44,59 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* ── Active nav link on scroll ── */
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.navbar-floating .nav-link:not(.nav-cta-btn)');
-    const mobileLinks = document.querySelectorAll('.msb-nav .msb-link:not(.cta)');
 
-    const setActive = () => {
-        const scrollY = window.pageYOffset;
-        let currentId = '';
-
-        sections.forEach(section => {
-            const top = section.offsetTop - 120;
-            const height = section.offsetHeight;
-            const id = section.getAttribute('id');
-
-            if (scrollY >= top && scrollY < top + height) {
-                currentId = id;
-            }
-        });
-
-        // Update Desktop Links
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            const href = link.getAttribute('href');
-            if (currentId) {
-                if (href === '#' + currentId || href === 'index.html#' + currentId) {
-                    link.classList.add('active');
-                }
-            } else {
-                // If at the top of the page
-                if (href === 'index.html' || href === '') {
-                    link.classList.add('active');
-                }
-            }
-        });
-
-        // Update Mobile Links
-        mobileLinks.forEach(link => {
-            link.classList.remove('active');
-            const href = link.getAttribute('href');
-            if (currentId) {
-                if (href === '#' + currentId || href === 'index.html#' + currentId) {
-                    link.classList.add('active');
-                }
-            } else {
-                if (href === 'index.html' || href === '') {
-                    link.classList.add('active');
-                }
-            }
-        });
-    };
-
-    window.addEventListener('scroll', setActive, { passive: true });
-    setActive();
 
     /* ── Animate progress bars on scroll ── */
     const progressBars = document.querySelectorAll('.progress-bar-fill');
