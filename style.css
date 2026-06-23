@@ -287,7 +287,7 @@ a:hover { color: var(--second-dark); }
 .bh-tag i { color: var(--cta); font-size: 1.05rem; }
 
 /* Stat Cells */
-.bh-stat { grid-column: span 5; padding: 26px; justify-content: space-between; position: relative; overflow: hidden; }
+.bh-stat { grid-column: span 5; padding: 26px; justify-content: flex-start; position: relative; overflow: hidden; }
 .bh-stat-icon { width: 44px; height: 44px; border-radius: 12px; background: color-mix(in srgb, var(--second) 12%, white); color: var(--second); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 16px; }
 .stat-revenue { background: color-mix(in srgb, var(--second) 5%, #fff); }
 .stat-revenue .bh-stat-icon { background: var(--second); color: #fff; }
@@ -295,7 +295,7 @@ a:hover { color: var(--second-dark); }
 .bh-stat-data h4 { font-size: 1.1rem; color: var(--main); margin: 0 0 4px; line-height: 1.2; }
 .bh-stat-data p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.4; margin: 0; font-weight: 600; }
 
-.bh-stat-chart { display: flex; align-items: flex-end; gap: 6px; height: 32px; margin-top: 16px; }
+.bh-stat-chart { display: flex; align-items: flex-end; gap: 6px; height: 32px; margin-top: auto; }
 .bh-stat-chart .bar { flex: 1; border-radius: 4px 4px 0 0; background: color-mix(in srgb, var(--second) 20%, transparent); transition: all 0.4s; }
 .bh-stat-chart .bar-1 { height: 40%; }
 .bh-stat-chart .bar-2 { height: 75%; }
@@ -345,11 +345,18 @@ a:hover { color: var(--second-dark); }
 .vision-card p { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.65; margin: 0; }
 
 /* Before / After rows */
-.ba-list { display: grid; gap: 12px; }
+.ba-list { display: flex; flex-direction: column; gap: 24px; }
+.ba-container {
+    border: 1px solid #dde6f2; border-radius: 18px;
+    background: #fff; box-shadow: var(--shadow-sm); overflow: hidden;
+}
+.ba-header {
+    background: #fff; padding: 14px 22px;
+    font-weight: 800; color: var(--main);
+    border-bottom: 1px solid #dde6f2; font-size: 1.1rem;
+}
 .ba-row {
     display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
-    overflow: hidden; border: 1px solid #dde6f2; border-radius: 18px;
-    background: #fff; box-shadow: var(--shadow-sm);
 }
 .ba-cell { padding: 18px 22px; }
 .ba-cell.before { border-right: 1px solid #ecdfe4; background: #fff9f9; }
@@ -404,8 +411,8 @@ a:hover { color: var(--second-dark); }
 
 .task-explorer {
     display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 16px; align-items: start;
+    grid-template-columns: minmax(280px, 30%) 1fr;
+    gap: 16px; align-items: stretch;
     background: var(--card-bg-soft);
     border-radius: var(--radius-xl);
     overflow: hidden;
@@ -416,29 +423,30 @@ a:hover { color: var(--second-dark); }
 .task-tabs {
     display: flex; flex-direction: column;
     background: var(--card-bg); border-right: 1px solid var(--border-light);
-    padding: 12px 0;
+    padding: 0;
 }
 
 .task-tab {
-    display: flex; align-items: center; gap: 12px;
-    padding: 16px 20px; border: none; background: transparent;
+    display: flex; align-items: center; gap: 14px;
+    padding: 24px 20px; border: none; background: transparent;
     text-align: left; cursor: pointer; position: relative;
     transition: all 0.25s var(--ease-out);
     border-left: 3px solid transparent;
+    flex: 1;
 }
 .task-tab:hover { background: var(--section-soft); }
 .task-tab.active {
     background: color-mix(in srgb, var(--second) 6%, #fff);
     border-left-color: var(--second);
 }
-.task-tab strong { display: block; font-size: 0.88rem; color: var(--main); line-height: 1.2; }
-.task-tab span { display: block; font-size: 0.76rem; color: var(--text-muted); margin-top: 2px; }
+.task-tab strong { display: block; font-size: 0.95rem; color: var(--main); line-height: 1.2; }
+.task-tab span { display: block; font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; }
 
 .task-tab-icon {
-    flex-shrink: 0; width: 36px; height: 36px; border-radius: 10px;
+    flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px;
     background: color-mix(in srgb, var(--second) 10%, white);
     color: var(--second); display: flex; align-items: center; justify-content: center;
-    font-size: 0.95rem; transition: all 0.25s;
+    font-size: 1.15rem; transition: all 0.25s;
 }
 .task-tab.active .task-tab-icon { background: var(--second); color: #fff; }
 
@@ -462,8 +470,8 @@ a:hover { color: var(--second-dark); }
 .tp-head h3 { margin: 0 0 4px; font-size: 1.5rem; color: var(--main); }
 .tp-sub { margin: 0; color: var(--text-muted); font-size: 0.9rem; font-weight: 600; }
 
-.tp-items { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
-.tp-item-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 28px; }
+.tp-items { display: flex; flex-direction: column; gap: 14px; margin-bottom: 0; }
+.tp-item-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 0; }
 .tp-item {
     display: flex; gap: 12px; align-items: flex-start;
     font-size: 0.9rem; color: var(--text-secondary); font-weight: 600; line-height: 1.4;
@@ -889,7 +897,7 @@ footer {
     .stat-projects { grid-column: span 6; }
     .task-explorer { grid-template-columns: 1fr; }
     .task-tabs { border-right: none; border-bottom: 1px solid var(--border-light); flex-direction: row; overflow-x: auto; padding: 0; }
-    .task-tab { border-left: none; border-bottom: 3px solid transparent; white-space: nowrap; padding: 16px; }
+    .task-tab { border-left: none; border-bottom: 3px solid transparent; white-space: nowrap; padding: 16px; flex: 0 0 auto; }
     .task-tab.active { border-left-color: transparent; border-bottom-color: var(--second); }
     .task-tab span { display: none; }
     .task-tab-arrow { display: none; }
