@@ -84,7 +84,8 @@
                         condivido le esperienze e le opportunità che hanno segnato il mio cammino.</p>
 
                     <div class="hero-actions mt-4 d-flex flex-wrap gap-3">
-                        <a href="#page-index" class="btn-cta">Scopri il percorso <i class="bi bi-arrow-down-circle ms-2"></i></a>
+                        <a href="#page-index" class="btn-cta">Scopri il percorso <i
+                                class="bi bi-arrow-down-circle ms-2"></i></a>
                         <a href="#contatti" class="btn-outline"><i class="bi bi-chat-dots"></i> Contattami</a>
                     </div>
                 </div>
@@ -1041,6 +1042,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js"></script>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         COZE AI CHATBOT SDK INTEGRATION
+         ═══════════════════════════════════════════════════════════════ -->
+    <style>
+        /* CSS Variables override (se supportato da Coze) per far matchare il brand */
+        :root {
+            --coze-primary-color: #003f5b;
+            --coze-brand-color: #003f5b;
+        }
+    </style>
+    <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
+    <script>
+        new CozeWebSDK.WebChatClient({
+            config: {
+                bot_id: '7661353910921560117',
+            },
+            componentProps: {
+                title: 'Alessandro Idà | AI Assistant',
+                // Un'icona pulita ed elegante, adatta a un contesto professionale B2B
+                icon: 'https://cdn-icons-png.flaticon.com/512/4712/4712035.png',
+                layout: 'pc'
+            },
+            auth: {
+                type: 'token',
+                token: 'pat_cS75eV0fF7HRVKqCQTNNjKtaLt85pHBkRw7yVty6JDdNGvnCBDH0FqMSNeAxhKIb',
+                onRefreshToken: function () {
+                    return 'pat_cS75eV0fF7HRVKqCQTNNjKtaLt85pHBkRw7yVty6JDdNGvnCBDH0FqMSNeAxhKIb';
+                }
+            }
+        });
+    </script>
 
 </body>
 
