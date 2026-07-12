@@ -1053,27 +1053,38 @@
             --coze-brand-color: #003f5b;
         }
     </style>
+    <!-- Inizio Script Coze Chatbot Sicuro -->
     <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
     <script>
-        new CozeWebSDK.WebChatClient({
-            config: {
-                bot_id: '7661353910921560117',
-            },
-            componentProps: {
-                title: 'Alessandro Idà | AI Assistant',
-                // Un'icona pulita ed elegante, adatta a un contesto professionale B2B
-                icon: 'https://cdn-icons-png.flaticon.com/512/4712/4712035.png',
-                layout: 'pc'
-            },
-            auth: {
-                type: 'token',
-                token: 'pat_',
-                onRefreshToken: function () {
-                    return 'pat_';
-                }
+      new CozeWebSDK.WebChatClient({
+        config: {
+          bot_id: '7661353910921560117', // Il tuo ID Coze
+        },
+        componentProps: {
+          title: 'Alessandro - Assistente Virtuale',
+        },
+        auth: {
+          type: 'token',
+          onRefreshToken: async function () {
+            try {
+              // Questa riga chiama in sicurezza il tuo Worker per ottenere il token invisibile
+              const response = await fetch('https://coze-auth-bot.i-ale9992.workers.dev/');
+              
+              if (!response.ok) {
+                console.error("Errore di connessione al sistema di autenticazione.");
+                return '';
+              }
+              const data = await response.json();
+              return data.token; 
+            } catch (error) {
+              console.error("Autenticazione fallita:", error);
+              return '';
             }
-        });
+          }
+        }
+      });
     </script>
+    <!-- Fine Script Coze Chatbot Sicuro -->
 
 </body>
 
