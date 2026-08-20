@@ -1,646 +1,879 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Progetti | Idà Alessandro</title>
-    <meta name="description" content="I miei progetti principali, raccontati attraverso sfide, gestione e impatto reale.">
+    <meta name="description"
+        content="I miei progetti principali, raccontati attraverso sfide, gestione e impatto reale.">
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<div class="nav-wrapper">
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-floating">
-        <div class="container-fluid px-4">
-            <a class="navbar-brand" href="index.html"><img src="images/Logo Idà Alessandro.png" alt="IDÀ Logo" style="height: 30px; width: auto;"></a>
-            <button class="custom-hamburger d-lg-none" id="mobileMenuBtn">
-                <span></span><span></span><span></span>
-            </button>
-            <div class="d-none d-lg-block" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Panoramica</a></li>
-                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="progetti.html">Progetti</a></li>
-                    <li class="nav-item"><a class="nav-link" href="risultati.html">Risultati</a></li>
-                    <li class="nav-item"><a class="nav-link" href="recensioni.html">Recensioni</a></li>
-                    <li class="nav-item ms-lg-3"><a class="nav-link nav-cta-btn" href="index.html#contatti">Scarica CV</a></li>
-                </ul>
+    <!-- NAVBAR -->
+    <div class="nav-wrapper">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-floating">
+            <div class="container-fluid px-4">
+                <a class="navbar-brand" href="index.html"><img src="images/Logo Idà Alessandro.png" alt="IDÀ Logo"
+                        style="height: 30px; width: auto;"></a>
+                <button class="custom-hamburger d-lg-none" id="mobileMenuBtn">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="d-none d-lg-block" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Panoramica</a></li>
+                        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="progetti.html">Progetti</a></li>
+                        <li class="nav-item"><a class="nav-link" href="risultati.html">Risultati</a></li>
+                        <li class="nav-item"><a class="nav-link" href="recensioni.html">Recensioni</a></li>
+                        <li class="nav-item ms-lg-3"><a class="nav-link nav-cta-btn" href="index.html#contatti">Scarica
+                                CV</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</div>
-
-<!-- Mobile Sidebar Menu -->
-<div class="mobile-sidebar-backdrop" id="sidebarBackdrop"></div>
-<div class="mobile-sidebar" id="mobileSidebar">
-    <div class="msb-header">
-        <span class="msb-logo"><img src="images/Logo Idà Alessandro.png" alt="IDÀ Logo" style="height: 30px; width: auto;"></span>
-        <button class="msb-close" id="mobileMenuClose"><i class="bi bi-x-lg"></i></button>
+        </nav>
     </div>
-    <nav class="msb-nav">
-        <a href="index.html" class="msb-link">Panoramica</a>
-        <a href="skills.html" class="msb-link">Skills</a>
-        <a href="progetti.html" class="msb-link active">Progetti</a>
-        <a href="risultati.html" class="msb-link">Risultati</a>
-        <a href="recensioni.html" class="msb-link">Recensioni</a>
-        <a href="index.html#contatti" class="msb-link cta">Scarica CV</a>
-    </nav>
-</div>
 
-<!-- ═══════════════════════════════════════════════════════════════
+    <!-- Mobile Sidebar Menu -->
+    <div class="mobile-sidebar-backdrop" id="sidebarBackdrop"></div>
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="msb-header">
+            <span class="msb-logo"><img src="images/Logo Idà Alessandro.png" alt="IDÀ Logo"
+                    style="height: 30px; width: auto;"></span>
+            <button class="msb-close" id="mobileMenuClose"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <nav class="msb-nav">
+            <a href="index.html" class="msb-link">Panoramica</a>
+            <a href="skills.html" class="msb-link">Skills</a>
+            <a href="progetti.html" class="msb-link active">Progetti</a>
+            <a href="risultati.html" class="msb-link">Risultati</a>
+            <a href="recensioni.html" class="msb-link">Recensioni</a>
+            <a href="index.html#contatti" class="msb-link cta">Scarica CV</a>
+        </nav>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════
      HERO — Premium UI Dashboard Mode
      ═══════════════════════════════════════════════════════════════ -->
-<section class="projects-hero">
-    <div class="ph-bg-blob blob-1"></div>
-    <div class="ph-bg-blob blob-2"></div>
-    
-    <div class="container position-relative" style="z-index:1;">
-        <div class="row align-items-center g-5">
-            <!-- Testo a Sinistra -->
-            <div class="col-lg-6" data-aos="fade-right">
-                <div class="kicker mb-3" style="display:inline-flex; background: var(--main); color: #fff; border: none; box-shadow: 0 8px 16px rgba(0,63,91,0.2);">
-                    <i class="bi bi-folder-fill text-white"></i>&nbsp;Case Studies
+    <section class="projects-hero">
+        <div class="ph-bg-blob blob-1"></div>
+        <div class="ph-bg-blob blob-2"></div>
+
+        <div class="container position-relative" style="z-index:1;">
+            <div class="row align-items-center g-5">
+                <!-- Testo a Sinistra -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="kicker mb-3"
+                        style="display:inline-flex; background: var(--main); color: #fff; border: none; box-shadow: 0 8px 16px rgba(0,63,91,0.2);">
+                        <i class="bi bi-folder-fill text-white"></i>&nbsp;Case Studies
+                    </div>
+                    <h1 class="display-3 fw-bold mb-4" style="color: var(--main); letter-spacing: -0.04em;">I miei <span
+                            style="color: var(--second); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--second) 40%, transparent); text-decoration-thickness: 6px; text-underline-offset: 2px;">progetti</span>
+                    </h1>
+                    <p class="hero-lead text-muted mb-4"
+                        style="font-size: 1.15rem; line-height: 1.6; max-width: 560px;">
+                        Casi di successo in cui ho trasformato criticità in opportunità. Scopri l'infrastruttura
+                        tecnica, la gestione operativa e l'impatto reale di ciascun progetto, navigando attraverso le
+                        mie esperienze sul campo.
+                    </p>
+                    <a href="#project-1" class="btn-cta">
+                        I miei ultimi progetti <i class="bi bi-arrow-down-circle ms-2"></i>
+                    </a>
                 </div>
-                <h1 class="display-3 fw-bold mb-4" style="color: var(--main); letter-spacing: -0.04em;">I miei <span style="color: var(--second); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--second) 40%, transparent); text-decoration-thickness: 6px; text-underline-offset: 2px;">progetti</span></h1>
-                <p class="hero-lead text-muted mb-4" style="font-size: 1.15rem; line-height: 1.6; max-width: 560px;">
-                    Casi di successo in cui ho trasformato criticità in opportunità. Scopri l'infrastruttura tecnica, la gestione operativa e l'impatto reale di ciascun progetto, navigando attraverso le mie esperienze sul campo.
-                </p>
-                <a href="#project-1" class="btn-cta">
-                    I miei ultimi progetti <i class="bi bi-arrow-down-circle ms-2"></i>
-                </a>
-            </div>
-            
-            <!-- UI Dashboard a Destra -->
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-                <div class="ph-ui-window-wrapper">
-                    <div class="ph-bg-glow"></div>
-                    
-                    <div class="ph-ui-glass">
-                        <!-- Header stile Mac -->
-                        <div class="ph-ui-header">
-                            <div class="ph-ui-dots">
-                                <span style="background: #ff5f56;"></span>
-                                <span style="background: #ffbd2e;"></span>
-                                <span style="background: #27c93f;"></span>
-                            </div>
-                            <div class="ph-ui-title"><i class="bi bi-briefcase"></i> I miei progetti</div>
-                        </div>
-                        
-                        <!-- Corpo della finestra -->
-                        <div class="ph-ui-body">
-                            <!-- Sidebar -->
-                            <div class="ph-ui-sidebar" id="ph-hero-tabs">
-                                <div class="ph-ui-nav active" data-target="tab-overview"><i class="bi bi-grid-fill"></i> Panoramica</div>
-                                <div class="ph-ui-nav" data-target="tab-timeline"><i class="bi bi-clock-history"></i> Fasi Progetto</div>
-                                <div class="ph-ui-nav" data-target="tab-archives"><i class="bi bi-folder-fill"></i> Archivio</div>
-                            </div>
-                            
-                            <!-- Contenuto principale -->
-                            <div class="ph-ui-content" style="min-height: 330px;">
-                                <!-- OVERVIEW TAB -->
-                                <div class="ph-tab-pane" id="tab-overview">
-                                    <!-- Statistiche rapide -->
-                                    <div class="ph-ui-stat-row">
-                                        <div class="ph-ui-stat-box">
-                                            <span class="ph-ui-stat-num">50+</span>
-                                            <span class="ph-ui-stat-label">Progetti totali</span>
-                                        </div>
-                                        <div class="ph-ui-stat-box">
-                                            <span class="ph-ui-stat-num text-success"><i class="bi bi-arrow-up-right"></i> 100%</span>
-                                            <span class="ph-ui-stat-label">Tasso di successo</span>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Lista progetti in miniatura -->
-                                    <div class="ph-ui-project-list">
-                                        <div class="ph-ui-project-item">
-                                            <div class="ph-ui-pi-icon" style="background: color-mix(in srgb, var(--second) 15%, white); color: var(--second);"><i class="bi bi-database-fill"></i></div>
-                                            <div class="ph-ui-pi-info">
-                                                <strong>CRM Custom</strong>
-                                                <span>Sviluppo & Integrazione</span>
-                                            </div>
-                                            <div class="ph-ui-pi-status">Completato</div>
-                                        </div>
-                                        <div class="ph-ui-project-item">
-                                            <div class="ph-ui-pi-icon" style="background: color-mix(in srgb, var(--cta) 15%, white); color: var(--cta);"><i class="bi bi-lightbulb-fill"></i></div>
-                                            <div class="ph-ui-pi-info">
-                                                <strong>Progetto freelance</strong>
-                                                <span>Branding completo</span>
-                                            </div>
-                                            <div class="ph-ui-pi-status">Completato</div>
-                                        </div>
-                                        <div class="ph-ui-project-item">
-                                            <div class="ph-ui-pi-icon" style="background: color-mix(in srgb, #16a34a 15%, white); color: #16a34a;"><i class="bi bi-graph-up-arrow"></i></div>
-                                            <div class="ph-ui-pi-info">
-                                                <strong>Piani di Crescita</strong>
-                                                <span>Analisi & Reportistica</span>
-                                            </div>
-                                            <div class="ph-ui-pi-status">Completato</div>
-                                        </div>
-                                    </div>
+
+                <!-- UI Dashboard a Destra -->
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+                    <div class="ph-ui-window-wrapper">
+                        <div class="ph-bg-glow"></div>
+
+                        <div class="ph-ui-glass">
+                            <!-- Header stile Mac -->
+                            <div class="ph-ui-header">
+                                <div class="ph-ui-dots">
+                                    <span style="background: #ff5f56;"></span>
+                                    <span style="background: #ffbd2e;"></span>
+                                    <span style="background: #27c93f;"></span>
                                 </div>
-                                
-                                <!-- TIMELINE TAB -->
-                                <div class="ph-tab-pane" id="tab-timeline" style="display: none; animation: fadeIn 0.3s ease;">
-                                    <div style="position: relative; padding-left: 24px; border-left: 2px solid var(--border-light); display: flex; flex-direction: column; gap: 24px; margin-top: 15px;">
-                                        <div style="position: relative;">
-                                            <div style="position: absolute; left: -30px; top: 4px; width: 10px; height: 10px; background: var(--main); border-radius: 50%; border: 2px solid #fff;"></div>
-                                            <strong style="font-size: 1rem; color: var(--main); display: block;">1. Analisi iniziale e fattibilità</strong>
+                                <div class="ph-ui-title"><i class="bi bi-briefcase"></i> I miei progetti</div>
+                            </div>
+
+                            <!-- Corpo della finestra -->
+                            <div class="ph-ui-body">
+                                <!-- Sidebar -->
+                                <div class="ph-ui-sidebar" id="ph-hero-tabs">
+                                    <div class="ph-ui-nav active" data-target="tab-overview"><i
+                                            class="bi bi-grid-fill"></i> Panoramica</div>
+                                    <div class="ph-ui-nav" data-target="tab-timeline"><i
+                                            class="bi bi-clock-history"></i> Fasi Progetto</div>
+                                    <div class="ph-ui-nav" data-target="tab-archives"><i class="bi bi-folder-fill"></i>
+                                        Archivio</div>
+                                </div>
+
+                                <!-- Contenuto principale -->
+                                <div class="ph-ui-content" style="min-height: 330px;">
+                                    <!-- OVERVIEW TAB -->
+                                    <div class="ph-tab-pane" id="tab-overview">
+                                        <!-- Statistiche rapide -->
+                                        <div class="ph-ui-stat-row">
+                                            <div class="ph-ui-stat-box">
+                                                <span class="ph-ui-stat-num">50+</span>
+                                                <span class="ph-ui-stat-label">Progetti totali</span>
+                                            </div>
+                                            <div class="ph-ui-stat-box">
+                                                <span class="ph-ui-stat-num text-success"><i
+                                                        class="bi bi-arrow-up-right"></i> 100%</span>
+                                                <span class="ph-ui-stat-label">Tasso di successo</span>
+                                            </div>
                                         </div>
-                                        <div style="position: relative;">
-                                            <div style="position: absolute; left: -30px; top: 4px; width: 10px; height: 10px; background: var(--main); border-radius: 50%; border: 2px solid #fff;"></div>
-                                            <strong style="font-size: 1rem; color: var(--main); display: block;">2. Pianificazione del progetto</strong>
-                                        </div>
-                                        <div style="position: relative;">
-                                            <div style="position: absolute; left: -30px; top: 4px; width: 10px; height: 10px; background: var(--second); border-radius: 50%; border: 2px solid #fff;"></div>
-                                            <strong style="font-size: 1rem; color: var(--main); display: block;">3. Analisi requisiti e progettazione</strong>
-                                        </div>
-                                        <div style="position: relative;">
-                                            <div style="position: absolute; left: -30px; top: 4px; width: 10px; height: 10px; background: var(--second); border-radius: 50%; border: 2px solid #fff;"></div>
-                                            <strong style="font-size: 1rem; color: var(--main); display: block;">4. Sviluppo / Realizzazione</strong>
-                                        </div>
-                                        <div style="position: relative;">
-                                            <div style="position: absolute; left: -30px; top: 4px; width: 10px; height: 10px; background: #22c55e; border-radius: 50%; border: 2px solid #fff;"></div>
-                                            <strong style="font-size: 1rem; color: var(--main); display: block;">5. Test e rilascio</strong>
-                                        </div>
-                                        <div style="position: relative;">
-                                            <div style="position: absolute; left: -30px; top: 4px; width: 10px; height: 10px; background: #22c55e; border-radius: 50%; border: 2px solid #fff;"></div>
-                                            <strong style="font-size: 1rem; color: var(--main); display: block;">6. Monitoraggio e manutenzione</strong>
+
+                                        <!-- Lista progetti in miniatura -->
+                                        <div class="ph-ui-project-list">
+                                            <div class="ph-ui-project-item">
+                                                <div class="ph-ui-pi-icon"
+                                                    style="background: color-mix(in srgb, var(--second) 15%, white); color: var(--second);">
+                                                    <i class="bi bi-database-fill"></i>
+                                                </div>
+                                                <div class="ph-ui-pi-info">
+                                                    <strong>CRM Custom</strong>
+                                                    <span>Sviluppo & Integrazione</span>
+                                                </div>
+                                                <div class="ph-ui-pi-status">Completato</div>
+                                            </div>
+                                            <div class="ph-ui-project-item">
+                                                <div class="ph-ui-pi-icon"
+                                                    style="background: color-mix(in srgb, var(--cta) 15%, white); color: var(--cta);">
+                                                    <i class="bi bi-lightbulb-fill"></i>
+                                                </div>
+                                                <div class="ph-ui-pi-info">
+                                                    <strong>Progetto freelance</strong>
+                                                    <span>Branding completo</span>
+                                                </div>
+                                                <div class="ph-ui-pi-status">Completato</div>
+                                            </div>
+                                            <div class="ph-ui-project-item">
+                                                <div class="ph-ui-pi-icon"
+                                                    style="background: color-mix(in srgb, #16a34a 15%, white); color: #16a34a;">
+                                                    <i class="bi bi-graph-up-arrow"></i>
+                                                </div>
+                                                <div class="ph-ui-pi-info">
+                                                    <strong>Piani di Crescita</strong>
+                                                    <span>Analisi & Reportistica</span>
+                                                </div>
+                                                <div class="ph-ui-pi-status">Completato</div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                
-                                <!-- ARCHIVES TAB -->
-                                <div class="ph-tab-pane" id="tab-archives" style="display: none; animation: fadeIn 0.3s ease;">
-                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px;">
-                                        <div style="background: rgba(0,0,0,0.02); border: 1px solid var(--border-light); border-radius: 8px; padding: 15px 12px; display: flex; align-items: center; gap: 8px;">
-                                            <i class="bi bi-folder-fill" style="color: var(--second); font-size: 1.3rem;"></i>
-                                            <span style="font-size: 0.85rem; font-weight: 700; color: var(--main); line-height: 1.2;">Lancio campagne GADS</span>
-                                        </div>
-                                        <div style="background: rgba(0,0,0,0.02); border: 1px solid var(--border-light); border-radius: 8px; padding: 15px 12px; display: flex; align-items: center; gap: 8px;">
-                                            <i class="bi bi-folder-fill" style="color: var(--second); font-size: 1.3rem;"></i>
-                                            <span style="font-size: 0.85rem; font-weight: 700; color: var(--main); line-height: 1.2;">Piano di crescita Farmacia</span>
-                                        </div>
-                                        <div style="background: rgba(0,0,0,0.02); border: 1px solid var(--border-light); border-radius: 8px; padding: 15px 12px; display: flex; align-items: center; gap: 8px;">
-                                            <i class="bi bi-folder-fill" style="color: var(--second); font-size: 1.3rem;"></i>
-                                            <span style="font-size: 0.85rem; font-weight: 700; color: var(--main); line-height: 1.2;">Landing personalizzata</span>
-                                        </div>
-                                        <div style="background: rgba(0,0,0,0.02); border: 1px solid var(--border-light); border-radius: 8px; padding: 15px 12px; display: flex; align-items: center; gap: 8px;">
-                                            <i class="bi bi-folder-fill" style="color: var(--second); font-size: 1.3rem;"></i>
-                                            <span style="font-size: 0.85rem; font-weight: 700; color: var(--main); line-height: 1.2;">Costruzione sito web</span>
-                                        </div>
-                                        <div style="background: rgba(0,0,0,0.02); border: 1px solid var(--border-light); border-radius: 8px; padding: 15px 12px; display: flex; align-items: center; gap: 8px;">
-                                            <i class="bi bi-folder-fill" style="color: var(--second); font-size: 1.3rem;"></i>
-                                            <span style="font-size: 0.85rem; font-weight: 700; color: var(--main); line-height: 1.2;">Guide CRM</span>
-                                        </div>
-                                        <div style="background: rgba(0,0,0,0.02); border: 1px solid var(--border-light); border-radius: 8px; padding: 15px 12px; display: flex; align-items: center; gap: 8px;">
-                                            <i class="bi bi-folder-fill" style="color: var(--second); font-size: 1.3rem;"></i>
-                                            <span style="font-size: 0.85rem; font-weight: 700; color: var(--main); line-height: 1.2;">Training team commerciale</span>
+
+                                    <!-- TIMELINE TAB -->
+                                    <div class="ph-tab-pane" id="tab-timeline"
+                                        style="display: none; animation: fadeIn 0.3s ease;">
+                                        <div
+                                            style="position: relative; padding-left: 24px; border-left: 2px solid var(--border-light); display: flex; flex-direction: column; gap: 24px; margin-top: 15px;">
+                                            <div style="position: relative;">
+                                                <div
+                                                    style="position: absolute; left: -30px; top: 4px; width: 10px; height: 10px; background: var(--main); border-radius: 50%; border: 2px solid #fff;">
+                                                </div>
+                                                <strong style="font-size: 1rem; color: var(--main); display: block;">1.
+                                                    Analisi iniziale e fattibilità</strong>
+                                            </div>
+                                            <div style="position: relative;">
+                                                <div
+                                                    style="position: absolute; left: -30px; top: 4px; width: 10px; height: 10px; background: var(--main); border-radius: 50%; border: 2px solid #fff;">
+                                                </div>
+                                                <strong style="font-size: 1rem; color: var(--main); display: block;">2.
+                                                    Pianificazione del progetto</strong>
+                                            </div>
+                                            <div style="position: relative;">
+                                                <div
+                                                    style="position: absolute; left: -30px; top: 4px; width: 10px; height: 10px; background: var(--second); border-radius: 50%; border: 2px solid #fff;">
+                                                </div>
+                                                <strong style="font-size: 1rem; color: var(--main); display: block;">3.
+                                                    Analisi requisiti e progettazione</strong>
+                                            </div>
+                                            <div style="position: relative;">
+                                                <div
+                                                    style="position: absolute; left: -30px; top: 4px; width: 10px; height: 10px; background: var(--second); border-radius: 50%; border: 2px solid #fff;">
+                                                </div>
+                                                <strong style="font-size: 1rem; color: var(--main); display: block;">4.
+                                                    Sviluppo / Realizzazione</strong>
+                                            </div>
+                                            <div style="position: relative;">
+                                                <div
+                                                    style="position: absolute; left: -30px; top: 4px; width: 10px; height: 10px; background: #22c55e; border-radius: 50%; border: 2px solid #fff;">
+                                                </div>
+                                                <strong style="font-size: 1rem; color: var(--main); display: block;">5.
+                                                    Test e rilascio</strong>
+                                            </div>
+                                            <div style="position: relative;">
+                                                <div
+                                                    style="position: absolute; left: -30px; top: 4px; width: 10px; height: 10px; background: #22c55e; border-radius: 50%; border: 2px solid #fff;">
+                                                </div>
+                                                <strong style="font-size: 1rem; color: var(--main); display: block;">6.
+                                                    Monitoraggio e manutenzione</strong>
+                                            </div>
                                         </div>
                                     </div>
+
+                                    <!-- ARCHIVES TAB -->
+                                    <div class="ph-tab-pane" id="tab-archives"
+                                        style="display: none; animation: fadeIn 0.3s ease;">
+                                        <div
+                                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px;">
+                                            <div
+                                                style="background: rgba(0,0,0,0.02); border: 1px solid var(--border-light); border-radius: 8px; padding: 15px 12px; display: flex; align-items: center; gap: 8px;">
+                                                <i class="bi bi-folder-fill"
+                                                    style="color: var(--second); font-size: 1.3rem;"></i>
+                                                <span
+                                                    style="font-size: 0.85rem; font-weight: 700; color: var(--main); line-height: 1.2;">Lancio
+                                                    campagne GADS</span>
+                                            </div>
+                                            <div
+                                                style="background: rgba(0,0,0,0.02); border: 1px solid var(--border-light); border-radius: 8px; padding: 15px 12px; display: flex; align-items: center; gap: 8px;">
+                                                <i class="bi bi-folder-fill"
+                                                    style="color: var(--second); font-size: 1.3rem;"></i>
+                                                <span
+                                                    style="font-size: 0.85rem; font-weight: 700; color: var(--main); line-height: 1.2;">Piano
+                                                    di crescita Farmacia</span>
+                                            </div>
+                                            <div
+                                                style="background: rgba(0,0,0,0.02); border: 1px solid var(--border-light); border-radius: 8px; padding: 15px 12px; display: flex; align-items: center; gap: 8px;">
+                                                <i class="bi bi-folder-fill"
+                                                    style="color: var(--second); font-size: 1.3rem;"></i>
+                                                <span
+                                                    style="font-size: 0.85rem; font-weight: 700; color: var(--main); line-height: 1.2;">Landing
+                                                    personalizzata</span>
+                                            </div>
+                                            <div
+                                                style="background: rgba(0,0,0,0.02); border: 1px solid var(--border-light); border-radius: 8px; padding: 15px 12px; display: flex; align-items: center; gap: 8px;">
+                                                <i class="bi bi-folder-fill"
+                                                    style="color: var(--second); font-size: 1.3rem;"></i>
+                                                <span
+                                                    style="font-size: 0.85rem; font-weight: 700; color: var(--main); line-height: 1.2;">Costruzione
+                                                    sito web</span>
+                                            </div>
+                                            <div
+                                                style="background: rgba(0,0,0,0.02); border: 1px solid var(--border-light); border-radius: 8px; padding: 15px 12px; display: flex; align-items: center; gap: 8px;">
+                                                <i class="bi bi-folder-fill"
+                                                    style="color: var(--second); font-size: 1.3rem;"></i>
+                                                <span
+                                                    style="font-size: 0.85rem; font-weight: 700; color: var(--main); line-height: 1.2;">Guide
+                                                    CRM</span>
+                                            </div>
+                                            <div
+                                                style="background: rgba(0,0,0,0.02); border: 1px solid var(--border-light); border-radius: 8px; padding: 15px 12px; display: flex; align-items: center; gap: 8px;">
+                                                <i class="bi bi-folder-fill"
+                                                    style="color: var(--second); font-size: 1.3rem;"></i>
+                                                <span
+                                                    style="font-size: 0.85rem; font-weight: 700; color: var(--main); line-height: 1.2;">Training
+                                                    team commerciale</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
-                                
                             </div>
                         </div>
-                    </div>
-                    
-                    <!-- Floating Badge -->
-                    <div class="ph-ui-floating-badge">
-                        <i class="bi bi-check-circle-fill"></i> Gestione End-to-End
-                    </div>
-                    
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     CASE STUDY 1: CRM CUSTOM
+                        <!-- Floating Badge -->
+                        <div class="ph-ui-floating-badge">
+                            <i class="bi bi-check-circle-fill"></i> Gestione End-to-End
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- New Project Section -->
+    <!-- ═══════════════════════════════════════════════════════════════
+     PROGETTI — Premium No-Image Case Studies (Accordion)
      ═══════════════════════════════════════════════════════════════ -->
-<section class="case-study-section" id="project-1">
-    <div class="container">
-        <div class="row">
-            <!-- Sticky Sidebar -->
-            <div class="col-lg-4" data-aos="fade-right">
-                <div class="cs-sidebar">
-                    <span class="cs-num">01</span>
-                    <h2>CRM Custom</h2>
-                    <p>Un sistema personalizzato da zero per ottimizzare i processi aziendali, sostituendo un leader di mercato per garantire prestazioni su misura.</p>
-                    
-                    <div class="cs-tags-wrapper">
-                        <div class="cs-tags-title">Tech Stack & Integrazioni</div>
-                        <div class="cs-tags">
-                            <span class="cs-tag"><i class="bi bi-braces"></i> Sviluppo Custom</span>
-                            <span class="cs-tag"><i class="bi bi-plugin"></i> API Esterne</span>
-                            <span class="cs-tag"><i class="bi bi-envelope-at"></i> Brevo Email</span>
-                            <span class="cs-tag"><i class="bi bi-check2-square"></i> Gestione Task</span>
-                            <span class="cs-tag"><i class="bi bi-diagram-3"></i> Workflow Autom.</span>
-                        </div>
+    <section class="cs2-section" id="project-1">
+        <div class="container">
+
+            <div class="section-header mb-5" data-aos="fade-up">
+                <div class="kicker"><i class="bi bi-folder2-open"></i> Case Studies</div>
+                <h2>I miei progetti</h2>
+                <p>Sfide reali, gestione concreta, impatto misurabile. Ogni progetto raccontato nelle sue tre
+                    dimensioni.</p>
+            </div>
+
+            <!-- PROJECT 01 -->
+            <div class="cs2-card" data-aos="fade-up" data-aos-delay="50">
+                <div class="cs2-card-header">
+                    <div class="cs2-num">01</div>
+                    <div class="cs2-title-block">
+                        <h3>CRM Custom</h3>
+                        <p>Un sistema personalizzato da zero per ottimizzare i processi aziendali, sostituendo un leader
+                            di mercato per garantire prestazioni su misura.</p>
+                    </div>
+                    <div class="cs2-tags-inline">
+                        <span><i class="bi bi-braces"></i> Sviluppo Custom</span>
+                        <span><i class="bi bi-plugin"></i> API Esterne</span>
+                        <span><i class="bi bi-envelope-at"></i> Brevo Email</span>
+                        <span><i class="bi bi-diagram-3"></i> Workflow Autom.</span>
+                    </div>
+                    <button class="cs2-toggle" aria-expanded="false"><i class="bi bi-plus-lg"></i></button>
+                </div>
+                <div class="cs2-body">
+                    <div class="cs2-pillar challenge">
+                        <div class="cs2-pillar-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                        <h4>La sfida</h4>
+                        <p>L'azienda utilizzava un CRM famoso e leader di mercato, ma era troppo limitato, poco
+                            customizzabile e costoso. Rallentava incredibilmente i processi aziendali perché non si
+                            sposava con le nostre reali esigenze operative.</p>
+                    </div>
+                    <div class="cs2-pillar mgmt">
+                        <div class="cs2-pillar-icon"><i class="bi bi-kanban-fill"></i></div>
+                        <h4>Il management</h4>
+                        <p>Ho proposto di sviluppare un CRM totalmente custom. Ho eseguito un'analisi dimostrando un
+                            abbattimento di migliaia di euro di costi annuali, stilando un piano delle feature attese.
+                            Ottenuta carta bianca, mi sono messo all'opera e l'ho sviluppato internamente da zero.</p>
+                    </div>
+                    <div class="cs2-pillar impact">
+                        <div class="cs2-pillar-icon"><i class="bi bi-check-circle-fill"></i></div>
+                        <h4>L'impatto</h4>
+                        <p>Il rilascio di un CRM totalmente personalizzato ha ottimizzato tutti i processi interni,
+                            adattandosi come un guanto al team e portando a notevoli miglioramenti sia sui rendimenti
+                            economici che su quelli operativi.</p>
                     </div>
                 </div>
             </div>
-            <!-- Content -->
-            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-                <div class="cs-content">
-                    
-                    <!-- Immagine Progetto -->
-                    <div class="cs-image-wrapper">
-                        <img src="https://raw.githubusercontent.com/alessandroida/Curriculum-Vitae/main/images/CRM" alt="CRM Custom" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-                    </div>
 
-                    <div class="cs-block cb-challenge">
-                        <div class="cs-block-header">
-                            <div class="cs-block-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
-                            <h4>La sfida</h4>
-                        </div>
-                        <p>L'azienda utilizzava un CRM famoso e leader di mercato, ma era troppo limitato, poco customizzabile e costoso. Rallentava incredibilmente i processi aziendali perché non si sposava con le nostre reali esigenze operative.</p>
+            <!-- PROJECT 02 -->
+            <div class="cs2-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="cs2-card-header">
+                    <div class="cs2-num">02</div>
+                    <div class="cs2-title-block">
+                        <h3>Dall'idea all'impresa</h3>
+                        <p>Lancio e gestione da zero di un'attività freelance, curandone ogni singolo aspetto in totale
+                            autonomia.</p>
                     </div>
-
-                    <div class="cs-block cb-mgmt">
-                        <div class="cs-block-header">
-                            <div class="cs-block-icon"><i class="bi bi-kanban-fill"></i></div>
-                            <h4>Il management</h4>
-                        </div>
-                        <p>Ho proposto di sviluppare un CRM totalmente custom. Ho eseguito un'analisi dimostrando un abbattimento di migliaia di euro di costi annuali, stilando un piano delle feature attese. Ottenuta carta bianca, mi sono messo all'opera e l'ho sviluppato internamente da zero.</p>
+                    <div class="cs2-tags-inline">
+                        <span><i class="bi bi-fonts"></i> Naming &amp; Logo</span>
+                        <span><i class="bi bi-browser-edge"></i> Web Design CSS/JS</span>
+                        <span><i class="bi bi-file-earmark-text"></i> Contrattualistica</span>
+                        <span><i class="bi bi-instagram"></i> Social Media</span>
                     </div>
-
-                    <div class="cs-block cb-impact">
-                        <div class="cs-block-header">
-                            <div class="cs-block-icon"><i class="bi bi-check-circle-fill"></i></div>
-                            <h4>L'impatto</h4>
-                        </div>
-                        <p>Il rilascio di un CRM totalmente personalizzato ha ottimizzato tutti i processi interni, adattandosi come un guanto al team e portando a notevoli miglioramenti sia sui rendimenti economici che su quelli operativi.</p>
+                    <button class="cs2-toggle" aria-expanded="false"><i class="bi bi-plus-lg"></i></button>
+                </div>
+                <div class="cs2-body">
+                    <div class="cs2-pillar challenge">
+                        <div class="cs2-pillar-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                        <h4>La sfida</h4>
+                        <p>La cliente aveva appena aperto la partita IVA come insegnante di canto, ma operava in una
+                            zona satura con centinaia di altri insegnanti. Ponendosi come semplice "privato", faticava a
+                            differenziarsi e attirare allievi.</p>
                     </div>
-
+                    <div class="cs2-pillar mgmt">
+                        <div class="cs2-pillar-icon"><i class="bi bi-kanban-fill"></i></div>
+                        <h4>Il management</h4>
+                        <p>Mi sono proposto di gestire interamente il progetto. Le ho redatto un business plan per
+                            trasformarla da "privato" a "vera azienda". Ho creato tutto l'ecosistema del brand da zero
+                            per posizionarla come reale punto di riferimento sul territorio.</p>
+                    </div>
+                    <div class="cs2-pillar impact">
+                        <div class="cs2-pillar-icon"><i class="bi bi-check-circle-fill"></i></div>
+                        <h4>L'impatto</h4>
+                        <p>La nascita di un brand strutturato, forte e professionale capace di distinguersi nettamente
+                            dalla concorrenza locale, attraendo nuovi clienti grazie a una comunicazione solida e
+                            organizzata.</p>
+                    </div>
                 </div>
             </div>
+
+            <!-- PROJECT 03 -->
+            <div class="cs2-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="cs2-card-header">
+                    <div class="cs2-num">03</div>
+                    <div class="cs2-title-block">
+                        <h3>Piani di Crescita</h3>
+                        <p>Analisi strategica e business planning a doppio binario: per l'efficienza del team interno e
+                            per la scalabilità degli e-commerce clienti.</p>
+                    </div>
+                    <div class="cs2-tags-inline">
+                        <span><i class="bi bi-graph-up-arrow"></i> Reportistica Dati</span>
+                        <span><i class="bi bi-people"></i> Riunioni Operative</span>
+                        <span><i class="bi bi-bullseye"></i> Consulenza MKTG</span>
+                        <span><i class="bi bi-cart3"></i> Strategia E-Commerce</span>
+                    </div>
+                    <button class="cs2-toggle" aria-expanded="false"><i class="bi bi-plus-lg"></i></button>
+                </div>
+                <div class="cs2-body">
+                    <div class="cs2-pillar challenge">
+                        <div class="cs2-pillar-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                        <h4>La sfida</h4>
+                        <p>La necessità critica di individuare i colli di bottiglia nei rendimenti interni del team e
+                            dell'azienda, oltre alla forte responsabilità di guidare con proattività gli e-commerce dei
+                            clienti verso performance economiche superiori.</p>
+                    </div>
+                    <div class="cs2-pillar mgmt">
+                        <div class="cs2-pillar-icon"><i class="bi bi-kanban-fill"></i></div>
+                        <h4>Il management</h4>
+                        <p>Opero parallelamente su due fronti. <strong>Internamente:</strong> analizzo business e
+                            rendimenti (personali, del team e aziendali), stilando report e conducendo riunioni per
+                            implementare soluzioni. <strong>Esternamente:</strong> analizzo campagne, fatturati e
+                            fidelizzazione, prescrivendo strategie e promozioni per il portafoglio clienti.</p>
+                    </div>
+                    <div class="cs2-pillar impact">
+                        <div class="cs2-pillar-icon"><i class="bi bi-check-circle-fill"></i></div>
+                        <h4>L'impatto</h4>
+                        <p>Ottimizzazione continua delle performance operative interne e un incremento documentato delle
+                            vendite, margini e fidelizzazione per gli e-commerce gestiti.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 04 -->
+            <div class="cs2-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="cs2-card-header">
+                    <div class="cs2-num">04</div>
+                    <div class="cs2-title-block">
+                        <h3>Algoritmo Strategico</h3>
+                        <p>Un sistema avanzato in grado di prevedere e calcolare in anticipo i rendimenti e la
+                            scalabilità degli investimenti.</p>
+                    </div>
+                    <div class="cs2-tags-inline">
+                        <span><i class="bi bi-file-earmark-spreadsheet"></i> Excel Avanzato</span>
+                        <span><i class="bi bi-calculator"></i> 8 Macro Formule</span>
+                        <span><i class="bi bi-infinity"></i> +10k Combinazioni</span>
+                        <span><i class="bi bi-currency-euro"></i> Budget &amp; Margini</span>
+                    </div>
+                    <button class="cs2-toggle" aria-expanded="false"><i class="bi bi-plus-lg"></i></button>
+                </div>
+                <div class="cs2-body">
+                    <div class="cs2-pillar challenge">
+                        <div class="cs2-pillar-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                        <h4>La sfida</h4>
+                        <p>Forte diffidenza iniziale da parte dei clienti (come ad es. le farmacie) che, prima di
+                            investire, non avevano chiara visibilità su quali ordini, fatturati o margini potessero
+                            ragionevolmente aspettarsi.</p>
+                    </div>
+                    <div class="cs2-pillar mgmt">
+                        <div class="cs2-pillar-icon"><i class="bi bi-kanban-fill"></i></div>
+                        <h4>Il management</h4>
+                        <p>Per abbattere questa lacuna ho ideato, ingegnerizzato e creato un potente algoritmo
+                            predittivo in Excel. Basta inserire le variabili desiderate dal cliente (budget, ricarichi,
+                            logistica) e il tool restituisce le proiezioni matematiche in automatico.</p>
+                    </div>
+                    <div class="cs2-pillar impact">
+                        <div class="cs2-pillar-icon"><i class="bi bi-check-circle-fill"></i></div>
+                        <h4>L'impatto</h4>
+                        <p>Totale abbattimento della diffidenza. I clienti ottengono istantaneamente una proiezione
+                            trasparente, che dona sicurezza e prevedibilità economica all'investimento.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 05 -->
+            <div class="cs2-card" data-aos="fade-up" data-aos-delay="250">
+                <div class="cs2-card-header">
+                    <div class="cs2-num">05</div>
+                    <div class="cs2-title-block">
+                        <h3>Smart Tracking</h3>
+                        <p>Un cruscotto di monitoraggio in tempo reale degli obiettivi per mantenere il team
+                            costantemente allineato sulle performance.</p>
+                    </div>
+                    <div class="cs2-tags-inline">
+                        <span><i class="bi bi-crosshair"></i> Monitoraggio KPI</span>
+                        <span><i class="bi bi-magic"></i> 12 Macro Analisi</span>
+                        <span><i class="bi bi-display"></i> Dashboard Real-Time</span>
+                        <span><i class="bi bi-camera-video"></i> Video Tutorial</span>
+                    </div>
+                    <button class="cs2-toggle" aria-expanded="false"><i class="bi bi-plus-lg"></i></button>
+                </div>
+                <div class="cs2-body">
+                    <div class="cs2-pillar challenge">
+                        <div class="cs2-pillar-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                        <h4>La sfida</h4>
+                        <p>L'obiettivo primario era far guadagnare il più possibile i clienti e i loro e-commerce. Ma le
+                            metriche e i KPI necessari per capire lo "stato di salute" e se si era "in target" erano
+                            troppi per essere analizzati a mano con reattività.</p>
+                    </div>
+                    <div class="cs2-pillar mgmt">
+                        <div class="cs2-pillar-icon"><i class="bi bi-kanban-fill"></i></div>
+                        <h4>Il management</h4>
+                        <p>Ho proposto e sviluppato interamente lo "Smart Tracking", uno strumento che processa le
+                            variabili e indica in tempo reale il raggiungimento degli obiettivi. Mi sono occupato
+                            dell'adozione interna registrando video training dedicati.</p>
+                    </div>
+                    <div class="cs2-pillar impact">
+                        <div class="cs2-pillar-icon"><i class="bi bi-check-circle-fill"></i></div>
+                        <h4>L'impatto</h4>
+                        <p>Massima trasparenza e monitoraggio istantaneo: il team è costantemente informato sui target
+                            in corso, migliorando l'efficienza e la rapidità d'intervento sui portafogli clienti.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 06 -->
+            <div class="cs2-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="cs2-card-header">
+                    <div class="cs2-num">06</div>
+                    <div class="cs2-title-block">
+                        <h3>Lanci di successo</h3>
+                        <p>Strategia e vendita diretta per l'introduzione sul mercato di servizi aziendali totalmente
+                            nuovi e ad alto valore.</p>
+                    </div>
+                    <div class="cs2-tags-inline">
+                        <span><i class="bi bi-google"></i> Google Ads Launch</span>
+                        <span><i class="bi bi-truck"></i> Contratti Corrieri</span>
+                        <span><i class="bi bi-megaphone"></i> Posizionamento Servizi</span>
+                        <span><i class="bi bi-person-check"></i> Vendita Diretta</span>
+                    </div>
+                    <button class="cs2-toggle" aria-expanded="false"><i class="bi bi-plus-lg"></i></button>
+                </div>
+                <div class="cs2-body">
+                    <div class="cs2-pillar challenge">
+                        <div class="cs2-pillar-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                        <h4>La sfida</h4>
+                        <p>L'esigenza aziendale era di introdurre e monetizzare rapidamente nuovi servizi (mai
+                            commercializzati prima dall'azienda) ampliando l'offerta dedicata alla nostra clientela già
+                            acquisita.</p>
+                    </div>
+                    <div class="cs2-pillar mgmt">
+                        <div class="cs2-pillar-icon"><i class="bi bi-kanban-fill"></i></div>
+                        <h4>Il management</h4>
+                        <p>Ho gestito i progetti dall'inizio alla fine: dalla creazione dell'offerta per i pacchetti
+                            Google Ads e partnership con corrieri, fino al posizionamento del servizio. Sono poi sceso
+                            in campo per venderli personalmente ai clienti.</p>
+                    </div>
+                    <div class="cs2-pillar impact">
+                        <div class="cs2-pillar-icon"><i class="bi bi-check-circle-fill"></i></div>
+                        <h4>L'impatto</h4>
+                        <p>Adozione massiva da parte dei clienti con eccellenti risultati economici derivanti da questi
+                            servizi aggiuntivi, riuscendo a superare nettamente le aspettative di vendita aziendali.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     CASE STUDY 2: DALL'IDEA ALL'IMPRESA
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="case-study-section" id="project-2">
-    <div class="container">
-        <div class="row">
-            <!-- Sticky Sidebar -->
-            <div class="col-lg-4" data-aos="fade-right">
-                <div class="cs-sidebar">
-                    <span class="cs-num">02</span>
-                    <h2>Dall'idea all'impresa</h2>
-                    <p>Lancio e gestione da zero di un'attività freelance, curandone ogni singolo aspetto in totale autonomia.</p>
+    <style>
+        /* ── CS2 PROJECT SECTION ────────────────────────────── */
+        .cs2-section {
+            padding: 80px 0 100px;
+            background: var(--page-bg);
+        }
 
-                    <div class="cs-tags-wrapper">
-                        <div class="cs-tags-title">Strumenti & Operazioni</div>
-                        <div class="cs-tags">
-                            <span class="cs-tag"><i class="bi bi-fonts"></i> Naming & Logo</span>
-                            <span class="cs-tag"><i class="bi bi-browser-edge"></i> Web Design CSS/JS</span>
-                            <span class="cs-tag"><i class="bi bi-file-earmark-text"></i> Contrattualistica</span>
-                            <span class="cs-tag"><i class="bi bi-tags"></i> Pricing Strategy</span>
-                            <span class="cs-tag"><i class="bi bi-instagram"></i> Social Media</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Content -->
-            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-                <div class="cs-content">
-                    
-                    <!-- Immagine Progetto -->
-                    <div class="cs-image-wrapper">
-                        <img src="https://raw.githubusercontent.com/alessandroida/Curriculum-Vitae/main/images/Vocalspace" alt="Dall'idea all'impresa" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-                    </div>
+        .cs2-card {
+            background: #fff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-xl);
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.35s var(--ease-out), border-color 0.35s var(--ease-out);
+        }
 
-                    <div class="cs-block cb-challenge">
-                        <div class="cs-block-header">
-                            <div class="cs-block-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
-                            <h4>La sfida</h4>
-                        </div>
-                        <p>La cliente aveva appena aperto la partita IVA come insegnante di canto, ma operava in una zona satura con centinaia di altri insegnanti. Ponendosi come semplice "privato", faticava a differenziarsi e attirare allievi.</p>
-                    </div>
+        .cs2-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-accent);
+        }
 
-                    <div class="cs-block cb-mgmt">
-                        <div class="cs-block-header">
-                            <div class="cs-block-icon"><i class="bi bi-kanban-fill"></i></div>
-                            <h4>Il management</h4>
-                        </div>
-                        <p>Mi sono proposto di gestire interamente il progetto. Le ho redatto un business plan per trasformarla da "privato" a "vera azienda". Ho creato tutto l'ecosistema del brand da zero per posizionarla come reale punto di riferimento sul territorio.</p>
-                    </div>
+        .cs2-card.open {
+            border-color: var(--second);
+            box-shadow: var(--shadow-lg);
+        }
 
-                    <div class="cs-block cb-impact">
-                        <div class="cs-block-header">
-                            <div class="cs-block-icon"><i class="bi bi-check-circle-fill"></i></div>
-                            <h4>L'impatto</h4>
-                        </div>
-                        <p>La nascita di un brand strutturato, forte e professionale capace di distinguersi nettamente dalla concorrenza locale, attraendo nuovi clienti grazie a una comunicazione solida e organizzata.</p>
-                    </div>
+        .cs2-card-header {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            padding: 28px 36px;
+            cursor: pointer;
+            user-select: none;
+        }
 
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        .cs2-num {
+            font-size: clamp(2.8rem, 5vw, 4.2rem);
+            font-weight: 900;
+            color: color-mix(in srgb, var(--second) 18%, transparent);
+            line-height: 1;
+            flex-shrink: 0;
+            min-width: 70px;
+            transition: color 0.3s;
+        }
 
-<!-- ═══════════════════════════════════════════════════════════════
-     CASE STUDY 3: PIANI DI CRESCITA
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="case-study-section" id="project-3">
-    <div class="container">
-        <div class="row">
-            <!-- Sticky Sidebar -->
-            <div class="col-lg-4" data-aos="fade-right">
-                <div class="cs-sidebar">
-                    <span class="cs-num">03</span>
-                    <h2>Piani di Crescita</h2>
-                    <p>Analisi strategica e business planning a doppio binario: per l'efficienza del team interno e per la scalabilità degli e-commerce clienti.</p>
+        .cs2-card.open .cs2-num,
+        .cs2-card:hover .cs2-num {
+            color: var(--second);
+        }
 
-                    <div class="cs-tags-wrapper">
-                        <div class="cs-tags-title">Strumenti & Operazioni</div>
-                        <div class="cs-tags">
-                            <span class="cs-tag"><i class="bi bi-graph-up-arrow"></i> Reportistica Dati</span>
-                            <span class="cs-tag"><i class="bi bi-people"></i> Riunioni Operative</span>
-                            <span class="cs-tag"><i class="bi bi-bullseye"></i> Consulenza MKTG</span>
-                            <span class="cs-tag"><i class="bi bi-cart3"></i> Strategia E-Commerce</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Content -->
-            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-                <div class="cs-content">
-                    
-                    <!-- Immagine Progetto -->
-                    <div class="cs-image-wrapper">
-                        <img src="https://raw.githubusercontent.com/alessandroida/Curriculum-Vitae/main/images/Piani%20di%20crescita.png" alt="Piani di Crescita" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-                    </div>
+        .cs2-title-block {
+            flex: 1;
+            min-width: 0;
+        }
 
-                    <div class="cs-block cb-challenge">
-                        <div class="cs-block-header">
-                            <div class="cs-block-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
-                            <h4>La sfida</h4>
-                        </div>
-                        <p>La necessità critica di individuare i colli di bottiglia nei rendimenti interni del team e dell'azienda, oltre alla forte responsabilità di guidare con proattività gli e-commerce dei clienti verso performance economiche superiori.</p>
-                    </div>
+        .cs2-title-block h3 {
+            font-size: clamp(1.15rem, 2vw, 1.5rem);
+            color: var(--main);
+            margin: 0 0 6px;
+            line-height: 1.2;
+        }
 
-                    <div class="cs-block cb-mgmt">
-                        <div class="cs-block-header">
-                            <div class="cs-block-icon"><i class="bi bi-kanban-fill"></i></div>
-                            <h4>Il management</h4>
-                        </div>
-                        <p>Opero parallelamente su due fronti. <strong>Internamente:</strong> analizzo business e rendimenti (personali, del team e aziendali), stilando report e conducendo riunioni per implementare soluzioni. <strong>Esternamente:</strong> analizzo campagne, fatturati e fidelizzazione, prescrivendo strategie e promozioni per il portafoglio clienti.</p>
-                    </div>
+        .cs2-title-block p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            line-height: 1.5;
+            font-weight: 500;
+        }
 
-                    <div class="cs-block cb-impact">
-                        <div class="cs-block-header">
-                            <div class="cs-block-icon"><i class="bi bi-check-circle-fill"></i></div>
-                            <h4>L'impatto</h4>
-                        </div>
-                        <p>Ottimizzazione continua delle performance operative interne e un incremento documentato delle vendite, margini e fidelizzazione per gli e-commerce gestiti.</p>
-                    </div>
+        .cs2-tags-inline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            flex-shrink: 0;
+            max-width: 340px;
+        }
 
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        .cs2-tags-inline span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 12px;
+            border-radius: var(--radius-pill);
+            background: color-mix(in srgb, var(--second) 8%, white);
+            border: 1px solid color-mix(in srgb, var(--second) 18%, transparent);
+            color: var(--second);
+            font-size: 0.76rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
 
-<!-- ═══════════════════════════════════════════════════════════════
-     CASE STUDY 4: ALGORITMO STRATEGICO
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="case-study-section" id="project-4">
-    <div class="container">
-        <div class="row">
-            <!-- Sticky Sidebar -->
-            <div class="col-lg-4" data-aos="fade-right">
-                <div class="cs-sidebar">
-                    <span class="cs-num">04</span>
-                    <h2>Algoritmo Strategico</h2>
-                    <p>Un sistema avanzato in grado di prevedere e calcolare in anticipo i rendimenti e la scalabilità degli investimenti.</p>
+        .cs2-tags-inline i {
+            font-size: 0.75rem;
+        }
 
-                    <div class="cs-tags-wrapper">
-                        <div class="cs-tags-title">Tecnologia & Parametri</div>
-                        <div class="cs-tags">
-                            <span class="cs-tag"><i class="bi bi-file-earmark-spreadsheet"></i> Excel Avanzato</span>
-                            <span class="cs-tag"><i class="bi bi-calculator"></i> 8 Macro Formule</span>
-                            <span class="cs-tag"><i class="bi bi-infinity"></i> +10k Combinazioni</span>
-                            <span class="cs-tag"><i class="bi bi-currency-euro"></i> Budget & Margini</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Content -->
-            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-                <div class="cs-content">
-                    
-                    <!-- Immagine Progetto -->
-                    <div class="cs-image-wrapper">
-                        <img src="https://raw.githubusercontent.com/alessandroida/Curriculum-Vitae/main/images/Algoritmo.png" alt="Algoritmo Strategico" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-                    </div>
+        .cs2-toggle {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid var(--border-light);
+            background: transparent;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.35s var(--ease-spring);
+        }
 
-                    <div class="cs-block cb-challenge">
-                        <div class="cs-block-header">
-                            <div class="cs-block-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
-                            <h4>La sfida</h4>
-                        </div>
-                        <p>Forte diffidenza iniziale da parte dei clienti (come ad es. le farmacie) che, prima di investire, non avevano chiara visibilità su quali ordini, fatturati o margini potessero ragionevolmente aspettarsi.</p>
-                    </div>
+        .cs2-card.open .cs2-toggle,
+        .cs2-card:hover .cs2-toggle {
+            border-color: var(--second);
+            color: var(--second);
+        }
 
-                    <div class="cs-block cb-mgmt">
-                        <div class="cs-block-header">
-                            <div class="cs-block-icon"><i class="bi bi-kanban-fill"></i></div>
-                            <h4>Il management</h4>
-                        </div>
-                        <p>Per abbattere questa lacuna ho ideato, ingegnerizzato e creato un potente algoritmo predittivo in Excel. Basta inserire le variabili desiderate dal cliente (budget, ricarichi, logistica) e il tool restituisce le proiezioni matematiche in automatico.</p>
-                    </div>
+        .cs2-card.open .cs2-toggle {
+            background: var(--second);
+            color: #fff;
+            transform: rotate(45deg);
+        }
 
-                    <div class="cs-block cb-impact">
-                        <div class="cs-block-header">
-                            <div class="cs-block-icon"><i class="bi bi-check-circle-fill"></i></div>
-                            <h4>L'impatto</h4>
-                        </div>
-                        <p>Totale abbattimento della diffidenza. I clienti ottengono istantaneamente una proiezione trasparente, che dona sicurezza e prevedibilità economica all'investimento.</p>
-                    </div>
+        /* Body - hidden by default, animated open */
+        .cs2-body {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.55s var(--ease-out), opacity 0.4s ease;
+            border-top: 0px solid var(--border-light);
+        }
 
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        .cs2-card.open .cs2-body {
+            max-height: 600px;
+            opacity: 1;
+            border-top-width: 1px;
+        }
 
-<!-- ═══════════════════════════════════════════════════════════════
-     CASE STUDY 5: SMART TRACKING
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="case-study-section" id="project-5">
-    <div class="container">
-        <div class="row">
-            <!-- Sticky Sidebar -->
-            <div class="col-lg-4" data-aos="fade-right">
-                <div class="cs-sidebar">
-                    <span class="cs-num">05</span>
-                    <h2>Smart Tracking</h2>
-                    <p>Un cruscotto di monitoraggio in tempo reale degli obiettivi per mantenere il team costantemente allineato sulle performance.</p>
+        .cs2-pillar {
+            padding: 28px 30px;
+            position: relative;
+        }
 
-                    <div class="cs-tags-wrapper">
-                        <div class="cs-tags-title">Tool & Formazione</div>
-                        <div class="cs-tags">
-                            <span class="cs-tag"><i class="bi bi-crosshair"></i> Monitoraggio KPI</span>
-                            <span class="cs-tag"><i class="bi bi-magic"></i> 12 Macro Analisi</span>
-                            <span class="cs-tag"><i class="bi bi-display"></i> Dashboard Real-Time</span>
-                            <span class="cs-tag"><i class="bi bi-camera-video"></i> Video Tutorial Interni</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Content -->
-            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-                <div class="cs-content">
-                    
-                    <!-- Immagine Progetto -->
-                    <div class="cs-image-wrapper">
-                        <img src="https://raw.githubusercontent.com/alessandroida/Curriculum-Vitae/main/images/Smart%20Tracking.png" alt="Smart Tracking" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-                    </div>
+        .cs2-pillar+.cs2-pillar {
+            border-left: 1px solid var(--border-light);
+        }
 
-                    <div class="cs-block cb-challenge">
-                        <div class="cs-block-header">
-                            <div class="cs-block-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
-                            <h4>La sfida</h4>
-                        </div>
-                        <p>L'obiettivo primario era far guadagnare il più possibile i clienti e i loro e-commerce. Ma le metriche e i KPI necessari per capire lo "stato di salute" e se si era "in target" erano troppi per essere analizzati a mano con reattività.</p>
-                    </div>
+        .cs2-pillar.challenge {
+            background: #fff9f9;
+        }
 
-                    <div class="cs-block cb-mgmt">
-                        <div class="cs-block-header">
-                            <div class="cs-block-icon"><i class="bi bi-kanban-fill"></i></div>
-                            <h4>Il management</h4>
-                        </div>
-                        <p>Ho proposto e sviluppato interamente lo "Smart Tracking", uno strumento che processa le variabili e indica in tempo reale il raggiungimento degli obiettivi. Mi sono occupato dell'adozione interna registrando video training dedicati.</p>
-                    </div>
+        .cs2-pillar.mgmt {
+            background: color-mix(in srgb, var(--second) 3%, #fff);
+        }
 
-                    <div class="cs-block cb-impact">
-                        <div class="cs-block-header">
-                            <div class="cs-block-icon"><i class="bi bi-check-circle-fill"></i></div>
-                            <h4>L'impatto</h4>
-                        </div>
-                        <p>Massima trasparenza e monitoraggio istantaneo: il team è costantemente informato sui target in corso, migliorando l'efficienza e la rapidità d'intervento sui portafogli clienti.</p>
-                    </div>
+        .cs2-pillar.impact {
+            background: #f2fbf6;
+        }
 
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        .cs2-pillar-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            margin-bottom: 14px;
+        }
 
-<!-- ═══════════════════════════════════════════════════════════════
-     CASE STUDY 6: LANCI DI SUCCESSO
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="case-study-section" id="project-6">
-    <div class="container">
-        <div class="row">
-            <!-- Sticky Sidebar -->
-            <div class="col-lg-4" data-aos="fade-right">
-                <div class="cs-sidebar">
-                    <span class="cs-num">06</span>
-                    <h2>Lanci di successo</h2>
-                    <p>Strategia e vendita diretta per l'introduzione sul mercato di servizi aziendali totalmente nuovi e ad alto valore.</p>
+        .cs2-pillar.challenge .cs2-pillar-icon {
+            background: #fff0f0;
+            color: #e85555;
+        }
 
-                    <div class="cs-tags-wrapper">
-                        <div class="cs-tags-title">Competenze Impiegate</div>
-                        <div class="cs-tags">
-                            <span class="cs-tag"><i class="bi bi-google"></i> Google Ads Launch</span>
-                            <span class="cs-tag"><i class="bi bi-truck"></i> Contratti Corrieri</span>
-                            <span class="cs-tag"><i class="bi bi-megaphone"></i> Posizionamento Servizi</span>
-                            <span class="cs-tag"><i class="bi bi-person-check"></i> Vendita Diretta</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Content -->
-            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-                <div class="cs-content">
-                    
-                    <!-- Immagine Progetto -->
-                    <div class="cs-image-wrapper">
-                        <img src="https://raw.githubusercontent.com/alessandroida/Curriculum-Vitae/main/images/Lanci%20di%20successo.png" alt="Lanci di successo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-                    </div>
+        .cs2-pillar.mgmt .cs2-pillar-icon {
+            background: color-mix(in srgb, var(--second) 12%, white);
+            color: var(--second);
+        }
 
-                    <div class="cs-block cb-challenge">
-                        <div class="cs-block-header">
-                            <div class="cs-block-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
-                            <h4>La sfida</h4>
-                        </div>
-                        <p>L'esigenza aziendale era di introdurre e monetizzare rapidamente nuovi servizi (mai commercializzati prima dall'azienda) ampliando l'offerta dedicata alla nostra clientela già acquisita.</p>
-                    </div>
+        .cs2-pillar.impact .cs2-pillar-icon {
+            background: #e9f7ed;
+            color: #4c9462;
+        }
 
-                    <div class="cs-block cb-mgmt">
-                        <div class="cs-block-header">
-                            <div class="cs-block-icon"><i class="bi bi-kanban-fill"></i></div>
-                            <h4>Il management</h4>
-                        </div>
-                        <p>Ho gestito i progetti dall'inizio alla fine: dalla creazione dell'offerta per i pacchetti Google Ads e partnership con corrieri, fino al posizionamento del servizio. Sono poi sceso in campo per venderli personalmente ai clienti.</p>
-                    </div>
+        .cs2-pillar h4 {
+            font-size: 0.88rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 10px;
+        }
 
-                    <div class="cs-block cb-impact">
-                        <div class="cs-block-header">
-                            <div class="cs-block-icon"><i class="bi bi-check-circle-fill"></i></div>
-                            <h4>L'impatto</h4>
-                        </div>
-                        <p>Adozione massiva da parte dei clienti con eccellenti risultati economici derivanti da questi servizi aggiuntivi, riuscendo a superare nettamente le aspettative di vendita aziendali.</p>
-                    </div>
+        .cs2-pillar.challenge h4 {
+            color: #c94444;
+        }
 
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        .cs2-pillar.mgmt h4 {
+            color: var(--second);
+        }
 
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <p class="mb-0"><script>document.write(new Date().getFullYear())</script> — Sviluppato da Alessandro Idà</p>
-    </div>
-</footer>
+        .cs2-pillar.impact h4 {
+            color: #3a8050;
+        }
 
-<!-- SCROLL TO TOP -->
-<a href="#" class="scroll-top-btn" id="scrollTopBtn"><i class="bi bi-arrow-up"></i></a>
+        .cs2-pillar p {
+            margin: 0;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            font-weight: 500;
+        }
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="main.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const tabs = document.querySelectorAll('#ph-hero-tabs .ph-ui-nav');
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove active class from all tabs
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                
-                // Hide all panes
-                document.querySelectorAll('.ph-tab-pane').forEach(pane => {
-                    pane.style.display = 'none';
+        /* Responsive */
+        @media (max-width: 1100px) {
+            .cs2-tags-inline {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cs2-card-header {
+                padding: 20px 20px;
+                gap: 16px;
+            }
+
+            .cs2-num {
+                font-size: 2.4rem;
+                min-width: 50px;
+            }
+
+            .cs2-body {
+                grid-template-columns: 1fr;
+            }
+
+            .cs2-pillar+.cs2-pillar {
+                border-left: none;
+                border-top: 1px solid var(--border-light);
+            }
+
+            .cs2-card.open .cs2-body {
+                max-height: 1600px;
+            }
+
+            .cs2-pillar {
+                padding: 22px 20px;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.cs2-card').forEach(card => {
+                const header = card.querySelector('.cs2-card-header');
+                header.addEventListener('click', () => {
+                    const isOpen = card.classList.contains('open');
+                    document.querySelectorAll('.cs2-card.open').forEach(c => c.classList.remove('open'));
+                    if (!isOpen) {
+                        card.classList.add('open');
+                        setTimeout(() => {
+                            card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }, 150);
+                    }
                 });
-                
-                // Show target pane
-                const targetId = tab.getAttribute('data-target');
-                const targetPane = document.getElementById(targetId);
-                if (targetPane) {
-                    targetPane.style.display = 'block';
-                }
             });
         });
-    });
-</script>
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="mb-0">
+                <script>document.write(new Date().getFullYear())</script> — Sviluppato da Alessandro Idà
+            </p>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <a href="#" class="scroll-top-btn" id="scrollTopBtn"><i class="bi bi-arrow-up"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('#ph-hero-tabs .ph-ui-nav');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    // Hide all panes
+                    document.querySelectorAll('.ph-tab-pane').forEach(pane => {
+                        pane.style.display = 'none';
+                    });
+
+                    // Show target pane
+                    const targetId = tab.getAttribute('data-target');
+                    const targetPane = document.getElementById(targetId);
+                    if (targetPane) {
+                        targetPane.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
+
 </html>
