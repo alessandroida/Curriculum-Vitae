@@ -10,8 +10,7 @@
     <meta name="theme-color" content="#003f5b">
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -79,7 +78,8 @@
                         <span class="d-md-none">Il backstage della mia crescita</span>
                         <span class="d-none d-md-inline">Il backstage della mia crescita professionale</span>
                     </p>
-                    <h1>Dietro le quinte</h1>
+                    <h1>Dietro le <span
+                            style="color: var(--second); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--second) 40%, transparent); text-decoration-thickness: 6px; text-underline-offset: 2px;">quinte</span></h1>
                     <p class="hero-lead">Sono Idà Alessandro, Sales Manager, Key account e Project Developer. Qui
                         condivido le esperienze e le opportunità che hanno segnato il mio cammino.</p>
 
@@ -1043,50 +1043,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js"></script>
 
-    <!-- ═══════════════════════════════════════════════════════════════
-         COZE AI CHATBOT SDK INTEGRATION
-         ═══════════════════════════════════════════════════════════════ -->
-    <style>
-        /* CSS Variables override (se supportato da Coze) per far matchare il brand */
-        :root {
-            --coze-primary-color: #003f5b;
-            --coze-brand-color: #003f5b;
-        }
-    </style>
-    <!-- Inizio Script Coze Chatbot Sicuro -->
-    <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.17/libs/oversea/index.js"></script>
-    <script>
-      new CozeWebSDK.WebChatClient({
-        config: {
-          bot_id: '7661353910921560117', // Il tuo ID Coze
-        },
-        componentProps: {
-          title: 'Alessandro Idà | AI Assistant',
-          icon: 'https://cdn-icons-png.flaticon.com/512/4712/4712035.png',
-          layout: 'pc'
-        },
-        auth: {
-          type: 'token',
-          onRefreshToken: async function () {
-            try {
-              // Questa riga chiama in sicurezza il tuo Worker per ottenere il token invisibile
-              const response = await fetch('https://coze-auth-bot.i-ale9992.workers.dev/');
-              
-              if (!response.ok) {
-                console.error("Errore di connessione al sistema di autenticazione.");
-                return '';
-              }
-              const data = await response.json();
-              return data.token; 
-            } catch (error) {
-              console.error("Autenticazione fallita:", error);
-              return '';
-            }
-          }
-        }
-      });
-    </script>
-    <!-- Fine Script Coze Chatbot Sicuro -->
+    
 
 </body>
 
